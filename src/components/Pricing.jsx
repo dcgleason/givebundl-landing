@@ -110,51 +110,42 @@ export function Pricing() {
             for everyone.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
+            We'll make your Bundle look nice, no matter if it's five pages or five hundred pages. 
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
+            name="Black + White"
+            price="$35"
+            description="Basic Bundle"
             href="/register"
             features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
+              'No pictures, just text',
+              'Maximum of 48 pages'
             ]}
           />
           <Plan
             featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
+            name="Color + Pictures"
+            price="$45"
+            description="Picture Bundle"
             href="/register"
             features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
+              'Color print',
+              'Pictures included',
+              'Maximum of 480 pages'
             ]}
           />
           <Plan
-            name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
+            name="Color + Pictures + Gift Basket"
+            price="$199"
+            description="Gift Basekt Bundle"
             href="/register"
             features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
+              'Color print',
+              'Pictures included',
+              'Maximum of 480 pages',
+              "Comes with a Henry and David's fresh fruit, meat, and cheese gift basket to gift along with your Bundle."
             ]}
           />
         </div>

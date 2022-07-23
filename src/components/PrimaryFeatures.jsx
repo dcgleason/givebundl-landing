@@ -5,34 +5,34 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotExpenses from '@/images/screenshots/letter_cropped.jpg'
+import screenshotPayroll from '@/images/screenshots/payment_cropped.jpeg'
+import screenshotReporting from '@/images/screenshots/package_cropped.jpeg'
+import screenshotVatReturns from '@/images/screenshots/book_cropped.jpeg'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Step 1: You Purchase Bundle',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "You purchase a Bundle on behalf of your intended recipient and give us the contact details of the Bundle contributors.  Write a message that we'll include when we reach out to the Bundle contributors (optional). Specify what question prompts you want us to ask for you (optional)",
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'Step 2: We coordinate the collection of messages',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "We send emails out, with your note and added prompt included, to your Bundle contributors. We ask ask that they simply reply to our email with their response within five days.",
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Step 3: We compile your messages into book',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "After our five-day, message-writing, open window, we collect all written messages we recieved for your Bundle and compile them into a book.",
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: 'Step 4: Send the Bundle to you',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      "Within two weeks of when you ordered your Bundle, you'll recieve it, a book full of loving messages from your elderly family member's family and friends. It will be ready to gift.",
     image: screenshotReporting,
   },
 ]
@@ -72,11 +72,10 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            How we create your Bundle, step by step.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+          <b>Bundle</b>, <em>noun</em>: a book of written messages expressing gratitude for a special person in your life from his or her family and friends.
           </p>
         </div>
         <Tab.Group

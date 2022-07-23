@@ -99,7 +99,7 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
+              <NavLink href="#features">How we do it</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
               <NavLink href="#pricing">Pricing</NavLink>
             </div>
@@ -110,7 +110,7 @@ export function Header() {
             </div>
             <Button href="/register" color="blue">
               <span>
-                Get started <span className="hidden lg:inline">today</span>
+                Try for <span className="hidden lg:inline">free</span>
               </span>
             </Button>
             <div className="-mr-1 md:hidden">
