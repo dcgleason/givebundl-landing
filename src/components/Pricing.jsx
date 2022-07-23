@@ -105,12 +105,12 @@ export function Pricing() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
+              <span className="relative">Pricing</span>
             </span>{' '}
-            for everyone.
+     
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            We'll make your Bundle look nice, no matter if it's five pages or five hundred pages. 
+           Choose your Bundle package
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
