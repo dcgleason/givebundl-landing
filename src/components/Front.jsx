@@ -454,8 +454,8 @@ const options = {
                       className="w-5 h-auto block flex-shrink-0"
                       height='5'
                       width='3' />
-                    <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
-                    <span className="sr-only">, change currency</span>
+                    {/* <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
+                    <span className="sr-only">, change currency</span> */}
                   </a>
                 </div>
 
