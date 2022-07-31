@@ -25,7 +25,7 @@ const Failure = () => {
             </svg>
           </div>
           <div className="ml-3 w-0 flex-1 pt-0.5">
-            <p className="text-sm font-medium text-gray-900">We&#39re sorry.</p>
+            <p className="text-sm font-medium text-gray-900">We are sorry.</p>
             <p className="mt-1 text-sm text-gray-500">There has been an error on our end. We are working on resolving the issue.</p>
           </div>
           <div className="ml-4 flex-shrink-0 flex">
