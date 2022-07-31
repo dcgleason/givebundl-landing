@@ -159,7 +159,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Bundle. Gift meaningfully.",
+  name: "Give a Bundle. Gift meaningfully.",
   href: '#',
   price: '$45',
   description:
