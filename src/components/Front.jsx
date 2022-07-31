@@ -369,7 +369,7 @@ const options = {
                         {category.featured.map((item) => (
                           <div key={item.name} className="group relative text-sm">
                             <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                              <Image src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" layout='fill'/>
+                              <Image src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" height = '10' width='10'/>
                             </div>
                             <a href={item.href} className="mt-6 block font-medium text-gray-900">
                               <span className="absolute z-10 inset-0" aria-hidden="true" />
@@ -440,7 +440,8 @@ const options = {
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
-                    layout='fill'
+                    height='5'
+                    width='3'
                   />
                   <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
                   <span className="sr-only">, change currency</span>
@@ -477,7 +478,8 @@ const options = {
                     className="h-6 w-auto"
                     src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png'
                     alt=""
-                    layout='fill'
+                    height='6'
+                    widgth='6'
                   />
                 </a>
               </div>
@@ -520,12 +522,13 @@ const options = {
                                     <div className="col-start-2 grid grid-cols-2 gap-x-8">
                                       {category.featured.map((item) => (
                                         <div key={item.name} className="group relative text-base sm:text-sm">
-                                          <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75 relative">
+                                          <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
                                             <Image
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
                                               className="object-center object-cover"
-                                              layout='fill'
+                                              height='50'
+                                              width='50'
                                             />
                                           </div>
                                           <a href={item.href} className="mt-6 block font-medium text-gray-900">
@@ -686,13 +689,14 @@ const options = {
                       Try Beta Version (it is free)
                     </button>
 
-                <div className="hidden lg:ml-8 lg:flex relative">
+                <div className="hidden lg:ml-8 lg:flex ">
                   <a href="#" className="text-gray-700 hover:text-gray-800 flex items-center">
                     <Image
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
-                      layout='fill'
+                      width='5'
+                      height='3'
                     />
                     <span className="ml-3 block text-sm font-medium">USA</span>
                     <span className="sr-only">, change currency</span>
@@ -754,7 +758,7 @@ const options = {
                   ))}
                 </ol>
               </nav> */}
-              <div className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25 relative">
+              <div className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25">
                 <Image
                   src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png'
                   alt={product.imageAlt}
@@ -917,7 +921,7 @@ const options = {
 
             <div className="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
               <div>
-                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden relative">
+                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <Image
                     src="https://cdn1.iconfinder.com/data/icons/aami-flat-emails/64/email-41-512.png"
                     alt="Drawstring top with elastic loop closure and textured interior padding."
@@ -931,7 +935,7 @@ const options = {
                 </p>
               </div>
               <div>
-                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden relative">
+                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <Image
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1024px-Closed_Book_Icon.svg.png"
                     alt=""
@@ -1111,7 +1115,7 @@ const options = {
                   {reviews.featured.map((review) => (
                     <div key={review.id} className="py-12">
                       <div className="flex items-center">
-                       <div className='relative'> <Image src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" width='15' height='15'/></div>
+                       <Image src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" width='15' height='15'/>
                         <div className="ml-4">
                           <h4 className="text-sm font-bold text-gray-900">{review.author}</h4>
                           <div className="mt-1 flex items-center">
@@ -1151,12 +1155,13 @@ const options = {
           <div className="border-t border-gray-200 py-20">
             <div className="grid grid-cols-1 md:grid-cols-12 md:grid-flow-col md:gap-x-8 md:gap-y-16 md:auto-rows-min">
               {/* Image section */}
-              <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1 relative h-8 w-8">
+              <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1 h-8 w-8">
                 <Image
                   src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png'
                   alt=""
-                 // className="h-8 w-auto"
-                  layout='fill'
+                  className="h-8 w-auto"
+                  height='8'
+                  width='8'
                 />
               </div>
 
