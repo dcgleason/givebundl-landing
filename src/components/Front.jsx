@@ -23,6 +23,7 @@ import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import { Input } from "../components/index"
 import { useEffect } from 'react'
+import Head from "next/head"
 import Image from 'next/image';
 import Script from 'next/script';
 import bundlepic from '../images/screenshots/bundle.png';
@@ -309,6 +310,11 @@ const options = {
   return (
 
     <>
+
+      <Head>
+        <title>Home - Bundle</title>
+        <meta name="description" content="Home page for Bundle, a give giving sevice that enables you to collect written messages for someone and gift them via a physical book." />
+      </Head>
     <div>
 
         <Script id='google-inline' strategy='lazyOnload' src={`https://www.googletagmanager.com/gtag/js?id=G-Q7EKYQCWR0`}> </Script>

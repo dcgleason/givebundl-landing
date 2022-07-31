@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Success from './success';
 import Failure from './error';
+import Head from "next/head"
 
 // when you input the gift code, the person's whose Bundle it is should appear in the question.
 
@@ -84,6 +85,10 @@ const Messages = () => {
 
   return (
     <>
+    <Head>
+        <title>Messages - Bundle</title>
+        <meta name="description" content="Where a Bundle contributor submits his or her written messages." />
+      </Head>
     {success? <Success/> : <div></div>}
     {failure? <Failure/> : <div></div>}
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
