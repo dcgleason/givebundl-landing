@@ -151,7 +151,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-    { name: "Write", href: 'https://bundle.love/write'}
+    { name: "Write", href: 'https://bundle.love/messages'}
   ],
 }
 const userNavigation = [
