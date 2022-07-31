@@ -599,8 +599,8 @@ const options = {
                     ))}
                   </div>
                 </Popover.Group>
-
-                <Transition
+{/* {beta button for sign ups - will not use} */}
+                {/* <Transition
                   show={isModalOpen}
                   enter="transition duration-100 ease-out"
                   enterFrom="transform scale-15 opacity-0"
@@ -679,7 +679,7 @@ const options = {
 
                     </div>
                   </Dialog>
-                </Transition>
+                </Transition> */}
 
                 {/* Join beta pop up */}
 
