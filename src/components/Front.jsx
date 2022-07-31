@@ -160,7 +160,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "The most meaningful gift in the world",
+  name: "The most meaningful gift in the world.",
   href: '#',
   price: '$45',
   description:
@@ -832,8 +832,7 @@ const options = {
               </div>
 
               {/* Product image */}
-
-
+{/* {uncomment this, and make stripe a non-test acconut to go live } */}
               <div className="mt-10 pb-20 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
                 <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
                   <Elements stripe={stripePromise} options={options}>
