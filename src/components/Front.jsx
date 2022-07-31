@@ -23,8 +23,12 @@ import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import { Input } from "../components/index"
 import { useEffect } from 'react'
-import clsx from "clsx"
 import Image from 'next/image';
+import bundlepic from '../images/screenshots/bundle.png';
+import usapic from '../images/screenshots/usa.png';
+import emailpic from '../images/screenshots/email.png';
+import closedbookpic from '../images/screenshots/closedbook.png';
+import avatarpic from '../images/screenshots/eliza_screenshot.png';
 
 
 const navigation = {
@@ -159,7 +163,7 @@ const product = {
   price: '$45',
   description:
    '',
-  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png',
+  imageSrc: "test",
   imageAlt: 'Bundle logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
@@ -202,7 +206,7 @@ const reviews = {
   counts: [
     { rating: 5, count: 3 },
     { rating: 4, count: 0 },
-    { rating: 3, count: 0 },
+    { rating: 3, count: 0 }, 
     { rating: 2, count: 0 },
     { rating: 1, count: 0 },
   ],
@@ -365,7 +369,7 @@ const options = {
                         {category.featured.map((item) => (
                           <div key={item.name} className="group relative text-sm">
                             <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                              <Image src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" />
+                              <Image src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" layout='fill'/>
                             </div>
                             <a href={item.href} className="mt-6 block font-medium text-gray-900">
                               <span className="absolute z-10 inset-0" aria-hidden="true" />
@@ -436,6 +440,7 @@ const options = {
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
+                    layout='fill'
                   />
                   <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
                   <span className="sr-only">, change currency</span>
@@ -465,13 +470,14 @@ const options = {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex lg:ml-0 relative">
                 <a href="#">
                   <span className="sr-only">Bundle</span>
                   <Image
                     className="h-6 w-auto"
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png"
+                    src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png'
                     alt=""
+                    layout='fill'
                   />
                 </a>
               </div>
@@ -514,11 +520,12 @@ const options = {
                                     <div className="col-start-2 grid grid-cols-2 gap-x-8">
                                       {category.featured.map((item) => (
                                         <div key={item.name} className="group relative text-base sm:text-sm">
-                                          <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
+                                          <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75 relative">
                                             <Image
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
                                               className="object-center object-cover"
+                                              layout='fill'
                                             />
                                           </div>
                                           <a href={item.href} className="mt-6 block font-medium text-gray-900">
@@ -679,12 +686,13 @@ const options = {
                       Try Beta Version (it is free)
                     </button>
 
-                <div className="hidden lg:ml-8 lg:flex">
+                <div className="hidden lg:ml-8 lg:flex relative">
                   <a href="#" className="text-gray-700 hover:text-gray-800 flex items-center">
                     <Image
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
+                      layout='fill'
                     />
                     <span className="ml-3 block text-sm font-medium">USA</span>
                     <span className="sr-only">, change currency</span>
@@ -746,11 +754,15 @@ const options = {
                   ))}
                 </ol>
               </nav> */}
+              <div className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25 relative">
                 <Image
-                  src={product.imageSrc}
+                  src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png'
                   alt={product.imageAlt}
-                  className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25"
+                  //className=" object-center object-cover mb-10 ml-14 mx-25"
+                  width='500'
+                  height='500'
                 /> 
+                </div>
 
               <div className="mt-4">
                 <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
@@ -905,11 +917,13 @@ const options = {
 
             <div className="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
               <div>
-                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden relative">
                   <Image
                     src="https://cdn1.iconfinder.com/data/icons/aami-flat-emails/64/email-41-512.png"
                     alt="Drawstring top with elastic loop closure and textured interior padding."
                     className="w-full h-full object-center object-cover"
+                    width='500'
+                    height='500'
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
@@ -917,11 +931,13 @@ const options = {
                 </p>
               </div>
               <div>
-                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden relative">
                   <Image
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1024px-Closed_Book_Icon.svg.png"
-                    alt="Front zipper pouch with included key ring."
+                    alt=""
                     className="w-full h-full object-center object-cover"
+                    width='500'
+                    height='500'
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
@@ -1095,7 +1111,7 @@ const options = {
                   {reviews.featured.map((review) => (
                     <div key={review.id} className="py-12">
                       <div className="flex items-center">
-                        <Image src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" />
+                       <div className='relative'> <Image src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" width='15' height='15'/></div>
                         <div className="ml-4">
                           <h4 className="text-sm font-bold text-gray-900">{review.author}</h4>
                           <div className="mt-1 flex items-center">
@@ -1135,11 +1151,12 @@ const options = {
           <div className="border-t border-gray-200 py-20">
             <div className="grid grid-cols-1 md:grid-cols-12 md:grid-flow-col md:gap-x-8 md:gap-y-16 md:auto-rows-min">
               {/* Image section */}
-              <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
+              <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1 relative h-8 w-8">
                 <Image
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png"
+                  src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png'
                   alt=""
-                  className="h-8 w-auto"
+                 // className="h-8 w-auto"
+                  layout='fill'
                 />
               </div>
 
