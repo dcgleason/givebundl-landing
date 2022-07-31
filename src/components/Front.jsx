@@ -813,7 +813,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support collected for a special person in your life from <em>his or her</em> family and friends.<br></br><br></br> We coordinate all of the logistics for you and will deliver a physical book of written messages to your recipient within a two week window.</p>
+                    <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support collected for a special person in your life from <em>his or her</em> family and friends.<br></br><br></br> Once we open shot, we will coordinate all of the logistics for you for your Bundle and will deliver a physical book of written messages within two weeks to you to gift to your recipient.</p>
                   </div>
                   <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
