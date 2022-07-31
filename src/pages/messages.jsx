@@ -90,7 +90,7 @@ const Messages = () => {
         onSubmit={postMessagesMongoDB}
         action="/pictureUpload"
         method="post" 
-        enctype="multipart/form-data"
+        encType="multipart/form-data"
         >
       <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
