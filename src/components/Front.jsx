@@ -458,8 +458,8 @@ const options = {
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
-                      height='5'
-                      width='3' />
+                      height='15'
+                      width='12' />
                     {/* <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
                     <span className="sr-only">, change currency</span> */}
                   </a>
