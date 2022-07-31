@@ -614,7 +614,7 @@ const options = {
                         Try the beta version of <em>Bundle</em>
                       </Dialog.Title>
                       <Dialog.Description className="text-xl m-2">
-                        (it is free! We&#39ll send you an email with instructions.)
+                        (it is free! We will send you an email with instructions.)
                       </Dialog.Description>
                       <form className="mt-2 flex-col sm:max-w-md">
                         <label className="text-gray-700 underline text-sm font-bold">
@@ -814,7 +814,7 @@ const options = {
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">We have a money-back guarantee, but we guarentee you won&#39t need it 😉</span>
+                      <span className="text-gray-500 hover:text-gray-700">We have a money-back guarantee, but we guarentee you will not need it 😉</span>
                     </a>
                   </div>
 
@@ -1020,7 +1020,7 @@ const options = {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Just Because</h3>
-                  <p className="mt-3 text-base text-gray-500">Let someone know how much they&#39re loved, just because they are.</p>
+                  <p className="mt-3 text-base text-gray-500">Let someone know how much they are loved, just because.</p>
                 </div>
                 {/* ))} */}
               </div>
