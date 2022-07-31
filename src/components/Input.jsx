@@ -536,7 +536,7 @@ const postOrderMongoDB = async () => {
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              Bundle recipient&aposs first and last name:
+              Bundle recipient's first and last name:
             </label>
             <input
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -551,7 +551,7 @@ const postOrderMongoDB = async () => {
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              Bundle contributors&apos email addresses:
+              Bundle contributors' email addresses:
             </label>
             {emails.map(obj => (
             <input
