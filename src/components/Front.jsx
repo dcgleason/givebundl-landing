@@ -820,7 +820,7 @@ const options = {
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">We have a money-back guarantee, but we guarentee you will not need it 😉</span>
+                      <span className="text-gray-500 hover:text-gray-700">We will have a money-back guarantee, but we guarentee you will not need it 😉</span>
                     </a>
                   </div>
 
