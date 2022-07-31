@@ -24,6 +24,7 @@ import {loadStripe} from '@stripe/stripe-js';
 import { Input } from "../components/index"
 import { useEffect } from 'react'
 import clsx from "clsx"
+import Image from 'next/image';
 
 
 const navigation = {
@@ -364,7 +365,7 @@ const options = {
                         {category.featured.map((item) => (
                           <div key={item.name} className="group relative text-sm">
                             <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                              <img src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" />
+                              <Image src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" />
                             </div>
                             <a href={item.href} className="mt-6 block font-medium text-gray-900">
                               <span className="absolute z-10 inset-0" aria-hidden="true" />
@@ -431,7 +432,7 @@ const options = {
               <div className="border-t border-gray-200 py-6 px-4">
               
                 <a href="#" className="-m-2 p-2 flex items-center">
-                  <img
+                  <Image
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
@@ -467,7 +468,7 @@ const options = {
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Bundle</span>
-                  <img
+                  <Image
                     className="h-6 w-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png"
                     alt=""
@@ -514,7 +515,7 @@ const options = {
                                       {category.featured.map((item) => (
                                         <div key={item.name} className="group relative text-base sm:text-sm">
                                           <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                            <img
+                                            <Image
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
                                               className="object-center object-cover"
@@ -680,7 +681,7 @@ const options = {
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="text-gray-700 hover:text-gray-800 flex items-center">
-                    <img
+                    <Image
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
@@ -745,7 +746,7 @@ const options = {
                   ))}
                 </ol>
               </nav> */}
-                <img
+                <Image
                   src={product.imageSrc}
                   alt={product.imageAlt}
                   className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25"
@@ -905,7 +906,7 @@ const options = {
             <div className="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
               <div>
                 <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="https://cdn1.iconfinder.com/data/icons/aami-flat-emails/64/email-41-512.png"
                     alt="Drawstring top with elastic loop closure and textured interior padding."
                     className="w-full h-full object-center object-cover"
@@ -917,7 +918,7 @@ const options = {
               </div>
               <div>
                 <div className="w-8/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1024px-Closed_Book_Icon.svg.png"
                     alt="Front zipper pouch with included key ring."
                     className="w-full h-full object-center object-cover"
@@ -1094,7 +1095,7 @@ const options = {
                   {reviews.featured.map((review) => (
                     <div key={review.id} className="py-12">
                       <div className="flex items-center">
-                        <img src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" />
+                        <Image src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" />
                         <div className="ml-4">
                           <h4 className="text-sm font-bold text-gray-900">{review.author}</h4>
                           <div className="mt-1 flex items-center">
@@ -1135,7 +1136,7 @@ const options = {
             <div className="grid grid-cols-1 md:grid-cols-12 md:grid-flow-col md:gap-x-8 md:gap-y-16 md:auto-rows-min">
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
-                <img
+                <Image
                   src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png"
                   alt=""
                   className="h-8 w-auto"
