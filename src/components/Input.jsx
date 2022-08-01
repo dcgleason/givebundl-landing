@@ -593,7 +593,7 @@ const postOrderMongoDB = async () => {
               type="submit"
               onClick={submitRequest}
             >
-              Submit Payment & Initate Gift
+              Submit Payment & Pre-order Gift
             </button> 
           </div>
 }
