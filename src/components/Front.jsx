@@ -976,7 +976,7 @@ const options = {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Employee Birthday</h3>
-                  <p className="mt-3 text-base text-gray-500">A birthday is a great time to show an employee how much they mean to the organization and to their colleagues. <br/> <br/> Instead of a generic birthday card, have colleagues and management write messsages of support and appreciation to with that lucky employee a very happy birthday.</p>
+                  <p className="mt-3 text-base text-gray-500">A birthday is a great time to show an employee how much they mean to the organization and to their colleagues. <br/> <br/> Instead of a generic birthday card, have colleagues and management write messsages of support and appreciation to wish that lucky employee a very happy birthday.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
