@@ -13,13 +13,13 @@ export const getServerSideProps = async ({ res }) => {
 
 
     <url>
-    <loc>https://bundle.love/</loc>
+    <loc>https://usebundle.co/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     </url>
 
     <url>
-    <loc>https://bundle.love/messages</loc>
+    <loc>https://usebundle.co/messages</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     </url>
