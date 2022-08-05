@@ -163,7 +163,7 @@ const userNavigation = [
 const product = {
   name: "Remote Employee Recognition Done Right.",
   href: '#',
-  price: '$45',
+  price: '<3',
   description:
    '',
   imageSrc: "test",
