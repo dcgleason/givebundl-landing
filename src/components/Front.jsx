@@ -218,7 +218,7 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>It's been a joy to work with the Bundle team. We used Bundle to honor our school retirees and would love to partner with them in the future. The Bundle team took care of us by helping us place the order, ensuring our Bundles were done on time, and shipping our Bundles in the mail. A great experience all around!</p>
+        <p>[Example] It's been a joy to work with the Bundle team. We used Bundle to honor our school retirees and would love to partner with them in the future. The Bundle team took care of us by helping us place the order, ensuring our Bundles were done on time, and shipping our Bundles in the mail. A great experience all around!</p>
       `,
       author: 'Eliza Irwin',
       avatarSrc:
