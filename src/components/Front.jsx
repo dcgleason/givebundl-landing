@@ -939,7 +939,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    1. Co-workers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://bundle.love/messages">Write</a> page about your Bundle recipient (we coordinate this for you). All Bundle contributors have five days to submit their responses.
+                    1. Co-workers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://usebundle.co/messages">Write</a> page about your Bundle recipient (we coordinate this for you). All Bundle contributors have five days to submit their responses.
                   </p>
                 </div>
                 <div>
