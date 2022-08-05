@@ -22,6 +22,7 @@ import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/so
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import { Input } from "../components/index"
+import { HubspotContactForm } from '../components/index';
 import { useEffect } from 'react'
 import Head from "next/head"
 import Image from 'next/image';
@@ -160,7 +161,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "The most meaningful gift in the world.",
+  name: "Employee Engagement & Recognition Done Right.",
   href: '#',
   price: '$45',
   description:
@@ -217,11 +218,11 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>I got this as a gift for my mom on Mother's Day - she loved it! Our family and her friends all chipped in. It was really special. </p>
+        <p>It's been a joy to work with the Bundle team. We used Bundle to honor our school retirees and would love to partner with them in the future. The Bundle team took care of us by helping us place the order, ensuring our Bundles were done on time, and shipping our Bundles in the mail. A great experience all around!</p>
       `,
       author: 'Eliza Irwin',
       avatarSrc:
-        'https://www.linkedin.com/in/elizairwin/overlay/photo/',
+        'https://i.ibb.co/b60fvcy/eliza.jpg',
     },
     // More reviews...
   ],
@@ -453,13 +454,13 @@ const options = {
 
                 <div className="border-t border-gray-200 py-6 px-4">
 
-                  <a href="#" className="-m-2 p-2 flex items-center">
+                  <a href="#" className="m-2 p-2 flex items-center">
                     <Image
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
-                      height='15'
-                      width='12' />
+                      height='25'
+                      width='30' />
                     {/* <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
                     <span className="sr-only">, change currency</span> */}
                   </a>
@@ -707,8 +708,8 @@ const options = {
                         src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                         alt=""
                         className="w-5 h-auto block flex-shrink-0"
-                        width='5'
-                        height='3' />
+                        width='20'
+                        height='15' />
                       <span className="ml-3 block text-sm font-medium">USA</span>
                       <span className="sr-only">, change currency</span>
                     </a>
@@ -813,14 +814,14 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support collected for a special person in your life from <em>his or her</em> family and friends.<br></br><br></br> Stay tuned! Once we open shop, will deliver your Bundle, physical book of written messages from friends and family of your recipient, to you within two weeks so that you can give it to your intended recipient.</p>
+                    <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation<br></br><br></br> Stay tuned! Enter your contact information to get details when we launch.</p>
                   </div>
                   <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">We will have a money-back guarantee, but we guarentee you will not need it 😉</span>
+                      <span className="text-gray-500 hover:text-gray-700">Guarenteed to build a positve work culture.</span>
                     </a>
                   </div>
 
@@ -835,9 +836,10 @@ const options = {
 {/* {uncomment this, and make stripe a non-test acconut to go live } */}
               <div className="mt-10 pb-20 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
                 <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-                  <Elements stripe={stripePromise} options={options}>
+                  {/* <Elements stripe={stripePromise} options={options}>
                     <Input clientSecret={secret} />
-                  </Elements>
+                  </Elements> */}
+                  <HubspotContactForm/>
 
                 </div>
               </div>
@@ -937,7 +939,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    1. Family, friends, and/or coworkers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://bundle.love/messages">Write</a> page about your Bundle recipient (we coordinate this for you).All Bundle contributors have five days to submit their responses.
+                    1. Co-workers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://bundle.love/messages">Write</a> page about your Bundle recipient (we coordinate this for you). All Bundle contributors have five days to submit their responses.
                   </p>
                 </div>
                 <div>
@@ -950,7 +952,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    2. After responses are collected for your Bundle, they are compiled, published into a physical book, and sent to you within eight to ten business days.The completed book is sent to you, so that you can give to it your intended recipient.
+                    2. After responses are collected for your Bundle, they are compiled and published into a physical book - sent to you within eight to ten business days. The completed is then yours to give to your lucky employee.
                   </p>
                 </div>
               </div>
@@ -963,18 +965,18 @@ const options = {
                   When to send a Bundle:
                 </h2>
                 <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                  (Below are some of our favorite excuses to &quotshare the love.&quot)
+                  (Below are some of our favorite reasons)
                 </p>
               </div>
-              <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
+              <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8">
                 {/* {policies.map((policy) => ( */}
                 {/* Start of occations */}
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Birthdays</h3>
-                  <p className="mt-3 text-base text-gray-500">Wish someone a happy birthday.</p>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Employee Birthday</h3>
+                  <p className="mt-3 text-base text-gray-500">Wish someone a happy birthday from their team.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -982,51 +984,54 @@ const options = {
                     <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Graduations</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Work Anniversary</h3>
                   <p className="mt-3 text-base text-gray-500">Congratulate someone on his or her accomplishments.</p>
-                </div>
+                </div> 
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Anniversaries</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Employee Welcome</h3>
                   <p className="mt-3 text-base text-gray-500">Wish someone a happy anniversary.</p>
                 </div>
-                <div>
+                
+              </div>
+              <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8'>
+              <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Weddings</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Employee Recognition</h3>
                   <p className="mt-3 text-base text-gray-500">Give a the bride (or groom) a gift she or he can cherish for years to come.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">A Thank You</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Employee Farewell</h3>
                   <p className="mt-3 text-base text-gray-500">Send a group thank you to a special someone.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Retirement</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Employee Retirement</h3>
                   <p className="mt-3 text-base text-gray-500">Offer well-wishes to a co-worker on his or her final day.</p>
                 </div>
-                <div>
+                {/* <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Get Well Soon</h3>
                   <p className="mt-3 text-base text-gray-500">Offer up support from friends and family for a sick loved one.</p>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Just Because</h3>
                   <p className="mt-3 text-base text-gray-500">Let someone know how much they are loved, just because.</p>
-                </div>
+                </div> */}
                 {/* ))} */}
               </div>
             </section>
