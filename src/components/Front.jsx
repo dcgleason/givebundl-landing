@@ -161,7 +161,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Employee Engagement & Recognition Done Right.",
+  name: "Employee Recognition Done Right.",
   href: '#',
   price: '$45',
   description:
