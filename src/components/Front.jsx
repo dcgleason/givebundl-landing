@@ -921,7 +921,7 @@ const options = {
             <section aria-labelledby="details-heading">
               <div className="flex flex-col items-center text-center">
                 <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  Here is how your Bundle is put together:
+                  Here your Bundle is put together:
                 </h2>
                 <p className="mt-3 max-w-3xl text-lg text-gray-600">
                   (This all happens within a two week window)
