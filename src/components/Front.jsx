@@ -921,10 +921,10 @@ const options = {
             <section aria-labelledby="details-heading">
               <div className="flex flex-col items-center text-center">
                 <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  How your Bundles book are put together:
+                  How your Bundles books are put together:
                 </h2>
                 <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                  (This all happens within a two week window, per book)
+                  (Each book takes two weeks, start to finish)
                 </p>
               </div>
 
@@ -939,7 +939,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    1. Co-workers of your Bundle book recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://usebundle.co/messages">Write</a> page about your Bundle book recipient (we coordinate this for you). All Bundle book contributors have five days to submit their responses.
+                    1. Co-workers of your Bundle book recipient write heartfelt messages from prompts our <a className="underline font-bold" href="https://usebundle.co/messages">Write</a> page about your Bundle book recipient (we coordinate this for you). All Bundle book contributors have five days to submit their responses.
                   </p>
                 </div>
                 <div>
@@ -952,7 +952,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    2. After responses are collected for your Bundle book, they are compiled and published into a physically-bound and pretty book - sent to you within eight to ten business days. The completed book is then yours to give to your lucky employee.
+                    2. After responses are collected for your Bundle book, they are compiled and published into a physically-bound, pretty book - sent to you within eight to ten business days. The completed book is then yours to give to your lucky employee.
                   </p>
                 </div>
               </div>
