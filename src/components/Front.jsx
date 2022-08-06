@@ -821,7 +821,7 @@ const options = {
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">Gaurenteed to promote feelings of connectedness in the workplace.</span>
+                      <span className="text-gray-500 hover:text-gray-700">Guaranteed to promote feelings of connectedness among employees in the workplace.</span>
                     </a>
                   </div>
 
