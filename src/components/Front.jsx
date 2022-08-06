@@ -161,7 +161,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Create a culure people won't want to leave.",
+  name: "Ready to create a culure people won't want to leave?",
   href: '#',
   price: '👌',
   description:
@@ -814,14 +814,14 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">Use Bundle Inc. to recognize great work, build community, promote core values and increase employee engagement.<br></br><br></br> <b>Bundle</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch!</p>
+                    <p className="text-base text-gray-500">Use Bundle to recognize great work, build community, promote core values and increase employee engagement.<br></br><br></br> <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch!</p>
                   </div>
                   <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">Guarenteed to build a positve work culture.</span>
+                      <span className="text-gray-500 hover:text-gray-700">Gaurenteed to promote feelings of connectedness in the workplace.</span>
                     </a>
                   </div>
 
