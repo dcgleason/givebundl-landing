@@ -161,7 +161,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Remote Employee Recognition Done Right.",
+  name: "Create a culure people won't want to leave.",
   href: '#',
   price: '👌',
   description:
