@@ -314,7 +314,7 @@ const options = {
 
       <Head>
         <title>Home - Bundle</title>
-        <meta name="description" content="Home page for Bundle, a give giving sevice that enables you to collect written messages for someone and gift them via a physical book." />
+        <meta name="description" content="Home page for Bundle, a gift giving employee recognition software that enables you to collect written messages for someone and gift them via a physical book." />
       </Head>
     <div>
 
@@ -814,7 +814,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation<br></br><br></br> Stay tuned! Enter your contact information into the form and get details when we launch!</p>
+                    <p className="text-base text-gray-500">Use <b>Bundle</b> to recognize great work, build community, promote core values and increate employee engagement.<br></br><br></br> <b>Bundle</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch!</p>
                   </div>
                   <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
