@@ -939,7 +939,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    1. You provide the email addresses of the people you want to contribute to the Bundle book you are creating for a deserving employee (contributors are often co-workers, managers, of the Bundle book recipient). Our software it collects responses for your Bundle book from the Bundle contributors. Contributors have five days to contribute.
+                    1. You provide the email addresses of the people you want to contribute to the Bundle book you are creating for an employee you want to recognize (contributors are often co-workers, managers, of the Bundle book recipient). Our software it collects responses for your Bundle book from the Bundle contributors. Contributors have five days to contribute.
                   </p>
                 </div>
                 <div>
