@@ -939,7 +939,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    1. Co-workers of your Bundle book recipient write heartfelt messages from prompts our <a className="underline font-bold" href="https://usebundle.co/messages">Write</a> page about your Bundle book recipient (we coordinate this for you). All Bundle book contributors have five days to submit their responses.
+                    1. You provide the email addresses of the people you want to contribute to the Bundle book you are creating for a deserving employee (contributors are often co-workers, managers, of the Bundle book recipient). Our software it collects responses for your Bundle book from the Bundle contributors. Contributors have five days to contribute.
                   </p>
                 </div>
                 <div>
@@ -952,7 +952,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    2. After responses are collected for your Bundle book, they are compiled and published into a physically-bound, pretty book - sent to you within eight to ten business days. The completed book is then yours to give to your lucky employee.
+                    2. After responses are collected for your Bundle book, they are compiled and published into a physically-bound (and pretty) book - sent to you within eight to ten business days. The completed book is then yours to give to your lucky recipient.
                   </p>
                 </div>
               </div>
