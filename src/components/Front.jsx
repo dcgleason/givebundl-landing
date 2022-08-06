@@ -939,7 +939,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    1. Co-workers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://usebundle.co/messages">Write</a> page about your Bundle recipient (we coordinate this for you). All Bundle contributors have five days to submit their responses.
+                    1. Co-workers of your Bundle book recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://usebundle.co/messages">Write</a> page about your Bundle book recipient (we coordinate this for you). All Bundle book contributors have five days to submit their responses.
                   </p>
                 </div>
                 <div>
@@ -952,7 +952,7 @@ const options = {
                       height='500' />
                   </div>
                   <p className="mt-8 text-base text-gray-500">
-                    2. After responses are collected for your Bundle, they are compiled and published into a physical book - sent to you within eight to ten business days. The completed is then yours to give to your lucky employee.
+                    2. After responses are collected for your Bundle book, they are compiled and published into a physically-bound and pretty book - sent to you within eight to ten business days. The completed book is then yours to give to your lucky employee.
                   </p>
                 </div>
               </div>
