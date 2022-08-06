@@ -161,7 +161,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Ready to create a culure people won't want to leave?",
+  name: "Ready to create a culture people won't want to leave?",
   href: '#',
   price: '👌',
   description:
