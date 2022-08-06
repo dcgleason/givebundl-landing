@@ -814,7 +814,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">Use Bundle to recognize great work, build community, promote core values and increase employee engagement.<br></br><br></br> <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch!</p>
+                    <p className="text-base text-gray-500">Use Bundle to recognize great work, build community, promote core values and increase employee engagement.<br></br><br></br> <b>Bundle</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch!</p>
                   </div>
                   <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
@@ -921,10 +921,10 @@ const options = {
             <section aria-labelledby="details-heading">
               <div className="flex flex-col items-center text-center">
                 <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  How your Bundle is put together:
+                  How our Bundles are put together:
                 </h2>
                 <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                  (This all happens within a two week window)
+                  (This all happens within a two week window, per Bundle)
                 </p>
               </div>
 
