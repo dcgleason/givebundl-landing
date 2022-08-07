@@ -963,10 +963,10 @@ const options = {
             <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
               <div className="flex flex-col items-center pb-10 text-center">
                 <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  When to use Bundle:
+                Use Bundle to celebrate employees for the following:
                 </h2>
                 <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                  (Below are some of our favorite reasons to recognize an employee & engage your team with Bundle)
+                  (and create a truly connected company culture)
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8">
@@ -977,7 +977,7 @@ const options = {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Employee Birthday</h3>
-                  <p className="mt-3 text-base text-gray-500">A birthday is a great time to show an employee how much they mean to the organization and to their colleagues. <br/> <br/> Instead of a generic birthday card, have colleagues and management write messsages of support and appreciation to wish that lucky employee a very happy birthday.</p>
+                  <p className="mt-3 text-base text-gray-500">A birthday is a great time to show an employee how much they mean to the organization and to their colleagues. <br/> <br/> Instead of a generic birthday card, use Bundle to make it easy for colleagues and management to support and appreciate that lucky employee on their birthday.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -986,14 +986,14 @@ const options = {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Work Anniversary</h3>
-                  <p className="mt-3 text-base text-gray-500">Simply the best way to recognize an employee and his or her work anniversary. <br/> <br/>  Acknowledge the essential role they play for your team and thank them for all their contributions in the workplace. Happier staff equals higher employee productivity!</p>
+                  <p className="mt-3 text-base text-gray-500">A great way to recognize an employee and his or her work anniversary. <br/> <br/>  Acknowledge the essential role they play for your team and thank them for all their contributions in the workplace. Happier staff equals higher employee productivity!</p>
                 </div> 
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Employee Welcome</h3>
-                  <p className="mt-3 text-base text-gray-500">Give a warm welcome to new team members with a Bundle form staff and employees -- introducing themselves and providing encouraging words. <br/> <br/>  Onboarding Bundles enable you to walk new employees through the ins-and-outs of your organization from afar.</p>
+                  <p className="mt-3 text-base text-gray-500">Use Bundle to give a warm welcome to new team members from staff and employees -- introducing themselves and providing encouraging words. <br/> <br/> Bundle for onboarding enables you to walk new employees through the ins-and-outs of your organization from afar.</p>
                 </div>
                 
               </div>
@@ -1003,21 +1003,21 @@ const options = {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Employee Recognition</h3>
-                  <p className="mt-3 text-base text-gray-500">Companies that give more employee recognition have higher productivity. Bring together a Bundle of written messages of appreciation and support from colleagues and all levels of managements. <br/> <br/> This will lead to happier staff, boost morale, and create a stronger work culture and employee engagement.</p>
+                  <p className="mt-3 text-base text-gray-500">Companies that give more employee recognition have higher productivity. Use Bundle to apprecaite and support from colleagues and all levels of managements. <br/> <br/> This will lead to happier staff, boost morale, and create a stronger work culture and employee engagement.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Employee Farewell</h3>
-                  <p className="mt-3 text-base text-gray-500">Easily collect farewell messages from coworkers and colleagues in a beautiful book keepsake. <br/><br/>  Farewell Bundles provide a lifetime of lasting memories for departing staff as they leave their role in the company. As they move on to new endeavors, they will have a treasured souvenir from the company.</p>
+                  <p className="mt-3 text-base text-gray-500">Easily collect farewell messages from coworkers and colleagues in a beautiful book keepsake. <br/><br/>  Use Bundle to povide a lifetime of lasting memories for departing staff as they leave their role in the company. As they move on to new endeavors, they will have a treasured souvenir from the company.</p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Employee Retirement</h3>
-                  <p className="mt-3 text-base text-gray-500">Congratulate the retiree as they enter a new chapter in their life with a Bundle - it is a meaningful way to commemorate their lifetime of achievement and service. <br/> <br/> A personalized written Bundle from everyone is more sincere than a signed card. Send off the retiree with a memorable Bundle that they will cherish while enjoying their newfound freedom.</p>
+                  <p className="mt-3 text-base text-gray-500">Congratulate the retiree as they enter a new chapter in their life with Bundle, and commemorate their lifetime of achievement and service. <br/> <br/> A personalized messages from everyone is more sincere than a signed card. Send off the retiree with a keepsake that they will cherish while enjoying their newfound freedom.</p>
                 </div>
                 {/* <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
