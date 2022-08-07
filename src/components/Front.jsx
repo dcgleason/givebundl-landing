@@ -814,7 +814,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">According to <a href="https://www.surveymonkey.com/curiosity/employee-recognition-and-retention/"><em><u>this study</u></em></a>, an employee who is regularly recognized is 52 percent more likely to stay at his or her current job for the next three to six months. <br></br><br></br> Use Bundle to recognize great work, build community, promote core values and increase employee retention.  <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch! </p> 
+                    <p className="text-base text-gray-500">According to <a href="https://www.surveymonkey.com/curiosity/employee-recognition-and-retention/"><em><u>this study</u></em></a>, an employee who is regularly recognized is 52% more likely to stay at his or her current job for the next three to six months. <br></br><br></br> Use Bundle to recognize great work, build community, promote core values and increase employee retention.  <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch! </p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   <div className="mt-6 text-center">
