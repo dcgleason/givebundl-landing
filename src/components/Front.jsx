@@ -814,7 +814,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">More than 40% of employed Americans feel that if they were recognized more often, they would put more energy into their work <a href="https://hbr.org/2016/05/recognizing-employees-is-the-simplest-way-to-improve-morale?zd_source=hrt&zd_campaign=5503&zd_term=chiradeepbasumallick">(study)</a>.<br></br><br></br> Use Bundle to recognize great work, build community, promote core values and increase employee engagement.  <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch! </p> 
+                    <p className="text-base text-gray-500">More than 40% of employed Americans feel that if they were recognized more often, they would put more energy into their work <a href="https://hbr.org/2016/05/recognizing-employees-is-the-simplest-way-to-improve-morale?zd_source=hrt&zd_campaign=5503&zd_term=chiradeepbasumallick"><em>(link to study)</em></a>.<br></br><br></br> Use Bundle to recognize great work, build community, promote core values and increase employee engagement.  <br/> <br/> Stay tuned! Enter your contact information into the form and get details when we launch! </p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   <div className="mt-6 text-center">
