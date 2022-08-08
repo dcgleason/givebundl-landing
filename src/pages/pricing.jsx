@@ -19,7 +19,7 @@ export default function Example() {
               <span className="text-red-400">$49</span>
             </h1>
             <p className="mt-5 text-xl text-gray-500">
-              (thats all)
+              
             </p>
           </div>
           <a
