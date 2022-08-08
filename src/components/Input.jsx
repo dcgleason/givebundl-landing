@@ -327,15 +327,15 @@ const postOrderMongoDB = async () => {
       </Dialog>
       
       <div className="flex flex-col items-center justify-around bg-gray-200"></div>
-      <div className="w-full max-w-sm m-auto flex flex-col my-32">
+      {/* <div className="w-full max-w-sm m-auto flex flex-col my-32"> */}
 
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-gray-200 border"
           onSubmit={submitRequest}
         >
-          <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
+          {/* <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Pre-Order your Bundle
-          </h1>
+          </h1> */}
           <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
             Your Information
           </h2>
@@ -531,7 +531,7 @@ const postOrderMongoDB = async () => {
           <div className='sm:border-t sm:border-gray-200 sm:pt-5 mt-7'>
             <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
             Recipient Information
-          </h2>
+           </h2>
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
@@ -581,7 +581,7 @@ const postOrderMongoDB = async () => {
                 />
               </div>
             </div>
-            </div>
+          </div>
             
      
      {isLoading ? 
@@ -596,10 +596,10 @@ const postOrderMongoDB = async () => {
               Submit Payment & Pre-Order Gift
             </button> 
           </div>
-}
+      }
           </div>
         </form>
-        <div className="inline-flex">
+      <div className="inline-flex">
         <button  onClick={handleAddFields} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
              <span className='font-bold'> Add Contributor </span> 
               </button>
@@ -608,10 +608,10 @@ const postOrderMongoDB = async () => {
             </button>
            
            </div>
-      </div>
+{/* </div> */}
       
       
-    </div>
+</div>
 
     
   );
