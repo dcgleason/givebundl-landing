@@ -314,7 +314,7 @@ const options = {
 
       <Head>
         <title>Home - Bundle</title>
-        <meta name="description" content="Home page for Bundle, a gift giving employee recognition software that enables you to collect written messages for someone and gift them via a physical book." />
+        <meta name="description" content="Bundle: a gift giving employee recognition software that enables you to collect written messages for someone and gift them via a physical book." />
       </Head>
     <div>
 
