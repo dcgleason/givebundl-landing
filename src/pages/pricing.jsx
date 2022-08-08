@@ -2,7 +2,7 @@ import { CheckIcon } from '@heroicons/react/outline'
 
 const features = [
   'A two week turn around time, starting from the time you tell us to start collecting messages and picutres.',
-  'A five day message collection time, starting at the time and day you want.',
+  'A five day message collection window.',
   "A small, printed book full of your the messages and pictures your recipient's co-workers posted about him or her.",
   'Memories documented for your employee to keep for a lifetime.'
  
