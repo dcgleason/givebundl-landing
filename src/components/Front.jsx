@@ -21,7 +21,7 @@ import { MenuIcon, SearchIcon, ShieldCheckIcon, ShoppingBagIcon, XIcon } from '@
 import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/solid'
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
-import { Input } from "../components/index"
+import { Input, NewsletterContactForm } from "../components/index"
 import { HubspotContactForm } from '../components/index';
 import { useEffect } from 'react'
 import Head from "next/head"
@@ -1202,9 +1202,10 @@ const options = {
 
                 {/* Newsletter section */}
                 <div className="mt-12 md:mt-0 md:row-start-2 md:col-start-3 md:col-span-8 lg:row-start-1 lg:col-start-9 lg:col-span-4">
-                  <h3 className="text-sm font-medium text-gray-900">Sign up for our newsletter</h3>
-                  <p className="mt-6 text-sm text-gray-500">Arrives in your inbox every Monday.</p>
-                  <form className="mt-2 flex sm:max-w-md">
+                  <h3 className="text-sm font-medium text-gray-900">Sign up for our newsletter!</h3>
+                  <p className="mt-6 text-sm text-gray-500">Arrives in your inbox every Tuesday.</p>
+                  <NewsletterContactForm/>
+                  {/* <form className="mt-2 flex sm:max-w-md">
                     <label htmlFor="email-address" className="sr-only">
                       Email address
                     </label>
@@ -1222,7 +1223,7 @@ const options = {
                         Sign up
                       </button>
                     </div>
-                  </form>
+                  </form> */}
                 </div>
               </div>
             </div>
