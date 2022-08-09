@@ -44,31 +44,31 @@ const Input = (props) => {
   const stripe = useStripe();
   const elements = useElements();
  
-  useEffect(() => {
+  // useEffect(() => {
 
-  const fetchData = async () => {
-    var random = Number((Math.random() * 1000000000).toFixed())
-      // get the data from the api
-      const resp =  await fetch("https://yay-api.herokuapp.com/unique/check", { 
-        method: 'POST', 
-        headers: { 
-          'Content-type': 'application/json'
-         }, 
-        body: JSON.stringify({
-         giftCode: random // possible random Number 
-        })  
-        }); 
-     if (!resp){ ////response false - there does not exist a number in the db already, set 
-       console.log("the repsonse is: " + resp);
-       setRandomNumber(random);
-       console.log('random number set to:' + random)
-     }
-    else {
-      fetchData()  // recusively run until response is false and setRandomNumber has run.
-    }
-  };
-    fetchData();
-    }, [])
+  // const fetchData = async () => {
+  //   var random = Number((Math.random() * 1000000000).toFixed())
+  //     // get the data from the api
+  //     const resp =  await fetch("https://yay-api.herokuapp.com/unique/check", { 
+  //       method: 'POST', 
+  //       headers: { 
+  //         'Content-type': 'application/json'
+  //        }, 
+  //       body: JSON.stringify({
+  //        giftCode: random // possible random Number 
+  //       })  
+  //       }); 
+  //    if (!resp){ ////response false - there does not exist a number in the db already, set 
+  //      console.log("the repsonse is: " + resp);
+  //      setRandomNumber(random);
+  //      console.log('random number set to:' + random)
+  //    }
+  //   else {
+  //     fetchData()  // recusively run until response is false and setRandomNumber has run.
+  //   }
+  // };
+  //   fetchData();
+  //   }, [])
 
     useEffect(() => {
       setAlert({
@@ -80,88 +80,88 @@ const Input = (props) => {
   }, [paymentStatus]);
 
 
+
   const handleChangeInput = (id, e) => {
-   // generateUniqueRandom();
-
-    const newInputFields = emails.map(i => {
-      if(id === i.id) {
-        i[e.target.name] = e.target.value
-      }
-      return i;
-    })
-    
-    setEmail(newInputFields);
-    console.log(emails);
-  }
-
-const handleAddFields = () => {
-    setEmail([...emails, { id: uuidv4(),  email: '' }])
-  }
-
-const handleRemoveFields = id => {
-    const values  = [...emails];
-    values.splice(values.findIndex(value => value.id === id), 1);
-    setEmail(values);
-  }
+    // generateUniqueRandom();
  
-function timeout(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-const submitPayment = async () => {
-  // create customer and submit payment
-
-  setIsLoading(true);
-  console.log('ownerName: '+ ownerName);
-  console.log('ownerEmail: '+ ownerEmail);
-  console.log('clientSecret: '+ props.clientSecret);
-
-  //(async () => {
-
-    const {paymentIntent, error} = await stripe.confirmCardPayment(
-      props.clientSecret,
-      {
-        payment_method: {
-          type: "card",
-          card: elements.getElement(CardElement),
-          billing_details: {
-            name: ownerName,
-            email: ownerEmail
-          },
-        },
-      },
-    );
-    if (error) {
-      setPaymentStatus({
-        status: "Error: " + error.message,
-        title: "Error",
-        type: "error",
-        open: true
-      })
-      console.log("There has been a payment error", error.message)
-    return 'submitpayment function complete - error'
-    } else if (paymentIntent && paymentIntent.status === 'succeeded') {
-      console.log("Your payment has succeeded", paymentIntent.status)
-      setPaymentStatus({
-          status: "Your payment of $49 dollars succeeded",
-          title: "Success",
-          type: "success",
-          open: true
-        })
-     // postOrderMongoDB()
-      //sendEmails();
-    return 'submitpayment function complete - success'
-
-      
+     const newInputFields = emails.map(i => {
+       if(id === i.id) {
+         i[e.target.name] = e.target.value
+       }
+       return i;
+     })
      
-    }
-//  })();
-
-
-
-}
-
+     setEmail(newInputFields);
+     console.log(emails);
+   }
+ 
+ const handleAddFields = () => {
+     setEmail([...emails, { id: uuidv4(),  email: '' }])
+   }
+ 
+ const handleRemoveFields = id => {
+     const values  = [...emails];
+     values.splice(values.findIndex(value => value.id === id), 1);
+     setEmail(values);
+   }
+  
+ function timeout(ms) {
+     return new Promise(resolve => setTimeout(resolve, ms));
+ }
+ 
+ 
+ const submitPayment = async () => {
+   // create customer and submit payment
+ 
+   setIsLoading(true);
+   console.log('ownerName: '+ ownerName);
+   console.log('ownerEmail: '+ ownerEmail);
+   console.log('clientSecret: '+ props.clientSecret);
+ 
+   //(async () => {
+ 
+     const {paymentIntent, error} = await stripe.confirmCardPayment(
+       props.clientSecret,
+       {
+         payment_method: {
+           type: "card",
+           card: elements.getElement(CardElement),
+           billing_details: {
+             name: ownerName,
+             email: ownerEmail
+           },
+         },
+       },
+     );
+     if (error) {
+       setPaymentStatus({
+         status: "Error: " + error.message,
+         title: "Error",
+         type: "error",
+         open: true
+       })
+       console.log("There has been a payment error", error.message)
+     return 'submitpayment function complete - error'
+     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+       console.log("Your payment has succeeded", paymentIntent.status)
+       setPaymentStatus({
+           status: "Your payment of $49 dollars succeeded",
+           title: "Success",
+           type: "success",
+           open: true
+         })
+      // postOrderMongoDB()
+       //sendEmails();
+     return 'submitpayment function complete - success'
+ 
+       
+      
+     }
+ //  })();
+ 
+ 
+ 
+ }
 // const updatePaymentIntent = async () => {
 
 //   const resp =  await fetch("https://yay-api.herokuapp.com/stripe/updatePaymentIntent", { 
