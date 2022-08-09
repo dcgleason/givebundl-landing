@@ -297,7 +297,7 @@ const postToServiceNow = async () => {
       headers: { 
         'Content-type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': 'Basic YWRtaW46VTFvQ1ohWnpsPTB4'
+        'Authorization': 'Basic J2FkbWluOlUxb0NaIVp6bD0weCc='
        }, 
       body: reqBody
       }); 
