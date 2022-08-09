@@ -150,7 +150,7 @@ const submitPayment = async () => {
           open: true
         })
      // postOrderMongoDB()
-      sendEmails();
+      //sendEmails();
     return 'submitpayment function complete - success'
 
       
