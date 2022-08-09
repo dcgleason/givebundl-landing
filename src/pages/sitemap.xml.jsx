@@ -18,11 +18,6 @@ export const getServerSideProps = async ({ res }) => {
     <priority>0.9</priority>
     </url>
 
-    <url>
-    <loc>https://usebundle.co/messages</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    </url>
 
     </urlset>
   `;
