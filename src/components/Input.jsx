@@ -266,49 +266,10 @@ const submitRequest = async (e) => {
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
 console.log(result);
 setIsLoading(false);
-postToServiceNow();
 //setNotification(true);
 };
 
-const getBase64 = async (file) => {
-  let document = "";
-  let reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onload = function () {
-      document = reader.result;
-  };
-  reader.onerror = function (error) {
-      console.log('Error: ', error);
-  };
 
-  return document;
-}
-
-const postToServiceNow = async () => {
-
-  var reqBody = "{\"recipient_full_name\":\"Daniel Gleason\",\"recipient_email\":\"danny.c.gleason@gmail.com\",\"street_address\":\"123 Steinmann Ave\",\"apartment_number\":\"1\",\"city\":\"Middlebury\",\"postal_code\":\"06762\",\"country\":\"USA\",\"contributor_one_email\":\"elizairwin@gmail.com\",\"contributor_two_email\":\"dannycgleason@gmail.com\"}"; 
-  var passwordString = 'admin'+':'+'U1oCZ!Zzl=0x'
-  
-  
-  try{
-   
-    const resp =  await fetch("https://dev34057.service-now.com/api/now/table/x_484913_bundle_bundles?sysparm_input_display_value=True", { 
-      method: 'POST', 
-      headers: { 
-        'Content-type': 'application/json',
-        'Accept': 'application/json',
-        'Authorization': 'Basic YWRtaW46VTFvQ1ohWnpsPTB4'
-       }, 
-      body: reqBody
-      }); 
-  }
-  catch{
-    console.error(error)
-  }
-
-
-
-}
 
 const postOrderMongoDB = async () => {
   try{
