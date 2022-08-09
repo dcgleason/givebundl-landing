@@ -144,7 +144,7 @@ const submitPayment = async () => {
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       console.log("Your payment has succeeded", paymentIntent.status)
       setPaymentStatus({
-          status: "Your payment of $45 dollars succeeded",
+          status: "Your payment of $49 dollars succeeded",
           title: "Success",
           type: "success",
           open: true
