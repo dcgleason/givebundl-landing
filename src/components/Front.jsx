@@ -163,7 +163,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Create a culture your employees love.",
+  name: "It's how you make your emplyees feel.",
   href: '#',
   price: '👌',
   description:
