@@ -978,8 +978,8 @@ const options = {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Employee Birthdays</h3>
-                  <p className="mt-3 text-base text-gray-500">A birthday is a great time to show an employee how much they mean to the organization and to their colleagues. <br/> <br/> Instead of a generic birthday card, use Bundle to make it easy for colleagues and management to support and appreciate that lucky employee on their birthday.</p>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Birthdays</h3>
+                  <p className="mt-3 text-base text-gray-500"> </p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -987,7 +987,7 @@ const options = {
                     <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Birthdays</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Graduations</h3>
                   <p className="mt-3 text-base text-gray-500"> <br/> <br/>  </p>
                 </div> 
                 <div>s
