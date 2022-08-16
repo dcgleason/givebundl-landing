@@ -990,7 +990,7 @@ const options = {
                   <h3 className="mt-6 text-base font-medium text-gray-900">A Graduation</h3>
                   <p className="mt-3 text-base text-gray-500"> <br/> <br/>  </p>
                 </div> 
-                <div>s
+                <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
