@@ -163,7 +163,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "It's how you make your emplyees feel.",
+  name: "Become your friend's new best friend.",
   href: '#',
   price: '👌',
   description:
@@ -316,7 +316,7 @@ const options = {
 
       <Head>
         <title>Home - Bundle</title>
-        <meta name="description" content="Bundle: a gift giving employee recognition software that enables you to collect written messages for someone and gift them via a physical book." />
+        <meta name="description" content="Bundle: a gift giving software that enables you to collect written messages for someone and gift them via a physical book." />
       </Head>
     <div>
 
@@ -816,7 +816,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500"> Use Bundle to recognize great work, build community, promote core values and increase employee retention.  <br/> <br/> <em>Stay tuned! Bundle uses its software to collect heartfelt messages (and pictures) of support and appreciation from the co-workers of an employee and publishes them in a physical, bound, and aesthetically pleasing book for the employee to keep.</em> <br/><br/> Enter your contact information into the form and get details when we launch! </p> 
+                    <p className="text-base text-gray-500">Bundle in beta testing made people cry tears of joy - 89% of the time. <br/> <br/> <em>Stay tuned! Bundle uses its software to collect heartfelt messages (and pictures) of support and appreciation from the friends and family of a recipient and publishes them in a physical, bound, and aesthetically pleasing book for the person to keep.</em> <br/><br/> Enter your contact information into the form and get details when we launch! </p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   <div className="mt-6 text-center">
@@ -824,7 +824,7 @@ const options = {
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">Guaranteed to promote feelings of connectedness among employees in the workplace.</span>
+                      <span className="text-gray-500 hover:text-gray-700">Guaranteed to make you feel like a great friend, sister, brother, etc.</span>
                     </a>
                   </div>
 
