@@ -978,7 +978,7 @@ const options = {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Birthdays</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">A Birthday</h3>
                   <p className="mt-3 text-base text-gray-500"> </p>
                 </div>
                 <div>
@@ -987,14 +987,14 @@ const options = {
                     <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Graduations</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">A Graduation</h3>
                   <p className="mt-3 text-base text-gray-500"> <br/> <br/>  </p>
                 </div> 
                 <div>s
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Anniversaries</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">An Anniversary</h3>
                   <p className="mt-3 text-base text-gray-500"></p>
                 </div>
                 
@@ -1004,21 +1004,21 @@ const options = {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Weddings</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">A Wedding</h3>
                   <p className="mt-3 text-base text-gray-500"></p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Thank you</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">A Holiday</h3>
                   <p className="mt-3 text-base text-gray-500"></p>
                 </div>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">Retirement</h3>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">A Retirement</h3>
                   <p className="mt-3 text-base text-gray-500"></p>
                 </div>
                 {/* <div>
