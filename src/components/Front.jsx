@@ -152,10 +152,10 @@ const navigation = {
     // },
   ],
   pages: [
-    { name: 'Home', href: '#' },
-    { name: "Pricing", href: 'http://usebundle.co/pricing'},
-   { name: "Order", href: 'http://usebundle.co/order'},
-     { name: "Write", href: 'https://usebundle.co/messages'}
+    { name: 'Home', href: '#' }
+  //   { name: "Pricing", href: 'http://usebundle.co/pricing'},
+  //  { name: "Order", href: 'http://usebundle.co/order'},
+  //    { name: "Write", href: 'https://usebundle.co/messages'}
   ],
 }
 const userNavigation = [
