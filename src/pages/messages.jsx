@@ -12,6 +12,7 @@ const Messages = () => {
   const [ responseThree, setResponseThree] = useState('');
   const [ responseFour, setResponseFour] = useState('');
   const [ responseFive, setResponseFive] = useState('');
+  const [ questionOne, setQuestionOne] = useState('');
   const [ additionalComments, setAdditionalComments ] = useState('');
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
@@ -145,7 +146,21 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="about" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Describe how the person you are writing to has impacted you positively. Are you grateful? If so, in what ways? 
+              <div className="mt-1">
+                  <select
+                    id="question"
+                    name="question"
+                    onChange={e => setQuestionOne(e.target.value)}
+                    value={country}
+                    autoComplete="question"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                 >
+                    <option>Describe how your Bundle recipient has impacted your life positively.</option>
+                    <option>Describe how you are grateful for your Bundle receipient.</option>
+                    <option>What are some qualities that you admire in your Bundle recipient? Why?</option>
+                  </select>
+                </div>
               </label> 
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <textarea
