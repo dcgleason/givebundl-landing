@@ -533,7 +533,7 @@ const postOrderMongoDB = async () => {
             <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
             Recipient Information
            </h2>
-          <label
+           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
