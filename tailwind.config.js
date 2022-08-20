@@ -4,6 +4,13 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
+    minWidth: {
+             '0': '0',
+             '1/4': '25%',
+             '1/2': '50%',
+             '3/4': '75%',
+             'full': '100%',
+            },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
