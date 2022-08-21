@@ -358,6 +358,38 @@ const postOrderMongoDB = async () => {
   }
 }
 
+const postOrderMongoDBGitOwner = async () => { // for the owner to get their own Gift (Bundle)
+  try{
+    const resp =  await fetch("https://yay-api.herokuapp.com/gift/insertOrder", { 
+      method: 'POST', 
+      headers: { 
+        'Content-type': 'application/json'
+       }, 
+      body: JSON.stringify({
+          owner: {
+            ownerName: ownerName,
+            ownerEmail: ownerEmail,
+            shipping: {
+              address: address + " " + apartment,
+              city: city,
+              state: state,
+              zipCode: zip,
+              country: country,
+              phone: phone,
+            }
+          },
+          gift: {
+              giftCode: randomNumber,
+              recipient: name
+          }
+      }) 
+      }); 
+  }
+  catch{
+    console.error(error)
+  }
+}
+
   return (
     <div>
 
