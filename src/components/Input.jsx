@@ -11,11 +11,18 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 
 
 const Input = (props) => {
   const [emails, setEmail] = useState([ { id: uuidv4(),  email: '' }]);
+  const [ownEmails, setOwnEmail] = useState([ { id: uuidv4(),  email: '' }]);
   const [randomNumber, setRandomNumber] = useState(-1)
   const [name, setName] = useState(['']);
   const [ownerName, setOwnerName] = useState('');
@@ -30,6 +37,9 @@ const Input = (props) => {
     type: 'error',
     text: '',
     title: 'Error',
+    open: false
+  })
+  const [ownBundle, setOwnBundle] = useState({
     open: false
   })
   const [ paymentStatus, setPaymentStatus ] = useState({
@@ -81,6 +91,30 @@ const Input = (props) => {
 
 
 
+  const handleChangeInputOwnBundle = (id, e) => {
+    // generateUniqueRandom();
+ 
+     const newInputFields = ownEmails.map(i => {
+       if(id === i.id) {
+         i[e.target.name] = e.target.value
+       }
+       return i;
+     })
+     
+     setOwnEmail(newInputFields);
+     console.log(ownEmails);
+   }
+ 
+ const handleAddFieldsOwnBundle = () => {
+     setOwnEmail([...ownEmails, { id: uuidv4(),  email: '' }])
+   }
+ 
+ const handleRemoveFieldsOwnBundle = id => {
+     const values  = [...ownEmails];
+     values.splice(values.findIndex(value => value.id === id), 1);
+     setOwnEmail(values);
+   }
+
   const handleChangeInput = (id, e) => {
     // generateUniqueRandom();
  
@@ -91,7 +125,7 @@ const Input = (props) => {
        return i;
      })
      
-     setEmail(newInputFields);
+     setOwnEmail(newInputFields);
      console.log(emails);
    }
  
@@ -109,14 +143,28 @@ const Input = (props) => {
      return new Promise(resolve => setTimeout(resolve, ms));
  }
  
+
+ const submitForm = () => {
+
+  setOwnBundle({
+   open: true
+  });
+  setIsLoading(true);
+ }
  
  const submitPayment = async () => {
    // create customer and submit payment
+
+   setOwnBundle({
+    open: false
+  });
  
    setIsLoading(true);
    console.log('ownerName: '+ ownerName);
    console.log('ownerEmail: '+ ownerEmail);
    console.log('clientSecret: '+ props.clientSecret);
+
+   
  
    //(async () => {
  
@@ -259,6 +307,12 @@ const handleClick = () => {
   })
 }
 
+const handleOwnBundleClose = () => {
+  setOwnBundle({
+    open: false
+  })
+}
+
 
 const submitRequest = async (e) => {
   e.preventDefault();
@@ -326,13 +380,59 @@ const postOrderMongoDB = async () => {
           {alert.text}
         </Alert>
       </Dialog>
+
+      <Dialog open={ownBundle.open} onClose={handleOwnBundleClose}>
+        <DialogTitle>Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Would you like us to gather your own Bundle for you? 
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Contributor Email Address"
+            type="email"
+            fullWidth
+            variant="standard"
+          />
+         
+           {ownEmails.map(obj => (
+             <TextField
+             key={obj.id}
+             autoFocus
+             id="name"
+             label="Contributor Email Address"
+             type="email"
+             fullWidth
+             onChange={e => handleChangeInputOwnBundle(obj.id, e)}
+             value={ownEmails.email}
+             variant="standard"
+           />
+    
+            ))}
+             <div className="inline-flex">
+               <button  onClick={handleAddFieldsOwnBundle} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
+             <span className='font-bold'> Add Contributor </span> 
+              </button>
+            <button disabled={ownEmails.length === 1} onClick={() => handleRemoveFieldsOwnBundle(ownEmails.id)} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-2 rounded-r">
+             <span className='font-bold'> Remove Contributor </span>
+            </button>
+           
+           </div>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={submitRequest}>Cancel</Button>
+          <Button onClick={submitRequest}>Submit</Button>
+        </DialogActions>
+      </Dialog>
       
       <div className="flex flex-col items-center justify-around bg-gray-200"></div>
       {/* <div className="w-full max-w-sm m-auto flex flex-col my-32"> */}
 
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-gray-200 border"
-          onSubmit={submitRequest}
+          onSubmit={submitForm}
         >
           {/* <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Pre-Order your Bundle
@@ -609,10 +709,10 @@ const postOrderMongoDB = async () => {
             </button>
            
            </div>
-{/* </div> */}
+              {/* </div> */}
       
       
-</div>
+      </div>
 
     
   );
