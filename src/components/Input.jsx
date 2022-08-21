@@ -376,7 +376,7 @@ const postOrderMongoDB = async () => {
       </Dialog>
 
       <Dialog open={ownBundle.open} onClose={handleOwnBundleClose}>
-        <DialogTitle>Subscribe</DialogTitle>
+        <DialogTitle>Get a Bundle for yourself!</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Would you like us to gather your own Bundle for you? 
