@@ -144,19 +144,13 @@ const Input = (props) => {
  }
  
 
- const submitForm = () => {
 
-  setOwnBundle({
-   open: true
-  });
-  setIsLoading(true);
- }
  
  const submitPayment = async () => {
    // create customer and submit payment
 
    setOwnBundle({
-    open: false
+    open: true
   });
  
    setIsLoading(true);
@@ -422,8 +416,8 @@ const postOrderMongoDB = async () => {
            </div>
         </DialogContent>
         <DialogActions>
-          <Button onClick={submitRequest}>Cancel</Button>
-          <Button onClick={submitRequest}>Submit</Button>
+          <Button onClick={handleOwnBundleClose}>Cancel</Button>
+          <Button onClick={handleOwnBundleClose}>Submit</Button>
         </DialogActions>
       </Dialog>
       
@@ -432,7 +426,7 @@ const postOrderMongoDB = async () => {
 
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-gray-200 border"
-          onSubmit={submitForm}
+          onSubmit={submitRequest}
         >
           {/* <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Pre-Order your Bundle
