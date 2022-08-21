@@ -145,13 +145,17 @@ const Input = (props) => {
  
 
 
+const submitForm = () => {
+  setOwnBundle({
+    open: true
+  });
+
+}
  
  const submitPayment = async () => {
    // create customer and submit payment
 
-   setOwnBundle({
-    open: true
-  });
+   
  
    setIsLoading(true);
    console.log('ownerName: '+ ownerName);
@@ -310,6 +314,9 @@ const handleOwnBundleClose = () => {
 
 const submitRequest = async (e) => {
   e.preventDefault();
+  setOwnBundle({
+    open: false
+  })
   const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
 console.log(result);
@@ -416,8 +423,8 @@ const postOrderMongoDB = async () => {
            </div>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleOwnBundleClose}>Cancel</Button>
-          <Button onClick={handleOwnBundleClose}>Submit</Button>
+          <Button onClick={handleOwnBundleClose}>Go back</Button>
+          <Button onClick={submitRequest}>Submit and Continue</Button>
         </DialogActions>
       </Dialog>
       
@@ -426,7 +433,7 @@ const postOrderMongoDB = async () => {
 
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-gray-200 border"
-          onSubmit={submitRequest}
+          onSubmit={submitForm}
         >
           {/* <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Pre-Order your Bundle
@@ -686,7 +693,7 @@ const postOrderMongoDB = async () => {
            <button
               className="bg-[#f8ad9d] hover:bg-[#f4978e] text-white font-bold py-2 px-4 mt-6 w-full rounded focus:outline-none focus:shadow-outline"
               type="submit"
-              onClick={submitRequest}
+              onClick={submitForm}
             >
               Submit Payment & Pre-Order Bundle
             </button> 
