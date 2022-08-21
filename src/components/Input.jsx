@@ -388,16 +388,6 @@ const postOrderMongoDB = async () => {
           <DialogContentText>
             Would you like us to gather your own Bundle for you? 
           </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Contributor Email Address"
-            type="email"
-            fullWidth
-            variant="standard"
-          />
-         
            {ownEmails.map(obj => (
              <TextField
              key={obj.id}
