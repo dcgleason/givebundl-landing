@@ -104,7 +104,7 @@ const Messages = () => {
       <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
           <div>
-            <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Contributor Message Center</h3>
+            <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
               Please answer the questions below about the gift recipient.
             </p>
@@ -145,35 +145,55 @@ const Messages = () => {
                 </div>
               </div>
             </div>
-
-            <div className="mx-10 lg:grid lg:grid-rows-2 lg:gap-0 sm:grid sm:grid-rows-2 sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <div htmlFor="about" className="block text-sm font-small text-gray-700 sm:mt-px sm:pt-2">
-              <div className="mt-1 w-full m-auto">
-                  <select
-                    id="question"
-                    name="question"
-                    onChange={e => setQuestionOne(e.target.value)}
-                    value={questionOne}
-                    autoComplete="question"
-                    className="shadow appearance-none border lg:col-span-1 rounded w-full m-auto my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    required
-                 >
-                    <option>Describe how your Bundle recipient has impacted your life positively.</option>
-                    <option>Describe how you are grateful for your Bundle receipient.</option>
-                    <option>What are some qualities that you admire in your Bundle recipient? Why?</option>
-                  </select>
-                </div>
-              </div> 
-              <div className="mt-1 w-full sm:mt-0 sm:col-span-1 m-auto">
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Describe how you are grateful for your Bundle receipient.
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
                 <textarea
                   id="about"
                   name="about"
-                  rows={4}
-                  onChange={e => setResponseOne(e.target.value)}
-                  value={responseOne}
-                  className="w-full shadow-sm block focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                  rows={2}
+                  onChange={e => setQuestionOne(e.target.value)}
+                  value={questionOne}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                 />
-                <p className="mt-2 text-sm text-gray-500"></p>
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Describe how your Bundle recipient has impacted your life positively.
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setQuestionTwo(e.target.value)}
+                  value={setQuestionTwo}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              What are some qualities that you admire in your Bundle recipient? Why?
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setQuestionThree(e.target.value)}
+                  value={questionThree}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
               </div>
             </div>
 
