@@ -10,6 +10,12 @@ const Messages = () => {
   const [ questionOne, setQuestionOne] = useState('');
   const [ questionTwo, setQuestionTwo] = useState('');
   const [ questionThree, setQuestionThree] = useState('');
+  const [ name, setName] = useState('');
+  const [ street, setStreet] = useState('');
+  const [ city, setCity] = useState('');
+  const [ state, setState] = useState('');
+  const [ zip, setZip] = useState('');
+  const [ country, setCountry] = useState('');
   const [ responseFour, setResponseFour] = useState('');
   const [ responseFive, setResponseFive] = useState('');
   const [ additionalComments, setAdditionalComments ] = useState('');
@@ -129,7 +135,7 @@ const Messages = () => {
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient name and address (Name, Street, City, State, Zip, Country):
+                Recipient Name:
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -137,8 +143,93 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={2}
-                  onChange={e => setAddress(e.target.value)}
-                  value={address}
+                  onChange={e => setName(e.target.value)}
+                  value={name}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Recipient Street:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setStreet(e.target.value)}
+                  value={street}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Recipient City:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setCity(e.target.value)}
+                  value={city}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Recipient State:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setState(e.target.value)}
+                  value={state}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Recipient Zip Code:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setZip(e.target.value)}
+                  value={zip}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+                </div>
+              </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Recipient Country:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  onChange={e => setCountry(e.target.value)}
+                  value={country}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                 />
                 </div>
