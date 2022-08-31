@@ -33,6 +33,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        apple: ['Homemade Apple', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',
