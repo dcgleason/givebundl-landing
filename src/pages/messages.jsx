@@ -7,12 +7,11 @@ import Head from "next/head"
 
 const Messages = () => {
 
-  const [ responseOne, setResponseOne] = useState('');
-  const [ responseTwo, setResponseTwo] = useState('');
-  const [ responseThree, setResponseThree] = useState('');
+  const [ questionOne, setQuestionOne] = useState('');
+  const [ questionTwo, setQuestionTwo] = useState('');
+  const [ questionThree, setQuestionThree] = useState('');
   const [ responseFour, setResponseFour] = useState('');
   const [ responseFive, setResponseFive] = useState('');
-  const [ questionOne, setQuestionOne] = useState('');
   const [ additionalComments, setAdditionalComments ] = useState('');
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
@@ -173,7 +172,7 @@ const Messages = () => {
                   name="about"
                   rows={2}
                   onChange={e => setQuestionTwo(e.target.value)}
-                  value={setQuestionTwo}
+                  value={questionTwo}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                 />
                 </div>
