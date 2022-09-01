@@ -249,8 +249,8 @@ const Messages = () => {
                 <textarea
                   id="about"
                   name="about"
-                  placeholder='Dear (your recipient), ...'
-                  rows={2}
+                  placeholder='Dear (your recipient),'
+                  rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
                   value={questionOne}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
