@@ -144,6 +144,7 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={2}
+                  placeholder='Elle Young'
                   onChange={e => setName(e.target.value)}
                   value={name}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
@@ -156,7 +157,7 @@ const Messages = () => {
               
               <div className="sm:col-span-2">
                 <label htmlFor="address"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
-                  Recipient Street address
+                  Street address
                 </label>
                 <div className="mt-1">
                   <input
@@ -174,7 +175,7 @@ const Messages = () => {
 
               <div className="sm:col-span-2">
                 <label htmlFor="apartment"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
-                  Recipient Apartment, suite, etc.
+                 Apartment, suite, etc.
                 </label>
                 <div className="mt-1">
                   <input
@@ -189,7 +190,7 @@ const Messages = () => {
               </div>
               <div>
                 <label htmlFor="city"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
-                  Recipient City
+                  City
                 </label>
                 <div className="mt-1">
                   <input
@@ -207,7 +208,7 @@ const Messages = () => {
 
               <div>
                 <label htmlFor="country"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
-                  Recipient Country
+                  Country
                 </label>
                 <div className="mt-1">
                   <select
@@ -227,7 +228,7 @@ const Messages = () => {
 
               <div>
                 <label htmlFor="region"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
-                 Recipient State / Province
+                 State / Province
                 </label>
                 <div className="mt-1">
                   <input
@@ -245,7 +246,7 @@ const Messages = () => {
 
               <div>
                 <label htmlFor="postal-code"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
-                  Recipient Postal code
+                  Postal code
                 </label>
                 <div className="mt-1">
                   <input
