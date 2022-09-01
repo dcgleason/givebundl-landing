@@ -8,20 +8,16 @@ import Head from "next/head"
 const Messages = () => {
 
   const [ questionOne, setQuestionOne] = useState('');
-  const [ questionTwo, setQuestionTwo] = useState('');
-  const [ questionThree, setQuestionThree] = useState('');
   const [ name, setName] = useState('');
   const [ street, setStreet] = useState('');
   const [ city, setCity] = useState('');
   const [ state, setState] = useState('');
   const [ zip, setZip] = useState('');
+  const [ phone, setPhone] = useState('');
+  const [ apartment, setApartment] = useState('');
   const [ country, setCountry] = useState('');
-  const [ responseFour, setResponseFour] = useState('');
-  const [ responseFive, setResponseFive] = useState('');
-  const [ additionalComments, setAdditionalComments ] = useState('');
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
-  const [ address, setAddress ] = useState('');
   const [ picture, setPicture] = useState({});
   const [ success, setSuccess ] = useState(false);
   const [ failure, setFailure ] = useState(false);
@@ -166,8 +162,8 @@ const Messages = () => {
                   <input
                     type="text"
                     name="address"
-                    onChange={e => setAddress(e.target.value)}
-                    value={address}
+                    onChange={e => setStreet(e.target.value)}
+                    value={street}
                     placeholder="123 Main St."
                     id="address"
                     autoComplete="street-address"
