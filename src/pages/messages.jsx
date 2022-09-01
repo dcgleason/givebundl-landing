@@ -155,7 +155,7 @@ const Messages = () => {
           
               
               <div className="sm:col-span-2">
-                <label htmlFor="address"  className="block text-gray-700 text-sm pb-2 font-bold mb-2">
+                <label htmlFor="address"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
                   Recipient Street address
                 </label>
                 <div className="mt-1">
@@ -173,7 +173,7 @@ const Messages = () => {
               </div>
 
               <div className="sm:col-span-2">
-                <label htmlFor="apartment"  className="block text-gray-700 text-sm pb-2 font-bold">
+                <label htmlFor="apartment"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
                   Recipient Apartment, suite, etc.
                 </label>
                 <div className="mt-1">
@@ -188,7 +188,7 @@ const Messages = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="city"  className="block text-gray-700 text-sm pb-2 font-bold">
+                <label htmlFor="city"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
                   Recipient City
                 </label>
                 <div className="mt-1">
@@ -206,7 +206,7 @@ const Messages = () => {
               </div>
 
               <div>
-                <label htmlFor="country"  className="block text-gray-700 text-sm pb-2 font-bold">
+                <label htmlFor="country"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
                   Recipient Country
                 </label>
                 <div className="mt-1">
@@ -227,7 +227,7 @@ const Messages = () => {
               </div>
 
               <div>
-                <label htmlFor="region"  className="block text-gray-700 text-sm pb-2 font-bold">
+                <label htmlFor="region"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
                  Recipient State / Province
                 </label>
                 <div className="mt-1">
@@ -245,7 +245,7 @@ const Messages = () => {
               </div>
 
               <div>
-                <label htmlFor="postal-code"  className="block text-gray-700 text-sm pb-2 font-bold">
+                <label htmlFor="postal-code"  className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-">
                   Recipient Postal code
                 </label>
                 <div className="mt-1">
