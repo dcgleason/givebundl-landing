@@ -114,9 +114,9 @@ const Messages = () => {
       <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
           <div>
-            <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write</h3>
+            <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Please answer the questions below your friend / family member / etc.
+              Please write your letter to your your friend or family member by filling out the form below. 
             </p>
           </div>
 
