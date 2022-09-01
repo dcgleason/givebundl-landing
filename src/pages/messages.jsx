@@ -77,9 +77,14 @@ const Messages = () => {
         body: JSON.stringify({
           createdAt: Date.now(),
           contributorName: contributorName, 
+          recipientName: name,
+          questionOne: questionOne,
+          recipientStreet: street,
+          recipientCity: city,
+          recipientState: state,
+          recipientZip: zip,
+          recipientCountry: country,
           giftCode: giftCode, // need to pass in the gift code from somewhere...when the person ordres it,
-          address: address,
-          messages:  [responseOne, additionalComments]
         }) 
         });
         setSuccess(true);
@@ -237,7 +242,7 @@ const Messages = () => {
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-               How you are grateful for your Bundle receipient?
+               Your message here (Why are you grateful for this person? Has this person impacted your life positively? What qualities do you admire in this person?):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -252,59 +257,8 @@ const Messages = () => {
                 </div>
               </div>
             </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-               How has your Bundle recipient has impacted your life positively?
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setQuestionTwo(e.target.value)}
-                  value={questionTwo}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
-            </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              What are some qualities that you admire in your Bundle recipient? Why?
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setQuestionThree(e.target.value)}
-                  value={questionThree}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
-            </div>
 
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="about" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Additional words:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={4}
-                  onChange={e => setAdditionalComments(e.target.value)}
-                  value={additionalComments}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                <p className="mt-2 text-sm text-gray-500"></p>
-              </div>
-            </div>
-           
-
+    
 
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
