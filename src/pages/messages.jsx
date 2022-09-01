@@ -152,7 +152,7 @@ const Messages = () => {
               </div>
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
+          
               
               <div className="sm:col-span-2">
                 <label htmlFor="address"  className="block text-gray-700 text-sm pb-2 font-bold mb-2">
@@ -285,7 +285,7 @@ const Messages = () => {
                 />
                 </div>
               </div>
-            </div>
+          
             </div>
             
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
