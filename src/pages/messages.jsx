@@ -156,90 +156,142 @@ const Messages = () => {
               </div>
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient Street:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setStreet(e.target.value)}
-                  value={street}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+            <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
+              
+              <div className="sm:col-span-2">
+                <label htmlFor="address"  className="block text-gray-700 text-sm pb-2 font-bold mb-2">
+                  Street address
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="address"
+                    onChange={e => setAddress(e.target.value)}
+                    value={address}
+                    placeholder="123 Main St."
+                    id="address"
+                    autoComplete="street-address"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label htmlFor="apartment"  className="block text-gray-700 text-sm pb-2 font-bold">
+                  Apartment, suite, etc.
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    onChange={e => setApartment(e.target.value)}
+                    value={apartment}
+                    name="apartment"
+                    placeholder="Apt 1A"
+                    id="apartment"
+                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="city"  className="block text-gray-700 text-sm pb-2 font-bold">
+                  City
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    onChange={e => setCity(e.target.value)}
+                    value={city}
+                    placeholder="Boston"
+                    autoComplete="address-level2"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="country"  className="block text-gray-700 text-sm pb-2 font-bold">
+                  Country
+                </label>
+                <div className="mt-1">
+                  <select
+                    id="country"
+                    name="country"
+                    onChange={e => setCountry(e.target.value)}
+                    value={country}
+                    autoComplete="country-name"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                >
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="region"  className="block text-gray-700 text-sm pb-2 font-bold">
+                  State / Province
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="region"
+                    id="region"
+                    onChange={e => setState(e.target.value)}
+                    value={state}
+                    placeholder="MA"
+                    autoComplete="address-level1"
+                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="postal-code"  className="block text-gray-700 text-sm pb-2 font-bold">
+                  Postal code
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="postal-code"
+                    onChange={e => setZip(e.target.value)}
+                    value={zip}
+                    id="postal-code"
+                    placeholder="02117"
+                    autoComplete="postal-code"
+                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                />
+                </div>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label htmlFor="phone" className="block text-gray-700 text-sm pb-2 font-bold">
+                  Phone number
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="phone"
+                    onChange={e => setPhone(e.target.value)}
+                    value={phone}
+                    placeholder="(555) 555-5555"
+                    id="phone"
+                    autoComplete="tel"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
                 />
                 </div>
               </div>
             </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient City:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setCity(e.target.value)}
-                  value={city}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
             </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient State:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setState(e.target.value)}
-                  value={state}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
-            </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient Zip Code:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setZip(e.target.value)}
-                  value={zip}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
-            </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient Country:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  onChange={e => setCountry(e.target.value)}
-                  value={country}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
-            </div>
+            
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
               Why are you grateful for this person? Has this person impacted your life positively? What qualities do you admire in this person? Your message here:
