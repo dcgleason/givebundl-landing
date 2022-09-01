@@ -166,7 +166,7 @@ const Messages = () => {
                     value={street}
                     id="address"
                     autoComplete="street-address"
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
                   />
                 </div>
@@ -183,7 +183,7 @@ const Messages = () => {
                     value={apartment}
                     name="apartment"
                     id="apartment"
-                    className="shadow appearance-none border rounded w-1/2 mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                 />
                 </div>
               </div>
@@ -199,7 +199,7 @@ const Messages = () => {
                     onChange={e => setCity(e.target.value)}
                     value={city}
                     autoComplete="address-level2"
-                    className="shadow appearance-none border rounded w-1/2 my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
                   />
                 </div>
@@ -215,7 +215,7 @@ const Messages = () => {
                     name="country"
                     onChange={e => setCountry(e.target.value)}
                     value={country}
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
                 >
                     <option>United States</option>
@@ -237,7 +237,7 @@ const Messages = () => {
                     onChange={e => setState(e.target.value)}
                     value={state}
                     autoComplete="address-level1"
-                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
                   />
                 </div>
@@ -255,7 +255,7 @@ const Messages = () => {
                     value={zip}
                     id="postal-code"
                     autoComplete="postal-code"
-                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
                 />
                 </div>
