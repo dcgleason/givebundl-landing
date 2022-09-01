@@ -156,7 +156,7 @@ const Messages = () => {
               
               <div className="sm:col-span-2">
                 <label htmlFor="address"  className="block text-gray-700 text-sm pb-2 font-bold mb-2">
-                  Street address
+                  Recipient Street address
                 </label>
                 <div className="mt-1">
                   <input
@@ -175,7 +175,7 @@ const Messages = () => {
 
               <div className="sm:col-span-2">
                 <label htmlFor="apartment"  className="block text-gray-700 text-sm pb-2 font-bold">
-                  Apartment, suite, etc.
+                  Recipient Apartment, suite, etc.
                 </label>
                 <div className="mt-1">
                   <input
@@ -191,7 +191,7 @@ const Messages = () => {
               </div>
               <div>
                 <label htmlFor="city"  className="block text-gray-700 text-sm pb-2 font-bold">
-                  City
+                  Recipient City
                 </label>
                 <div className="mt-1">
                   <input
@@ -210,7 +210,7 @@ const Messages = () => {
 
               <div>
                 <label htmlFor="country"  className="block text-gray-700 text-sm pb-2 font-bold">
-                  Country
+                  Recipient Country
                 </label>
                 <div className="mt-1">
                   <select
@@ -231,7 +231,7 @@ const Messages = () => {
 
               <div>
                 <label htmlFor="region"  className="block text-gray-700 text-sm pb-2 font-bold">
-                  State / Province
+                 Recipient State / Province
                 </label>
                 <div className="mt-1">
                   <input
@@ -250,7 +250,7 @@ const Messages = () => {
 
               <div>
                 <label htmlFor="postal-code"  className="block text-gray-700 text-sm pb-2 font-bold">
-                  Postal code
+                  Recipient Postal code
                 </label>
                 <div className="mt-1">
                   <input
@@ -262,25 +262,6 @@ const Messages = () => {
                     placeholder="02117"
                     autoComplete="postal-code"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    required
-                />
-                </div>
-              </div>
-
-              <div className="sm:col-span-2">
-                <label htmlFor="phone" className="block text-gray-700 text-sm pb-2 font-bold">
-                  Phone number
-                </label>
-                <div className="mt-1">
-                  <input
-                    type="text"
-                    name="phone"
-                    onChange={e => setPhone(e.target.value)}
-                    value={phone}
-                    placeholder="(555) 555-5555"
-                    id="phone"
-                    autoComplete="tel"
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
                 />
                 </div>
