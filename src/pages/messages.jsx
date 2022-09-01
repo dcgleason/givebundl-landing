@@ -258,6 +258,7 @@ const Messages = () => {
                     onChange={e => setZip(e.target.value)}
                     value={zip}
                     id="postal-code"
+                    placeholder='43054'
                     autoComplete="postal-code"
                     className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
