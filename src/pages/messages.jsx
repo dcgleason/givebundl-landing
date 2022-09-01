@@ -166,6 +166,7 @@ const Messages = () => {
                     onChange={e => setStreet(e.target.value)}
                     value={street}
                     id="address"
+                    placeholder="123 Main Street"
                     autoComplete="street-address"
                     className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
@@ -200,6 +201,7 @@ const Messages = () => {
                     onChange={e => setCity(e.target.value)}
                     value={city}
                     autoComplete="address-level2"
+                    placeholder="New Albany"
                     className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                     required
                   />
@@ -235,6 +237,7 @@ const Messages = () => {
                     type="text"
                     name="region"
                     id="region"
+                    placeholder="Ohio"
                     onChange={e => setState(e.target.value)}
                     value={state}
                     autoComplete="address-level1"
