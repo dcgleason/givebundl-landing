@@ -164,7 +164,6 @@ const Messages = () => {
                     name="address"
                     onChange={e => setStreet(e.target.value)}
                     value={street}
-                    placeholder="123 Main St."
                     id="address"
                     autoComplete="street-address"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -183,7 +182,6 @@ const Messages = () => {
                     onChange={e => setApartment(e.target.value)}
                     value={apartment}
                     name="apartment"
-                    placeholder="Apt 1A"
                     id="apartment"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 />
@@ -200,7 +198,6 @@ const Messages = () => {
                     id="city"
                     onChange={e => setCity(e.target.value)}
                     value={city}
-                    placeholder="Boston"
                     autoComplete="address-level2"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
@@ -240,7 +237,6 @@ const Messages = () => {
                     id="region"
                     onChange={e => setState(e.target.value)}
                     value={state}
-                    placeholder="MA"
                     autoComplete="address-level1"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
@@ -259,7 +255,6 @@ const Messages = () => {
                     onChange={e => setZip(e.target.value)}
                     value={zip}
                     id="postal-code"
-                    placeholder="02117"
                     autoComplete="postal-code"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
