@@ -242,7 +242,7 @@ const Messages = () => {
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-               Your message here (Why are you grateful for this person? Has this person impacted your life positively? What qualities do you admire in this person?):
+              Why are you grateful for this person? Has this person impacted your life positively? What qualities do you admire in this person? Your message here:
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
