@@ -183,7 +183,7 @@ const Messages = () => {
                     value={apartment}
                     name="apartment"
                     id="apartment"
-                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-1/2 mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 />
                 </div>
               </div>
@@ -199,7 +199,7 @@ const Messages = () => {
                     onChange={e => setCity(e.target.value)}
                     value={city}
                     autoComplete="address-level2"
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-1/2 my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
                   />
                 </div>
@@ -215,7 +215,6 @@ const Messages = () => {
                     name="country"
                     onChange={e => setCountry(e.target.value)}
                     value={country}
-                    autoComplete="country-name"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
                 >
