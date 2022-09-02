@@ -65,7 +65,7 @@ const Messages = () => {
     //   }
     // }
       // message upload
-      const resp =  await fetch("https://yay-api.herokuapp.comg/gift/insertmessages", { 
+      const resp =  await fetch("https://yay-api.herokuapp.com/gift/insertmessages", { 
         method: 'POST', 
         headers: { 
           'Content-type': 'application/json'
