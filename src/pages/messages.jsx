@@ -86,7 +86,7 @@ const Messages = () => {
         setSuccess(true);
      
     }
-    catch{
+    catch (error){
       console.log("error error"+ error);
       setFailure(true);
     }
