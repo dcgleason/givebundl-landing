@@ -103,9 +103,6 @@ const Messages = () => {
     {failure? <Failure/> : <div></div>}
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
         onSubmit={postMessagesMongoDB}
-        action="/pictureUpload"
-        method="post" 
-        encType="multipart/form-data"
         >
       <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
@@ -309,16 +306,9 @@ const Messages = () => {
             </div>
           </div>
         </div>
-
-
-        
-
-
-    
-          </div>
-        </div>
-
-      </div>
+       </div>
+     </div>
+     </div>
 
       <div className="pt-5">
         <div className="flex justify-end">
