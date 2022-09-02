@@ -79,7 +79,7 @@ const Messages = () => {
           recipientCity: city,
           recipientState: state,
           recipientZip: zip,
-          recipientCountry: country,
+          recipientCountry: 'USA',
           giftCode: giftCode, // need to pass in the gift code from somewhere...when the person ordres it,
         }) 
         });
