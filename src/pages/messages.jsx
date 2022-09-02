@@ -39,31 +39,31 @@ const Messages = () => {
     try{
 
 
-      // image upload
+    //   // image upload
 
-      if(picture){
+    //   if(picture){
 
-      const formData = new FormData();
-      formData.append("file", picture.pictureAsFile);
+    //   const formData = new FormData();
+    //   formData.append("file", picture.pictureAsFile);
   
-      console.log(picture.pictureAsFile);
+    //   console.log(picture.pictureAsFile);
   
-      for (var key of formData.entries()) {
-        console.log(key[0] + ", " + key[1]);
-      }
+    //   for (var key of formData.entries()) {
+    //     console.log(key[0] + ", " + key[1]);
+    //   }
   
-      const data = await fetch("https://yay-api.herokuapp.com/gift/imageupload", {
-        method: "post",
-        headers: { "Content-Type": "multipart/form-data" },
-        body: formData,
-      });
-      const uploadedImage = await data.json();
-      if (uploadedImage) {
-        console.log("Successfully uploaded image");
-      } else {
-        console.log("Error Found");
-      }
-    }
+    //   const data = await fetch("https://yay-api.herokuapp.com/gift/imageupload", {
+    //     method: "post",
+    //     headers: { "Content-Type": "multipart/form-data" },
+    //     body: formData,
+    //   });
+    //   const uploadedImage = await data.json();
+    //   if (uploadedImage) {
+    //     console.log("Successfully uploaded image");
+    //   } else {
+    //     console.log("Error Found");
+    //   }
+    // }
       // message upload
       const resp =  await fetch("https://yay-api.herokuapp.comg/gift/insertmessages", { 
         method: 'POST', 
