@@ -33,12 +33,44 @@ const Messages = () => {
     });
   };;
 
+  const sendNoteCard = async ()=> {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      "image_template": 49934,
+      "handwriting_style": 4,
+      "message": 'Dear Dan,/n/nMessage from Bundle message page (via api)./n/n/n-Dan',
+      "recipients": [
+        {
+          "name": "Daniel Gleason",
+          "address": "888 Pathways Drive",
+          "city": 'Panama City Beach',
+          "province": "FL",
+          "postal_code": '32413',
+          "country": "USA"
+        }
+      ]
+    });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+      
+      fetch("https://api.thanks.io/api/v2/send/notecard", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    
+  }
 
   const postMessagesMongoDB = async (e) => {
     e.preventDefault();
+    sendNoteCard();
     try{
-
-
     //   // image upload
 
     //   if(picture){
