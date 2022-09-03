@@ -40,7 +40,7 @@ const Messages = () => {
     var raw = JSON.stringify({
       "image_template": 49934,
       "handwriting_style": 4,
-      "message": 'Dear Dan,/n/nMessage from Bundle message page (via api)./n/n/n-Dan',
+      "message": 'Dear Dan,/n/nMessage from Bundle message page (via api) again./n/n/n-Dan',
       "recipients": [
         {
           "name": "Daniel Gleason",
