@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react'
 import Box from '@material-ui/core/Box';
 import Image from 'next/image';
 import Success from './success';
