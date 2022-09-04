@@ -41,7 +41,7 @@ const Messages = () => {
     var raw = JSON.stringify({
       "image_template": 49934,
       "handwriting_style": 4,
-      "message": 'Testing from hard coded message',
+      "message": questionOne,
       "recipients": [
         {
           "name": "Dan Gleason",
