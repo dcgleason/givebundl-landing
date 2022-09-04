@@ -40,14 +40,14 @@ const Messages = () => {
     var raw = JSON.stringify({
       "image_template": 49934,
       "handwriting_style": 4,
-      "message": 'Dear Dan,/n/nMessage from Bundle message page (via api) again./n/n/n-Dan',
+      "message": questionOne,
       "recipients": [
         {
-          "name": "Daniel Gleason",
-          "address": "888 Pathways Drive",
-          "city": 'Panama City Beach',
-          "province": "FL",
-          "postal_code": '32413',
+          "name": name,
+          "address": street,
+          "city": city,
+          "province": state,
+          "postal_code": zip,
           "country": "USA"
         }
       ]
