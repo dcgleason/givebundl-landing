@@ -21,7 +21,7 @@ const Messages = () => {
   const [ country, setCountry] = useState('');
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
-  const [ picture, setPicture] = useState({});
+  const [selectedImage, setSelectedImage] = useState(null);
   const [ success, setSuccess ] = useState(false);
   const [ failure, setFailure ] = useState(false);
 
@@ -333,7 +333,16 @@ const Messages = () => {
                 <div className="flex text-sm text-gray-600">
                   <label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                     <span>Upload a image</span>
-                    <input id="file-upload" name="file-upload" type="file" className="sr-only"/>
+                    <input
+                        id="file-upload" 
+                       name="file-upload" 
+                       type="file" 
+                       onChange={(event) => { 
+                          console.log(event.target.files[0]);
+                          setSelectedImage(event.target.files[0]); 
+                          console.log('selected image' + selectedImage);
+                          }} 
+                      className="sr-only"/>
                   </label>
                   <p className="pl-1">here</p>
                 </div>
