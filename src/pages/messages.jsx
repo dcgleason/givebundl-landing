@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Box from '@material-ui/core/Box';
+import Image from 'next/image';
 import Success from './success';
 import Failure from './error';
 import Head from "next/head"
@@ -16,7 +18,6 @@ const Messages = () => {
   const [ city, setCity] = useState('');
   const [ state, setState] = useState('');
   const [ zip, setZip] = useState('');
-  const [ phone, setPhone] = useState('');
   const [ apartment, setApartment] = useState('');
   const [ country, setCountry] = useState('');
   const [ contributorName, setContributorName ] = useState('');
@@ -24,17 +25,13 @@ const Messages = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [ success, setSuccess ] = useState(false);
   const [ failure, setFailure ] = useState(false);
+  const [imageUrl, setImageUrl] = useState(null);
 
-  const uploadPicture = (e) => {
-    setPicture({
-      /* contains the preview, if you want to show the picture to the user
-           you can access it with this.state.currentPicture
-       */
-      picturePreview: URL.createObjectURL(e.target.files[0]),
-      /* this contains the file we want to send */
-      pictureAsFile: e.target.files[0],
-    });
-  };;
+  useEffect(() => {
+    if (selectedImage) {
+      setImageUrl(URL.createObjectURL(selectedImage));
+    }
+  }, [selectedImage]);
 
   const sendNoteCard = async ()=> {
     var myHeaders = new Headers();
@@ -350,6 +347,12 @@ const Messages = () => {
               </div>
             </div>
           </div>
+          { imageUrl && selectedImage && (
+              <Box mt={2} textAlign="center">
+                <div>Image Preview:</div>
+                <Image src={imageUrl} alt={'Image'} height="100px"/>
+              </Box>
+)}
         </div>
        </div>
      </div>
