@@ -8,11 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
-  },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@emotion/react": "^11.10.4",
