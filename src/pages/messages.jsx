@@ -44,11 +44,11 @@ const Messages = () => {
       "message": questionOne,
       "recipients": [
         {
-          "name": "Dan Gleason",
-          "address": "123 Steinmann Ave",
-          "city": "Middlebury",
-          "province": "CT",
-          "postal_code": "06762",
+          "name": name,
+          "address": street,
+          "city": city,
+          "province": state,
+          "postal_code": zip,
           "country": "USA"
         }
       ]
@@ -267,7 +267,7 @@ const Messages = () => {
                     type="text"
                     name="region"
                     id="region"
-                    placeholder="Ohio"
+                    placeholder="OH"
                     onChange={e => setState(e.target.value)}
                     value={state}
                     autoComplete="address-level1"
