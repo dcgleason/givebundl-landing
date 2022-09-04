@@ -350,7 +350,7 @@ const Messages = () => {
           { imageUrl && selectedImage && (
               <div>
                 <div className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2" >Image Preview:</div>
-                <Image src={imageUrl} alt={'Image'} height="100" width='100'/>
+                <Image src={imageUrl} alt={'Image'} height="200" width='200'/>
               </div>
 )}
         </div>
