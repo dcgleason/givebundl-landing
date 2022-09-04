@@ -40,14 +40,14 @@ const Messages = () => {
     var raw = JSON.stringify({
       "image_template": 49934,
       "handwriting_style": 4,
-      "message": questionOne,
+      "message": 'Testing from hard coded message',
       "recipients": [
         {
-          "name": name,
-          "address": street,
-          "city": city,
-          "province": state,
-          "postal_code": zip,
+          "name": "Dan Gleason",
+          "address": "123 Steinmann Ave",
+          "city": "Middlebury",
+          "province": "CT",
+          "postal_code": "06762",
           "country": "USA"
         }
       ]
