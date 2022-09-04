@@ -339,9 +339,9 @@ const Messages = () => {
                        type="file" 
                        onChange={(event) => { 
                           console.log(event.target.files[0]);
-                          setSelectedImage(event.target.files[0]); 
-                          console.log('selected image' + selectedImage);
+                          setSelectedImage(event.target.files[0]);
                           }} 
+                        value={selectedImage}
                       className="sr-only"/>
                   </label>
                   <p className="pl-1">here</p>
