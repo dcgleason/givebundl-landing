@@ -348,10 +348,10 @@ const Messages = () => {
             </div>
           </div>
           { imageUrl && selectedImage && (
-              <Box mt={2} textAlign="center">
+              <div>
                 <div>Image Preview:</div>
-                <Image src={imageUrl} alt={'Image'} height="100px"/>
-              </Box>
+                <Image src={imageUrl} alt={'Image'} height="100" width='100'/>
+              </div>
 )}
         </div>
        </div>
