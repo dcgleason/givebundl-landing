@@ -43,7 +43,7 @@ const Messages = () => {
 
     var raw = JSON.stringify({
       "image_template": 49934,
-      "handwriting_style": 4,
+      "handwriting_style": 1,
       "message": questionOne,
       "recipients": [
         {
