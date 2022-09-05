@@ -115,6 +115,7 @@ const Messages = () => {
           recipientZip: zip,
           recipientCountry: 'USA',
           giftCode: giftCode, // need to pass in the gift code from somewhere...when the person ordres it,
+          image: selectedImage
         }) 
         });
         setSuccess(true);
