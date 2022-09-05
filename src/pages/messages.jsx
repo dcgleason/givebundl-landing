@@ -312,7 +312,7 @@ const Messages = () => {
                   spellCheck="true"
                   placeholder='Dear Elle,
 
-                  Your letter]
+                  [Your letter]
                   
                   Sincerely,
                   [Your name]'
