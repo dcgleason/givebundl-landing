@@ -332,7 +332,7 @@ const Messages = () => {
                 </svg>
                 <div className="flex text-sm text-gray-600">
                   <label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                    <span>Upload a image</span>
+                   {selectedImage ? <span> Image Ready to Send</span> : <span>Upload a image</span>}
                     <input
                         id="file-upload" 
                        name="file-upload" 
@@ -349,12 +349,12 @@ const Messages = () => {
               </div>
             </div>
           </div>
-          { imageUrl && selectedImage && (
+          {/* { imageUrl && selectedImage && (
               <div>
                 <div className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2" >Image Preview:</div>
                 <Image src={imageUrl} alt={'Image'} height="200" width='200'/>
               </div>
-)}
+)} */}
         </div>
        </div>
      </div>
