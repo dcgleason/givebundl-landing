@@ -309,8 +309,9 @@ const Messages = () => {
                 <textarea
                   id="about"
                   name="about"
+                  spellCheck="true"
                   placeholder='Dear Elle,
-                  
+
                   Your letter]
                   
                   Sincerely,
