@@ -31,6 +31,7 @@ const Messages = () => {
   useEffect(() => {
     if (selectedImage) {
       setImageUrl(URL.createObjectURL(selectedImage));
+      console.log('selectedimage ' + selectedImage);
     }
   }, [selectedImage]);
 
