@@ -309,7 +309,7 @@ const Messages = () => {
                 <textarea
                   id="about"
                   name="about"
-                  placeholder='Dear (your recipient),'
+                  placeholder='Dear Elle,<br><br>[Your letter]<br><br>Sincerely,<br>[Your name]'
                   rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
                   value={questionOne}
