@@ -310,7 +310,7 @@ const Messages = () => {
                   id="about"
                   name="about"
                   spellCheck="true"
-                  placeholder='Dear Elle,&#10;&#10;[Your letter]&#10;&#10;Sincerely,&#10;[Your name]'
+                  placeholder="Dear Elle,&#10;&#10;[Your letter]&#10;&#10;Sincerely,&#10;[Your name]"
                   rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
                   value={questionOne}
