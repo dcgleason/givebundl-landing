@@ -22,10 +22,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 const Input = (props) => {
   const [emails, setEmail] = useState([ { id: uuidv4(),  email: '' }]);
-  const [ownEmails, setOwnEmail] = useState([ { id: uuidv4(),  email: '' }]);
   const [randomNumber, setRandomNumber] = useState(-1)
   const [name, setName] = useState(['']);
-  const [ownerName, setOwnerName] = useState('');
   const [address, setAddress] = useState('');
   const [apartment, setApartment] = useState('');
   const [zip, setZip] = useState('');
@@ -49,7 +47,6 @@ const Input = (props) => {
     open: false
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [giftOwnerMessage, setGiftOwnerMessage] = useState('');
   const [ownerEmail, setOwnerEmail] = useState('');
   const stripe = useStripe();
   const elements = useElements();
@@ -121,22 +118,18 @@ const Input = (props) => {
  
 
  const sendEmails = async () => {
-  const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
+  //const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
   try {
-        for(var j=0; j<emails.length; j++){
-          if(emails[j]){
-            (async function(j){
+          if(ownerEmail){
             const response =  await fetch("https://yay-api.herokuapp.com/email/send", { 
               method: 'POST', 
               headers: { 
                 'Content-type': 'application/json'
                }, 
               body: JSON.stringify({
-                email: emails[j].email,
-                giftCode: randomNumber,
+                email: ownerEmail,
                 ownerName: ownerName,
-                recipient: name,
-                giftOwnerMessage: giftOwnerMessage
+                recipient: name
               }) 
               }); 
       
@@ -146,12 +139,9 @@ const Input = (props) => {
              }else if(response === 500){
                alert("Message failed to send.")
              }
-            console.log('contributor email ' + emails[j].email);
-            console.log('random number' + randomNumber)
-            console.log('recipient - contributor' + name);
-            })(j);
+
           }
-        }
+        
       }
       catch {
         console.log('error in sending email(s)');
@@ -160,15 +150,10 @@ const Input = (props) => {
 
  const submitPayment = async () => {
   // create customer and submit payment
-
-  
-
   setIsLoading(true);
   console.log('ownerName: '+ ownerName);
   console.log('ownerEmail: '+ ownerEmail);
   console.log('clientSecret: '+ props.clientSecret);
-
-  
 
   //(async () => {
 
@@ -185,6 +170,7 @@ const Input = (props) => {
         },
       },
     );
+    // handling return values
     if (error) {
       setPaymentStatus({
         status: "Error: " + error.message,
@@ -202,11 +188,9 @@ const Input = (props) => {
           type: "success",
           open: true
         })
-     // postOrderMongoDB()
-      //sendEmails();
-    return 'submitpayment function complete - success'
-
-      
+      postOrderMongoDB()
+      sendEmails();
+    return 'submitpayment function complete - success' 
      
     }
 //  })();
@@ -246,8 +230,6 @@ const submitForm = async () => {
   console.log(result);
   setIsLoading(false);
   //setNotification(true);
-  postOrderMongoDB()
-  sendEmails()
 
 }
  
