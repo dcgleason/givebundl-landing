@@ -730,7 +730,7 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
               type="submit"
               onClick={submitForm}
             >
-              Submit payment & Pre-Order Bundle
+              Submit Payment & Pre-Order Bundle
             </button> 
           </div>
       }
