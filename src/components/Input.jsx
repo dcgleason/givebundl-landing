@@ -458,9 +458,9 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-gray-200 border"
           onSubmit={submitForm}
         >
-          {/* <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
+          <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Pre-Order your Bundle
-          </h1> */}
+          </h1>
           <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
             Your Information
           </h2>
