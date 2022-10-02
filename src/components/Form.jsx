@@ -22,7 +22,7 @@ const HubspotContactForm = () => {
 
     return (
         <div>
-            <h1 className="text-2xl mb-12 font-extrabold tracking-tight text-gray-900 sm:text-4xl" >...sign up to be the first to hear about when we launch</h1>
+            <h1 className="text-2xl mb-12 font-bold tracking-tight text-gray-900 sm:text-4xl" >...sign up to be the first to hear about when we launch</h1>
             <div id="hubspotForm"></div>
         </div>
     );
