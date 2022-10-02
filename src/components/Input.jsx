@@ -54,31 +54,31 @@ const Input = (props) => {
   const stripe = useStripe();
   const elements = useElements();
  
-  useEffect(() => {
+  // useEffect(() => {
 
-  const fetchData = async () => {
-    var random = Number((Math.random() * 1000000000).toFixed())
-      // get the data from the api
-      const resp =  await fetch("https://yay-api.herokuapp.com/unique/check", { 
-        method: 'POST', 
-        headers: { 
-          'Content-type': 'application/json'
-         }, 
-        body: JSON.stringify({
-         giftCode: random // possible random Number 
-        })  
-        }); 
-     if (!resp){ ////response false - there does not exist a number in the db already, set 
-       console.log("the repsonse is: " + resp);
-       setRandomNumber(random);
-       console.log('random number set to:' + random)
-     }
-    else {
-      fetchData()  // recusively run until response is false and setRandomNumber has run.
-    }
-  };
-    fetchData();
-    }, [])
+  // const fetchData = async () => {
+  //   var random = Number((Math.random() * 1000000000).toFixed())
+  //     // get the data from the api
+  //     const resp =  await fetch("https://yay-api.herokuapp.com/unique/check", { 
+  //       method: 'POST', 
+  //       headers: { 
+  //         'Content-type': 'application/json'
+  //        }, 
+  //       body: JSON.stringify({
+  //        giftCode: random // possible random Number 
+  //       })  
+  //       }); 
+  //    if (!resp){ ////response false - there does not exist a number in the db already, set 
+  //      console.log("the repsonse is: " + resp);
+  //      setRandomNumber(random);
+  //      console.log('random number set to:' + random)
+  //    }
+  //   else {
+  //     fetchData()  // recusively run until response is false and setRandomNumber has run.
+  //   }
+  // };
+  //   fetchData();
+  //   }, [])
 
     useEffect(() => {
       setAlert({
@@ -90,30 +90,6 @@ const Input = (props) => {
   }, [paymentStatus]);
 
 
-
-  const handleChangeInputOwnBundle = (id, e) => {
-    // generateUniqueRandom();
- 
-     const newInputFields = ownEmails.map(i => {
-       if(id === i.id) {
-         i[e.target.name] = e.target.value
-       }
-       return i;
-     })
-     
-     setOwnEmail(newInputFields);
-     console.log(ownEmails);
-   }
- 
- const handleAddFieldsOwnBundle = () => {
-     setOwnEmail([...ownEmails, { id: uuidv4(),  email: '' }])
-   }
- 
- const handleRemoveFieldsOwnBundle = id => {
-     const values  = [...ownEmails];
-     values.splice(values.findIndex(value => value.id === id), 1);
-     setOwnEmail(values);
-   }
 
   const handleChangeInput = (id, e) => {
     // generateUniqueRandom();
@@ -144,78 +120,138 @@ const Input = (props) => {
  }
  
 
+ const sendEmails = async () => {
+  const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
+  try {
+        for(var j=0; j<emails.length; j++){
+          if(emails[j]){
+            (async function(j){
+            const response =  await fetch("https://yay-api.herokuapp.com/email/send", { 
+              method: 'POST', 
+              headers: { 
+                'Content-type': 'application/json'
+               }, 
+              body: JSON.stringify({
+                email: emails[j].email,
+                giftCode: randomNumber,
+                ownerName: ownerName,
+                recipient: name,
+                giftOwnerMessage: giftOwnerMessage
+              }) 
+              }); 
+      
+            if (response === 200){
+             alert("Message Sent."); 
+              this.resetForm()
+             }else if(response === 500){
+               alert("Message failed to send.")
+             }
+            console.log('contributor email ' + emails[j].email);
+            console.log('random number' + randomNumber)
+            console.log('recipient - contributor' + name);
+            })(j);
+          }
+        }
+      }
+      catch {
+        console.log('error in sending email(s)');
+      }
+    };
+
+ const submitPayment = async () => {
+  // create customer and submit payment
+
+  
+
+  setIsLoading(true);
+  console.log('ownerName: '+ ownerName);
+  console.log('ownerEmail: '+ ownerEmail);
+  console.log('clientSecret: '+ props.clientSecret);
+
+  
+
+  //(async () => {
+
+    const {paymentIntent, error} = await stripe.confirmCardPayment(
+      props.clientSecret,
+      {
+        payment_method: {
+          type: "card",
+          card: elements.getElement(CardElement),
+          billing_details: {
+            name: ownerName,
+            email: ownerEmail
+          },
+        },
+      },
+    );
+    if (error) {
+      setPaymentStatus({
+        status: "Error: " + error.message,
+        title: "Error",
+        type: "error",
+        open: true
+      })
+      console.log("There has been a payment error", error.message)
+    return 'submitpayment function complete - error'
+    } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+      console.log("Your payment has succeeded", paymentIntent.status)
+      setPaymentStatus({
+          status: "Your payment of $49 dollars succeeded",
+          title: "Success",
+          type: "success",
+          open: true
+        })
+     // postOrderMongoDB()
+      //sendEmails();
+    return 'submitpayment function complete - success'
+
+      
+     
+    }
+//  })();
+
+
+
+}
+
+const postOrderMongoDB = async () => {
+  try{
+    const resp =  await fetch("https://yay-api.herokuapp.com/gift/insertOrder", { 
+      method: 'POST', 
+      headers: { 
+        'Content-type': 'application/json'
+       }, 
+      body: JSON.stringify({
+          owner: {
+            ownerName: ownerName,
+            ownerEmail: ownerEmail        
+          },
+          gift: {
+              recipient: name
+          }
+      }) 
+      }); 
+  }
+  catch{
+    console.error(error)
+  }
+}
+
 
 const submitForm = async () => {
   e.preventDefault();
-  // setOwnBundle({
-  //   open: false
-  // })
   const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
   console.log(result);
   setIsLoading(false);
   //setNotification(true);
-  //postOrderMongoDB()
-  //sendEmails()
+  postOrderMongoDB()
+  sendEmails()
 
 }
  
- const submitPayment = async () => {
-   // create customer and submit payment
 
-   
- 
-   setIsLoading(true);
-   console.log('ownerName: '+ ownerName);
-   console.log('ownerEmail: '+ ownerEmail);
-   console.log('clientSecret: '+ props.clientSecret);
-
-   
- 
-   //(async () => {
- 
-     const {paymentIntent, error} = await stripe.confirmCardPayment(
-       props.clientSecret,
-       {
-         payment_method: {
-           type: "card",
-           card: elements.getElement(CardElement),
-           billing_details: {
-             name: ownerName,
-             email: ownerEmail
-           },
-         },
-       },
-     );
-     if (error) {
-       setPaymentStatus({
-         status: "Error: " + error.message,
-         title: "Error",
-         type: "error",
-         open: true
-       })
-       console.log("There has been a payment error", error.message)
-     return 'submitpayment function complete - error'
-     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
-       console.log("Your payment has succeeded", paymentIntent.status)
-       setPaymentStatus({
-           status: "Your payment of $49 dollars succeeded",
-           title: "Success",
-           type: "success",
-           open: true
-         })
-      // postOrderMongoDB()
-       //sendEmails();
-     return 'submitpayment function complete - success'
- 
-       
-      
-     }
- //  })();
- 
- 
- 
- }
 // const updatePaymentIntent = async () => {
 
 //   const resp =  await fetch("https://yay-api.herokuapp.com/stripe/updatePaymentIntent", { 
@@ -268,44 +304,7 @@ const submitForm = async () => {
 //     }
 
 
-const sendEmails = async () => {
-      const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
-      try {
-            for(var j=0; j<emails.length; j++){
-              if(emails[j]){
-                (async function(j){
-                const response =  await fetch("https://yay-api.herokuapp.com/email/send", { 
-                  method: 'POST', 
-                  headers: { 
-                    'Content-type': 'application/json'
-                   }, 
-                  body: JSON.stringify({
-                    email: emails[j].email,
-                    giftCode: randomNumber,
-                    ownerName: ownerName,
-                    recipient: name,
-                    giftOwnerMessage: giftOwnerMessage
-                  }) 
-                  }); 
-          
-                if (response === 200){
-                 alert("Message Sent."); 
-                  this.resetForm()
-                 }else if(response === 500){
-                   alert("Message failed to send.")
-                 }
-                console.log('contributor email ' + emails[j].email);
-                console.log('random number' + randomNumber)
-                console.log('recipient - contributor' + name);
-                })(j);
-              }
-            }
-          }
-          catch {
-            console.log('error in sending email(s)');
-          }
-        };
-  
+
 
 const handleClick = () => {
   setAlert({
@@ -313,92 +312,22 @@ const handleClick = () => {
   })
 }
 
-const handleOwnBundleClose = () => {
-  setOwnBundle({
-    open: false
-  })
-}
 
 
-const submitRequest = async (e) => {
-  e.preventDefault();
-  // setOwnBundle({
-  //   open: false
-  // })
-  const result = await submitPayment();
- // alert('Form submitted. Y&Y is still in development - your card was not charged!')
-console.log(result);
-setIsLoading(false);
-//setNotification(true);
-//postOrderMongoDB()
-//sendEmails()
-};
+// const submitRequest = async (e) => {
+//   e.preventDefault();
+//   // setOwnBundle({
+//   //   open: false
+//   // })
+//   const result = await submitPayment();
+//  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
+// console.log(result);
+// setIsLoading(false);
+// //setNotification(true);
+// //postOrderMongoDB()
+// //sendEmails()
+// };
 
-
-
-const postOrderMongoDB = async () => {
-  try{
-    const resp =  await fetch("https://yay-api.herokuapp.com/gift/insertOrder", { 
-      method: 'POST', 
-      headers: { 
-        'Content-type': 'application/json'
-       }, 
-      body: JSON.stringify({
-          owner: {
-            ownerName: ownerName,
-            ownerEmail: ownerEmail,
-            shipping: {
-              address: address + " " + apartment,
-              city: city,
-              state: state,
-              zipCode: zip,
-              country: country,
-              phone: phone,
-            }
-          },
-          gift: {
-              giftCode: randomNumber,
-              recipient: name
-          }
-      }) 
-      }); 
-  }
-  catch{
-    console.error(error)
-  }
-}
-
-const postOrderMongoDBGitOwner = async () => { // for the owner to get their own Gift (Bundle)
-  try{
-    const resp =  await fetch("https://yay-api.herokuapp.com/gift/insertOrder", { 
-      method: 'POST', 
-      headers: { 
-        'Content-type': 'application/json'
-       }, 
-      body: JSON.stringify({
-          owner: {
-            ownerName: ownerName,
-            ownerEmail: ownerEmail,
-            shipping: {
-              address: address + " " + apartment,
-              city: city,
-              state: state,
-              zipCode: zip,
-              country: country,
-              phone: phone,
-            }
-          },
-          gift: {
-              giftCode: randomNumber,
-              recipient: name
-          }
-      }) 
-      }); 
-  }
-  catch{
-    console.error(error)
-  }
-}
 
   return (
     <div>
