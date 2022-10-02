@@ -165,7 +165,7 @@ const userNavigation = [
 const product = {
   name: "Blow your loved one away...with gratidue.",
   href: '#',
-  price: '👌',
+  price: '$79',
   description:
    '',
   imageSrc: "test",
