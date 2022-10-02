@@ -163,7 +163,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Surpise your loved one, with gratidue.",
+  name: "Surpise your loved one...with gratidue.",
   href: '#',
   price: '👌',
   description:
