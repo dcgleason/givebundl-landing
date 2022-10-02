@@ -48,6 +48,7 @@ const Input = (props) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [ownerEmail, setOwnerEmail] = useState('');
+  const [ownerName, setOwnerName] = useState('');
   const stripe = useStripe();
   const elements = useElements();
  
