@@ -314,9 +314,9 @@ const handleOwnBundleClose = () => {
 
 const submitRequest = async (e) => {
   e.preventDefault();
-  setOwnBundle({
-    open: false
-  })
+  // setOwnBundle({
+  //   open: false
+  // })
   const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
 console.log(result);
@@ -414,7 +414,7 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
         </Alert>
       </Dialog>
 
-      <Dialog open={ownBundle.open} onClose={handleOwnBundleClose}>
+      {/* <Dialog open={ownBundle.open} onClose={handleOwnBundleClose}>
         <DialogTitle>Get a Bundle for yourself!</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -449,7 +449,7 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
           <Button onClick={handleOwnBundleClose}>Go back</Button>
           <Button onClick={submitRequest}>Submit and Continue</Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}
       
       <div className="flex flex-col items-center justify-around bg-gray-200"></div>
       {/* <div className="w-full max-w-sm m-auto flex flex-col my-32"> */}

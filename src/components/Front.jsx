@@ -816,7 +816,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500"><em>Stay tuned! Bundle uses its software to collect and send heartfelt, handwritten messages of support, gratitude, and appreciation from the friends and family of a recipient and publishes them in a physical, bound, and aesthetically pleasing book for the person to keep. It is about the meaningful gift anyone could recieve. </em> <br/><br/> Enter your contact information into the form to pre-order your bundle now!</p> 
+                    <p className="text-base text-gray-500"><em>Stay tuned! Bundle uses its software to collect and send heartfelt messages of support, gratitude, and appreciation from the friends and family of a recipient and publishes them in a physical, bound, and aesthetically pleasing book for the person to keep. It is about the meaningful gift anyone could recieve. </em> <br/><br/> Enter your contact information into the form to pre-order your bundle now!</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   <div className="mt-6 text-center">
