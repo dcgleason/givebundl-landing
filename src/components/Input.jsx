@@ -501,8 +501,8 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
            (
            <>
            <div className='sm:border-t sm:border-gray-200 mt-7 '>
-           <h2 className="text-xl pt-5 font-medium text-center underline text-gray-800">Shipping Information</h2>
-            <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
+           <h2 className="text-xl pt-5 font-medium text-center underline text-gray-800">Billing Information</h2>
+            {/* <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
   
               <div className="sm:col-span-2">
                 <label htmlFor="address"  className="block text-gray-700 text-sm pb-2 font-bold mb-2">
@@ -635,13 +635,12 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
                  />
                 </div>
               </div>
-            </div>
+            </div> */}
             <label
               className="block text-gray-700 text-sm py-2 font-bold"
               htmlFor="Email"
             >
               
-             Billing Information
             </label>
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
              </div>
@@ -672,7 +671,7 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
               value={name}
               required
             />
-            <label
+            {/* <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
@@ -689,8 +688,8 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
               value={emails.email}
               required
             />
-            ))}
-           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+            ))} */}
+           {/* <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
               <label htmlFor="about" className="block text-sm font-bold text-gray-700 sm:mt-px sm:pt-2">
                 Your message to contributors:
               </label>
@@ -705,7 +704,7 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
                   className="max-w-lg shadow block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
             
      
@@ -718,13 +717,13 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
               type="submit"
               onClick={submitForm}
             >
-              Submit Payment & Pre-Order Bundle
+              Submit payment & Pre-Order Bundle
             </button> 
           </div>
       }
           </div>
         </form>
-      <div className="inline-flex">
+      {/* <div className="inline-flex">
         <button  onClick={handleAddFields} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
              <span className='font-bold'> Add Contributor </span> 
               </button>
@@ -732,7 +731,7 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
              <span className='font-bold'> Remove Contributor </span>
             </button>
            
-           </div>
+           </div> */}
               {/* </div> */}
       
       
