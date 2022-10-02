@@ -22,6 +22,7 @@ const HubspotContactForm = () => {
 
     return (
         <div>
+            <h1>Sign up to be the first to hear about when we launch.</h1>
             <div id="hubspotForm"></div>
         </div>
     );
