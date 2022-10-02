@@ -225,6 +225,7 @@ const postOrderMongoDB = async () => {
 
 const submitForm = async () => {
   e.preventDefault();
+  console.log('submitform clicked');
   const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
   console.log("result is" + result);
