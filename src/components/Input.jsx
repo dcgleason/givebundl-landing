@@ -227,7 +227,7 @@ const submitForm = async () => {
   e.preventDefault();
   const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
-  console.log(result);
+  console.log("result is" + result);
   setIsLoading(false);
   //setNotification(true);
 

@@ -275,9 +275,7 @@ useEffect(() => {
         const getClientSecret = async () => {
         const response =  await fetch('https://yay-api.herokuapp.com/stripe/secret').then(res => res.json());
         console.log('response: '+ JSON.stringify(response));
-        const data = JSON.stringify(response);
-        const {client_secret} = JSON.parse(data);
-        console.log('JSON.parse(Data): ' + JSON.parse(data))
+        const {client_secret} = response;
         console.log('client secret: ' + client_secret)
         setSecret(client_secret)
 }
