@@ -223,7 +223,7 @@ const postOrderMongoDB = async () => {
 }
 
 
-const submitForm = async () => {
+const submitForm = async (e) => {
   e.preventDefault();
   console.log('submitform clicked');
   const result = await submitPayment();
