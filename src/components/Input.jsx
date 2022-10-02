@@ -461,6 +461,9 @@ const postOrderMongoDBGitOwner = async () => { // for the owner to get their own
           <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Pre-Order your Bundle
           </h1>
+          <div className="text-m pt-2 pb-2 text-center font-small text-gray-800">
+            We will collect all necessary information (shipping address, bundle contributor email addressses, etc.) in a subsequent email to you!
+         </div>
           <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
             Your Information
           </h2>
