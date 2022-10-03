@@ -121,7 +121,7 @@ const handleRemoveFields = id => {
            
             ))} 
             <>
-            <div className='inline-flex w-full'>
+            <div className='inline-flex w-full sm:px-6'>
                  <div className="bg-gray-50 px-4 py-3 inline-flex  justify-start text-right sm:px-6">
                 
 
@@ -132,7 +132,7 @@ const handleRemoveFields = id => {
                                     <span className='font-bold'> Remove Contributor </span>
                                 </button>
                         </div>
-                  <div className="bg-gray-50 px-4 py-3 inline-flex  justify-end text-right sm:px-6 w-full">
+                  <div className="bg-gray-50 px-4 py-3 inline-flex  justify-end text-right sm:px-6">
          
                        
                                     <button
