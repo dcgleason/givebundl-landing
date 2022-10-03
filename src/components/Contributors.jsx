@@ -121,23 +121,23 @@ const handleRemoveFields = id => {
            
             ))} 
             <>
-            <div className='inline-flex w-full sm:px-6'>
-                 <div className="bg-gray-50 px-4 py-3 inline-flex  justify-start text-right sm:px-6">
+            <div className='inline-flex px-10 w-full shink sm:px-6'>
+                 <div className="bg-gray-50 px-4 py-3 inline-flex shrink w-full justify-start text-right sm:px-6">
                 
 
-                                <button  onClick={handleAddFields} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
-                                    <span className='font-bold'> Add Contributor </span> 
+                                <button  onClick={handleAddFields} className="bg-gray-300 shrink hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
+                                    <span className='font-bold'> Add </span> 
                                 </button>
-                                    <button disabled={emails.length === 1} onClick={() => handleRemoveFields(emails.id)} className="bg-gray-300  hover:bg-gray-400 text-gray-800 border-4 py-1 px-2 mr-50 rounded-r">
-                                    <span className='font-bold'> Remove Contributor </span>
+                                    <button disabled={emails.length === 1} onClick={() => handleRemoveFields(emails.id)} className="bg-gray-300 shink hover:bg-gray-400 text-gray-800 border-4 py-1 px-2 mr-50 rounded-r">
+                                    <span className='font-bold'> Remove </span>
                                 </button>
                         </div>
-                  <div className="bg-gray-50 px-4 py-3 inline-flex  justify-end text-right sm:px-6">
+                  <div className="bg-gray-50 px-4 py-3 inline-flex  shrink justify-end text-right sm:px-6">
          
                        
                                     <button
                                     type="submit"
-                                    className="rounded-md border border-transparent bg-[#f8ad9d] hover:bg-[#f4978e] py-2 px-4 text-sm font-medium text-white shadow-smfocus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2"
+                                    className="rounded-md border shrink border-transparent bg-[#f8ad9d] hover:bg-[#f4978e] py-2 px-4 text-sm font-medium text-white shadow-smfocus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2"
                         
                                 >
                                     Submit
