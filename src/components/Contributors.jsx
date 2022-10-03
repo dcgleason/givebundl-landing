@@ -96,7 +96,7 @@ const handleRemoveFields = id => {
                             name="about"
                             rows={4}
                             required
-                            placeholder="Hi [contributor], I am putting together some notes of gratitude for [recipient], because [reason]. I'd love it if you would contribute a few words of gratitude about [recipient]. Would you do that for me? The link to contribute is below. There will be prompts to help guide you! Thank you, [Your name]"
+                            placeholder="Hi [contributor], I am putting together some notes of gratitude for [recipient] from his / her friends and family, because [reason]. I'd love it if you would contribute a few words of gratitude about [recipient]. Would you do that for me? The link to contribute is below. There will be prompts to help guide you! Thank you, [Your name]"
                             onChange={e => setMessage(e.target.value)}
                             value={message}
                             className="max-w-lg shadow block w-full focus:border-red-300 focus:ring-red-300  sm:text-sm border border-gray-300 rounded-md"
