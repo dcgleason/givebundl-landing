@@ -86,7 +86,7 @@ const options = {
         <div className="text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Add Contributors to Your Bundle</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-           We will email them to remind them, and include your message in the email!
+           We will send each an email with your message to invite and remind them to contribute.
           </p>
         </div>
         <div className="mt-12">
