@@ -612,7 +612,7 @@ const handleClick = () => {
                     onChange={setStartDate}
                     name="startDate"
                     dateFormat="MM/dd/yyyy"
-                    className="shadow appearance-none border rounded w-1/4 my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-1/4 my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline sm:w-full"
                 />
         </div>
             {/* <label
