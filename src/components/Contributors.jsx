@@ -10,6 +10,8 @@ const [email, setEmail] = useState('');
 const [first, setFirst] = useState('');
 const [last, setLast] = useState('');
 const [message, setMessage] = useState('');
+
+
  
  const handleAddFields = () => {
     setEmails([...emails, { id: uuidv4(),  email: '', number: amount+emails.length}])
@@ -20,6 +22,7 @@ const handleRemoveFields = id => {
     values.splice(values.findIndex(value => value.id === id), 1);
     setEmails(values);
   }
+
 
     return (
       <>
@@ -102,14 +105,7 @@ const handleRemoveFields = id => {
 
                     </div>
                     </div>
-                    <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                    <button
-                        type="submit"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-[#f8ad9d] hover:bg-[#f4978e] py-2 px-4 text-sm font-medium text-white shadow-smfocus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2"
-                    >
-                        Save
-                    </button>
-                    </div>
+               
                 </div>
                 </form>
             </div>
@@ -124,18 +120,38 @@ const handleRemoveFields = id => {
             </>
            
             ))} 
+            <>
+            <div className='inline-flex w-full'>
+                 <div className="bg-gray-50 px-4 py-3 inline-flex  justify-start text-right sm:px-6">
+                
+
+                                <button  onClick={handleAddFields} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
+                                    <span className='font-bold'> Add Contributor </span> 
+                                </button>
+                                    <button disabled={emails.length === 1} onClick={() => handleRemoveFields(emails.id)} className="bg-gray-300  hover:bg-gray-400 text-gray-800 border-4 py-1 px-2 mr-50 rounded-r">
+                                    <span className='font-bold'> Remove Contributor </span>
+                                </button>
+                        </div>
+                  <div className="bg-gray-50 px-4 py-3 inline-flex  justify-end text-right sm:px-6 w-full">
+         
+                       
+                                    <button
+                                    type="submit"
+                                    className="rounded-md border border-transparent bg-[#f8ad9d] hover:bg-[#f4978e] py-2 px-4 text-sm font-medium text-white shadow-smfocus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2"
+                        
+                                >
+                                    Submit
+                                </button>
+                        </div>
+        </div>
+
     
-  
+
+         </>
        
-        <div className="inline-flex">
-        <button  onClick={handleAddFields} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
-             <span className='font-bold'> Add Contributor </span> 
-              </button>
-            <button disabled={emails.length === 1} onClick={() => handleRemoveFields(emails.id)} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-2 rounded-r">
-             <span className='font-bold'> Remove Contributor </span>
-            </button>
+       
+
            
-           </div>
       </>
     )
   }
