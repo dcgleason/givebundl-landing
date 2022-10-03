@@ -11,6 +11,10 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
+import DatePicker from 'react-datepicker';
+ 
+import "react-datepicker/dist/react-datepicker.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import DialogActions from '@mui/material/DialogActions';
@@ -49,6 +53,8 @@ const Input = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [ownerEmail, setOwnerEmail] = useState('');
   const [ownerName, setOwnerName] = useState('');
+  const [startDate, setStartDate] = useState(new Date());
+
   const stripe = useStripe();
   const elements = useElements();
  
@@ -580,13 +586,13 @@ const handleClick = () => {
     
           <div className='sm:border-t sm:border-gray-200 sm:pt-5 mt-7'>
             <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
-            Recipient Information
+            Bundle Information
            </h2>
            <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              First and last name of Bundle recipient:
+              First and last name of your Bundle recipient:
             </label>
             <input
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -597,6 +603,18 @@ const handleClick = () => {
               value={name}
               required
             />
+            <label  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+              Date your Bundle should be delivered by:
+            </label>
+            <div className="form-group">
+                <DatePicker
+                    selected={startDate }
+                    onChange={setStartDate}
+                    name="startDate"
+                    dateFormat="MM/dd/yyyy"
+                    className="shadow appearance-none border rounded w-1/4 my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+        </div>
             {/* <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
