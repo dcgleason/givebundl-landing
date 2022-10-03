@@ -5,16 +5,19 @@ const Contributors = ()=> {
 
 const amount = 1;
 
-const [emails, setEmail] = useState([ { id: uuidv4(),  email: '', number: amount }]);
+const [emails, setEmails] = useState([ { id: uuidv4(),  email: '', number: amount }]);
+const [email, setEmail] = useState('');
+const [first, setFirst] = useState('');
+const [last, setLast] = useState('');
  
  const handleAddFields = () => {
-    setEmail([...emails, { id: uuidv4(),  email: '', number: amount+emails.length}])
+    setEmails([...emails, { id: uuidv4(),  email: '', number: amount+emails.length}])
   }
 
 const handleRemoveFields = id => {
     const values  = [...emails];
     values.splice(values.findIndex(value => value.id === id), 1);
-    setEmail(values);
+    setEmails(values);
   }
 
     return (
@@ -41,6 +44,8 @@ const handleRemoveFields = id => {
                         <input
                             type="text"
                             name="first-name"
+                            onChange={e => setFirst(e.target.value)}
+                            value={first}
                             id="first-name"
                             autoComplete="given-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
@@ -55,6 +60,8 @@ const handleRemoveFields = id => {
                             type="text"
                             name="last-name"
                             id="last-name"
+                            onChange={e => setLast(e.target.value)}
+                            value={last}
                             autoComplete="family-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
                         />
@@ -67,6 +74,8 @@ const handleRemoveFields = id => {
                         <input
                             type="text"
                             name="email-address"
+                            onChange={e => setEmail(e.target.value)}
+                            value={email}
                             id="email-address"
                             autoComplete="email"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
