@@ -9,6 +9,7 @@ const [emails, setEmails] = useState([ { id: uuidv4(),  email: '', number: amoun
 const [email, setEmail] = useState('');
 const [first, setFirst] = useState('');
 const [last, setLast] = useState('');
+const [message, setMessage] = useState('');
  
  const handleAddFields = () => {
     setEmails([...emails, { id: uuidv4(),  email: '', number: amount+emails.length}])
@@ -81,6 +82,24 @@ const handleRemoveFields = id => {
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
                         />
                         </div>
+
+                        <div className="col-span-6 sm:col-span-4">
+                        <label htmlFor="about" className="block text-sm font-medium text-gray-700">
+                            Your message to contributor #{String(obj.number)}:
+                        </label>
+                        <div className="mt-1 sm:mt-0 sm:col-span-2">
+                            <textarea
+                            id="about"
+                            name="about"
+                            rows={4}
+                            required
+                            onChange={e => setMessage(e.target.value)}
+                            value={message}
+                            className="max-w-lg shadow block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                            />
+                        </div>
+                        </div> 
+
                     </div>
                     </div>
                     <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
