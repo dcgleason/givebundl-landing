@@ -604,7 +604,7 @@ const handleClick = () => {
               required
             />
             <label  className="block text-gray-700 text-sm py-2 font-bold mb-2">
-              Date your Bundle should be delivered by:
+              Date your Bundle should be delivered by (we need at least takes 2 weeks):
             </label>
             <div className="form-group">
                 <DatePicker
