@@ -293,6 +293,12 @@ const submitForm = async (e) => {
 //      }
 //     }
 
+let fortnight = new Date(Date.now() + 12096e5);
+let month = fortnight.getMonth() + 1;
+let day = fortnight.getDate();
+let year = fortnight.getFullYear();
+let twoWeekDate = month + "/" + day + "/" + year;
+ 
 
 
 
@@ -604,7 +610,7 @@ const handleClick = () => {
               required
             />
             <label  className="block text-gray-700 text-sm py-2 font-bold mb-2">
-              Date your Bundle should be delivered by (we need at least takes 2 weeks):
+             Date your Bundle should be delivered by (earliest possible delivery date: {String(twoWeekDate)}):
             </label>
             <div className="form-group">
                 <DatePicker
