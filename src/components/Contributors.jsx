@@ -98,7 +98,7 @@ const handleRemoveFields = id => {
                             required
                             onChange={e => setMessage(e.target.value)}
                             value={message}
-                            className="max-w-lg shadow block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                            className="max-w-lg shadow block w-full focus:border-red-300 focus:ring-red-300  sm:text-sm border border-gray-300 rounded-md"
                             />
                         </div>
                         </div> 
