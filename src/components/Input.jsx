@@ -610,7 +610,7 @@ const handleClick = () => {
               required
             />
             <label  className="block text-gray-700 text-sm py-2 font-bold mb-2">
-             Date your Bundle should be delivered by (earliest possible delivery date: {String(twoWeekDate)}):
+             Your Bundle delivery date (earliest possible delivery date: {String(twoWeekDate)}):
             </label>
             <div className="form-group">
                 <DatePicker
