@@ -121,7 +121,7 @@ const handleRemoveFields = id => {
            
             ))} 
             <>
-            <div className='inline-flex px-10 w-full shink sm:px-6'>
+            <div className='inline-flex w-full shink sm:px-6'>
                  <div className="bg-gray-50 px-4 py-3 inline-flex shrink w-full justify-start text-right sm:px-6">
                 
 
