@@ -9,7 +9,7 @@ const [emails, setEmails] = useState([ { id: uuidv4(),  email: '', number: amoun
 const [email, setEmail] = useState('');
 const [first, setFirst] = useState('');
 const [last, setLast] = useState('');
-const [message, setMessage] = useState("Hi [contributor], I am putting together some notes of gratitude for [recipient] from his / her friends and family, because [reason]. I'd love it if you would contribute a few words of gratitude about [recipient]. Would you do that for me? The link to contribute is below. There will be prompts to help guide you! Thank you, [Your name]");
+const [message, setMessage] = useState("Hi [Contributor], I am putting together some notes of gratitude for [Recipient] from his / her friends and family, because [reason]. I'd love it if you would contribute a few words of gratitude about [recipient]. Would you do that for me? The link to contribute is below. There will be prompts to help guide you! Thank you, [Your name]");
 
 
  
