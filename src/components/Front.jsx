@@ -152,10 +152,10 @@ const navigation = {
     // },
   ],
   pages: [
-    { name: 'Home', href: '#' }
-  //   { name: "Pricing", href: 'http://usebundle.co/pricing'},
-  //  { name: "Order", href: 'http://usebundle.co/order'},
-  //    { name: "Write", href: 'https://usebundle.co/messages'}
+    { name: 'Home', href: '#' },
+   { name: "Write", href: 'http://usebundle.co/messages'},
+   { name: "Add Contributors", href: 'http://usebundle.co/contributors'} // need a way for the browser to known what gift the person is writing for / adding contributors to (and they can only add contributors once) - git code;
+
   ],
 }
 const userNavigation = [
