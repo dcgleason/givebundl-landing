@@ -100,7 +100,7 @@ const handleRemoveFields = id => {
                         <input
                             type="text"
                             key={obj.id}
-                            name="first-name"
+                            name="first"
                             onChange={e => handleChangeInput(obj.id, e)}
                             value={obj.first}
                             id="first-name"
@@ -116,7 +116,7 @@ const handleRemoveFields = id => {
                         <input
                             type="text"
                             key={obj.id}
-                            name="last-name"
+                            name="last"
                             id="last-name"
                             onChange={e => handleChangeInput(obj.id, e)}
                             value={obj.last}
@@ -132,7 +132,7 @@ const handleRemoveFields = id => {
                         <input
                             type="text"
                             key={obj.id}
-                            name="email-address"
+                            name="email"
                             onChange={e => handleChangeInput(obj.id, e)}
                             value={obj.email}
                             id="email-address"
@@ -149,7 +149,7 @@ const handleRemoveFields = id => {
                             <textarea
                             id="about"
                             key={obj.id}
-                            name="about"
+                            name="message"
                             rows={4}
                             required
                             onChange={e => handleChangeInput(obj.id, e)}
