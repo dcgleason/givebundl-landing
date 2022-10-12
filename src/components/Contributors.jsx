@@ -66,7 +66,7 @@ const sendEmails = async () => {
        }
  
  const handleAddFields = () => {
-    setEmails([...emails, { id: uuidv4(),  email: '', number: amount+emails.length}])
+    setEmails([...emails, { id: uuidv4(),  email: '', first: '', last: '', message: '', number: amount+emails.length}])
   }
 
 const handleRemoveFields = id => {
@@ -103,7 +103,6 @@ const handleRemoveFields = id => {
                             name="first"
                             onChange={e => handleChangeInput(obj.id, e)}
                             value={obj.first}
-                            id="first-name"
                             autoComplete="given-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
                         />
@@ -117,7 +116,6 @@ const handleRemoveFields = id => {
                             type="text"
                             key={obj.id}
                             name="last"
-                            id="last-name"
                             onChange={e => handleChangeInput(obj.id, e)}
                             value={obj.last}
                             autoComplete="family-name"
@@ -135,7 +133,6 @@ const handleRemoveFields = id => {
                             name="email"
                             onChange={e => handleChangeInput(obj.id, e)}
                             value={obj.email}
-                            id="email-address"
                             autoComplete="email"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
                         />
@@ -147,7 +144,6 @@ const handleRemoveFields = id => {
                         </label>
                         <div className="mt-1 sm:mt-0 sm:col-span-2">
                             <textarea
-                            id="about"
                             key={obj.id}
                             name="message"
                             placeholder="Edit this for each person --> Hi [Contributor], I am putting together some notes of gratitude for [Recipient] from [his / her] friends and family, because [reason]. Would you be willing to contribute a few words about why you are gratitude for [recipient]? The link to contribute is below (in this email). There will be prompts to help guide you! Thank you, [Your name]"
