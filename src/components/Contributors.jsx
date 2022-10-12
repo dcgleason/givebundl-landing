@@ -102,7 +102,7 @@ const handleRemoveFields = id => {
                             key={obj.id}
                             name="first-name"
                             onChange={e => handleChangeInput(obj.id, e)}
-                            value={emails.first}
+                            value={obj.first}
                             id="first-name"
                             autoComplete="given-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
@@ -119,7 +119,7 @@ const handleRemoveFields = id => {
                             name="last-name"
                             id="last-name"
                             onChange={e => handleChangeInput(obj.id, e)}
-                            value={emails.last}
+                            value={obj.last}
                             autoComplete="family-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
                         />
@@ -134,7 +134,7 @@ const handleRemoveFields = id => {
                             key={obj.id}
                             name="email-address"
                             onChange={e => handleChangeInput(obj.id, e)}
-                            value={email.email}
+                            value={obj.email}
                             id="email-address"
                             autoComplete="email"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
@@ -153,7 +153,7 @@ const handleRemoveFields = id => {
                             rows={4}
                             required
                             onChange={e => handleChangeInput(obj.id, e)}
-                            value={emails.message}
+                            value={obj.message}
                             className="max-w-lg shadow block w-full focus:border-red-300 focus:ring-red-300  sm:text-sm border border-gray-300 rounded-md"
                             />
                         </div>
