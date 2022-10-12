@@ -5,13 +5,66 @@ const Contributors = ()=> {
 
 const amount = 1;
 
-const [emails, setEmails] = useState([ { id: uuidv4(),  email: '', number: amount }]);
+const [emails, setEmails] = useState([ { id: uuidv4(),  email: '', first: '', last: '', message: '', number: amount }]);
 const [email, setEmail] = useState('');
 const [first, setFirst] = useState('');
 const [last, setLast] = useState('');
 const [message, setMessage] = useState("Edit this for each person --> Hi [Contributor], I am putting together some notes of gratitude for [Recipient] from [his / her] friends and family, because [reason]. Would you be willing to contribute a few words about why you are gratitude for [recipient]? The link to contribute is below (in this email). There will be prompts to help guide you! Thank you, [Your name]");
 
 
+
+const sendEmails = async () => {
+    //const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
+    try {
+            if(emails){
+
+         for(var i = 0; i< emails.length; i++ ){
+
+              const response =  await fetch("https://yay-api.herokuapp.com/email/contributors", { 
+                method: 'POST', 
+                headers: { 
+                  'Content-type': 'application/json'
+                 }, 
+                body: JSON.stringify({
+                  email: emails[i].email,
+                  firstName: emails[i].first,
+                  lastName: emails[i].last,
+                  message: emails[i].message
+                }) 
+                }); 
+        
+              if (response === 200){
+               alert("Message Sent."); 
+                this.resetForm()
+               }else if(response === 500){
+                 alert("Message failed to send.")
+               }
+  
+            }
+
+            }
+
+          
+        }
+        catch {
+          console.log('error in sending email(s)');
+        }
+
+      };
+
+      const handleChangeInput = (id, e) => {
+        // generateUniqueRandom();
+     
+         const newInputFields = emails.map(i => {
+           if(id === i.id) {
+             i[e.target.name] = e.target.value
+           }
+           return i;
+         })
+         
+         setEmails(newInputFields);
+         console.log(emails);
+       }
  
  const handleAddFields = () => {
     setEmails([...emails, { id: uuidv4(),  email: '', number: amount+emails.length}])
@@ -47,9 +100,10 @@ const handleRemoveFields = id => {
                         </label>
                         <input
                             type="text"
+                            key={obj.id}
                             name="first-name"
                             onChange={e => setFirst(e.target.value)}
-                            value={first}
+                            value={emails.first}
                             id="first-name"
                             autoComplete="given-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
@@ -62,10 +116,11 @@ const handleRemoveFields = id => {
                         </label>
                         <input
                             type="text"
+                            key={obj.id}
                             name="last-name"
                             id="last-name"
-                            onChange={e => setLast(e.target.value)}
-                            value={last}
+                            onChange={e => handleChangeInput(obj.id, e)}
+                            value={emails.last}
                             autoComplete="family-name"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
                         />
@@ -77,9 +132,10 @@ const handleRemoveFields = id => {
                         </label>
                         <input
                             type="text"
+                            key={obj.id}
                             name="email-address"
-                            onChange={e => setEmail(e.target.value)}
-                            value={email}
+                            onChange={e => handleChangeInput(obj.id, e)}
+                            value={email.email}
                             id="email-address"
                             autoComplete="email"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring-red-300 sm:text-sm"
@@ -93,11 +149,12 @@ const handleRemoveFields = id => {
                         <div className="mt-1 sm:mt-0 sm:col-span-2">
                             <textarea
                             id="about"
+                            key={obj.id}
                             name="about"
                             rows={4}
                             required
-                            onChange={e => setMessage(e.target.value)}
-                            value={message}
+                            onChange={e => handleChangeInput(obj.id, e)}
+                            value={emails.message}
                             className="max-w-lg shadow block w-full focus:border-red-300 focus:ring-red-300  sm:text-sm border border-gray-300 rounded-md"
                             />
                         </div>
