@@ -53,7 +53,6 @@ const sendEmails = async () => {
       };
 
       const handleChangeInput = (id, e) => {
-        // generateUniqueRandom();
      
          const newInputFields = emails.map(i => {
            if(id === i.id) {
@@ -102,7 +101,7 @@ const handleRemoveFields = id => {
                             type="text"
                             key={obj.id}
                             name="first-name"
-                            onChange={e => setFirst(e.target.value)}
+                            onChange={e => handleChangeInput(obj.id, e)}
                             value={emails.first}
                             id="first-name"
                             autoComplete="given-name"
