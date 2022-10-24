@@ -822,7 +822,7 @@ const options = {
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">If your recipient doesn&apos;t absolutely love it, we&apos;ll give you a full refund.</span>
+                      <span className="text-gray-500 hover:text-gray-700">If your recipient doesn&apos;t absolutely love their Bundle, we&apos;ll provide you with a full refund.</span>
                     </a>
                   </div>
 
