@@ -163,9 +163,9 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Blow your loved one away...with gratidue.",
+  name: "Surprise your spouse with a gift he'she will always cherish.",
   href: '#',
-  price: '$89',
+  price: '$49',
   description:
    '',
   imageSrc: "test",
