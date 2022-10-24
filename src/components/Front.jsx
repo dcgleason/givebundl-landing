@@ -814,7 +814,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500"><em>Stay tuned! Bundle uses its software to collect heartfelt messages of support, gratitude, and appreciation from the friends and family of a person of your choosing and publishes them in a physical, bound, and aesthetically pleasing book for you to gift this lucky person. </em> <br/><br/> Enter your contact information into the form to pre-order your bundle now!</p> 
+                    <p className="text-base text-gray-500"><em>Stay tuned! Bundle uses its software to collect heartfelt messages of support, gratitude, and appreciation from the friends and family of a person of your choosing and publishes them in a physical, bound, and aesthetically pleasing book for you to gift that lucky person. </em> <br/><br/> Enter your contact information into the form to pre-order your bundle now!</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   <div className="mt-6 text-center">
@@ -822,7 +822,7 @@ const options = {
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">100% satisfaction, money-back guarantee</span>
+                      <span className="text-gray-500 hover:text-gray-700">100% satisfaction, money-back guarantee.</span>
                     </a>
                   </div>
 
