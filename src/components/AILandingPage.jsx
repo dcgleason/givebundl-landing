@@ -8,10 +8,10 @@ const AILandingPage = () => {
 
     return (
         <>
-  <link
+  {/* <link
     href="https://unpkg.com/tailwindcss@2.0.2/dist/tailwind.min.css"
     rel="stylesheet"
-  />
+  /> */}
   {/**/} {/**/}{" "}
   <div className="px-4 py-5 mx-auto w-full md:px-24 lg:px-8 bg-gray-200">
     <div className="relative flex grid items-center max-w-6xl grid-cols-2 mx-auto lg:grid-cols-3">
