@@ -80,7 +80,7 @@ const Instructions = () => {
                 <div className="w-px h-full bg-gray-300" />
               </div>{" "}
               <div className="pt-1 pb-8">
-                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate</p>{" "}
+                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate Collection</p>{" "}
                 <p className="text-gray-700">
                   Once we start the proces by you, with your help we start collecting letters from the family and friends of your loved one who will be recieving the Bundle book. 
                   
