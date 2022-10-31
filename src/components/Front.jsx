@@ -780,7 +780,7 @@ const options = {
                 </div>
 
                 <div className="mt-4">
-                  <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
+                  <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
                 </div>
 
                 <section aria-labelledby="information-heading" className="mt-4">
@@ -817,14 +817,14 @@ const options = {
                     <p className="text-base text-gray-500">Send someone you love the ultimate gift -- a book of love letters from their friends and family to let them know just how much they are loved.</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
-                  {/* <div className="mt-6 text-center">
+                  <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
                       <ShieldCheckIcon
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true" />
-                      <span className="text-gray-500 hover:text-gray-700">Gaurenteed to elicit tears of joy, or your money back (we we mean it!).</span>
+                      <span className="text-gray-500 hover:text-gray-700">Tears of joy or your money back.</span>
                     </a>
-                  </div> */}
+                  </div>
 
                   {/* <div className="mt-6 flex items-center">
       <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
