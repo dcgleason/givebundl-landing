@@ -18,20 +18,15 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, RadioGroup, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, ShieldCheckIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
-import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/solid'
+import { StarIcon } from '@heroicons/react/solid'
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
-import { Input, NewsletterContactForm } from "../components/index"
+import { Input, Instructions, NewsletterContactForm } from "../components/index"
 import { HubspotContactForm } from '../components/index';
 import { useEffect } from 'react'
 import Head from "next/head"
 import Image from 'next/image';
 import Script from 'next/script';
-import bundlepic from '../images/screenshots/bundle.png';
-import usapic from '../images/screenshots/usa.png';
-import emailpic from '../images/screenshots/email.png';
-import closedbookpic from '../images/screenshots/closedbook.png';
-import avatarpic from '../images/screenshots/eliza_screenshot.png';
 
 
 const navigation = {
@@ -958,6 +953,8 @@ const options = {
                 </div>
               </div>
             </section>  commented-out! */ }
+
+            <Instructions/>
 
             {/* Policies section */}
             <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
