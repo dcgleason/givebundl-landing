@@ -47,7 +47,7 @@ const Instructions = () => {
                   Order a Bundle book:
                 </p>{" "}
                 <p className="text-gray-700">
-                  Order a Bundle book and input the email addresses of the family and friends of the person you are giving a Bundle book to. You&apos;ll also write a brief message that will be sent out to all Bundle contributors.
+                  Order a Bundle book. Input the email addresses of the family and friends of the person you are giving a Bundle book to. You&apos;ll also write a brief message that will be sent out to all Bundle contributors.
                 </p>
               </div>
             </div>{" "}
@@ -84,7 +84,7 @@ const Instructions = () => {
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">Initiate collection:</p>{" "}
                 <p className="text-gray-700">
-                  We reach out, with your message to the Bundle contributors you listed and we start collecting letters with the suggested prompts that ask for advice to your recipient, favorite memories with your recipient, and qualities people admire about your recipient (you can add your own prompts, too!).
+                  We reach out, with your message, to your Bundle book contributors. We start collecting letters via prompts that ask for advice to your recipient, favorite memories with your recipient, and qualities people admire about your recipient (you can add your own prompts, too!). We also collect pictures during this time.
                   
                 </p>
               </div>
@@ -124,7 +124,7 @@ const Instructions = () => {
                   Compile letters:
                 </p>{" "}
                 <p className="text-gray-700">
-                 Once we collect letters from your friends and family, their kind words will be
+                 Once the letters and pictures are collected from friends and family, their kind words and special pictures will be
                   compiled into a personalized bundle of love aka a physical Bundle book. 
                 </p>
               </div>
@@ -155,7 +155,7 @@ const Instructions = () => {
                   Give the gift:
                 </p>{" "}
                 <p className="text-gray-700">
-                  We deliver your Bundle book a few days ahead of schedule, so you have time to gift it to your recipient.
+                  We deliver your Bundle book a few days ahead of schedule, so you have time to gift it to your lucky recipient.
                 </p>
               </div>
             </div>
