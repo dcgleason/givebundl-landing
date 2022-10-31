@@ -84,7 +84,7 @@ const Instructions = () => {
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">Collect the letters:</p>{" "}
                 <p className="text-gray-700">
-                  We reach out, with your message, to your Bundle book contributors. We start collecting letters and that ask that your contributors to offer advice to your recipient, any favorite memories they have with your recipient, and/or qualities they admire about your recipient via prompts (you can add your own prompts here, too!). We also collect pictures during this time.
+                  We reach out, with your message, to your Bundle book contributors. We start collecting letters, pictures and ask that your contributors do at least one of the following: offer advice to your recipient, provide a favorite memory they have with your recipient, and/or give a few qualities they admire about your recipient (here you can add your own prompts, too).
                   
                 </p>
               </div>
