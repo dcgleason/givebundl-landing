@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import  Link  from 'next/Link'
+import Image from 'next/Image'
+
 
 const AILandingPage = () => {
   
@@ -14,37 +17,37 @@ const AILandingPage = () => {
     <div className="relative flex grid items-center max-w-6xl grid-cols-2 mx-auto lg:grid-cols-3">
       <ul className="flex items-center hidden space-x-8 lg:flex">
         <li>
-          <a
+          <Link
             href="/"
             aria-label="Our product"
             title="Our product"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
             About
-          </a>
+          </Link>
         </li>{" "}
         <li>
-          <a
+          <Link
             href="/"
             aria-label="Our product"
             title="Our product"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
             Browse
-          </a>
+          </Link>
         </li>{" "}
         <li>
-          <a
+          <Link
             href="/"
             aria-label="Product pricing"
             title="Product pricing"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
             Give a Bundle
-          </a>
+          </Link>
         </li>
       </ul>{" "}
-      <a
+      <Link
         href="/"
         aria-label="Company"
         title="Company"
@@ -68,25 +71,25 @@ const AILandingPage = () => {
         <span className="ml-2 text-xl font-bold tracking-wide text-gray-900 uppercase">
           Company
         </span>
-      </a>{" "}
+      </Link>{" "}
       <ul className="flex items-center hidden ml-auto space-x-8 lg:flex">
         <li>
-          <a
+          <Link
             href="/"
             aria-label="Sign in"
             title="Sign in"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
             Signup
-          </a>
+          </Link>
         </li>{" "}
         <li>
-          <a
+          <Link
             href="/"
             aria-label="Sign up"
             title="Sign up"
             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-500 focus:shadow-outline focus:outline-none"
-          ></a>
+          ></Link>
         </li>
       </ul>{" "}
       <div className="ml-auto lg:hidden">
@@ -146,17 +149,17 @@ const AILandingPage = () => {
             What your friends and family really think.
           </h2>{" "}
           <p className="text-base text-gray-700 md:text-lg">
-            Bundle is a book of love letters written by a recipient's friends
+            Bundle is a book of love letters written by a recipient&apos;s friends
             and family and gifted to that person.
           </p>
         </div>{" "}
         <div>
-          <a
+          <Link
             href="/"
             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-500 focus:shadow-outline focus:outline-none"
           >
             Buy now
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -197,15 +200,15 @@ const AILandingPage = () => {
             100% made with love.
           </h6>{" "}
           <p className="mb-3 text-sm text-gray-700">
-            Our books are made with love, and we'll ship anywhere in the world!
+            Our books are made with love, and we&apos;ll ship anywhere in the world!
           </p>{" "}
-          <a
+          <Link
             href="/"
             aria-label=""
             className="inline-flex items-center font-semibold text-red-500 transition-colors duration-200 hover:text-red-500"
           >
             Learn more
-          </a>
+          </Link>
         </div>
       </div>{" "}
       <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
@@ -233,13 +236,13 @@ const AILandingPage = () => {
           <p className="mb-3 text-sm text-gray-700">
             The perfect gift for anniversaries, birthdays or just because!
           </p>{" "}
-          <a
+          <Link
             href="/"
             aria-label=""
             className="inline-flex items-center font-semibold text-red-500 transition-colors duration-200 hover:text-red-500"
           >
             Learn more
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -362,7 +365,7 @@ const AILandingPage = () => {
               Gather letters
             </p>{" "}
             <p className="text-gray-700">
-             We'll collect letters from your friends and family which will be
+             We&apos;ll collect letters from your friends and family which will be
               compiled into a personalized bundle of love aka a Bundle book for this one lucky
               recipient.
             </p>
@@ -394,13 +397,13 @@ const AILandingPage = () => {
               Give the gift
             </p>{" "}
             <p className="text-gray-700">
-              We deliver Bundles quickly, so you won't be waiting long.
+              We deliver Bundles quickly, so you won&apos;t be waiting long.
             </p>
           </div>
         </div>
       </div>{" "}
       <div className="relative">
-        <img
+        <Image
           src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt=""
           className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
@@ -413,7 +416,7 @@ const AILandingPage = () => {
   <div className="px-4 py-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:py-20">
     <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-        It's time to express your love in a new way.
+        It&apos;s time to express your love in a new way.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
         Bundle is the perfect gift for couples who are celebrating an
@@ -423,7 +426,7 @@ const AILandingPage = () => {
     </div>{" "}
     <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
       <div>
-        <img
+        <Image
           src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
@@ -433,12 +436,12 @@ const AILandingPage = () => {
           <p className="mb-4 text-xs text-gray-900">Product Manager</p>{" "}
           <p className="text-sm tracking-wide text-gray-900">
             Pommy ipsum bent as a nine bob note naff off biscuits nowt, a cuppa
-            unhand me sir hadn't done it in donkey's years sod's law.
+            unhand me sir hadn&apos;t done it in donkey&apos;s years sod&apos;s law.
           </p>
         </div>
       </div>{" "}
       <div>
-        <img
+        <Image
           src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
@@ -454,7 +457,7 @@ const AILandingPage = () => {
         </div>
       </div>{" "}
       <div>
-        <img
+        <Image
           src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
@@ -469,7 +472,7 @@ const AILandingPage = () => {
         </div>
       </div>{" "}
       <div>
-        <img
+        <Image
           src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
@@ -493,7 +496,7 @@ const AILandingPage = () => {
     <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-          The best present you'll ever give.
+          The best present you&apos;ll ever give.
         </h2>{" "}
         <p className="text-base text-gray-700 md:text-lg">
           A Bundle is a thoughtful gift that celebrates the relationships of
