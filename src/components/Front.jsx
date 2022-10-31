@@ -809,7 +809,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">Bundle book: <em>noun, thoughtful gift,</em> A book of written letters and meaningful pictures provided by the recipient&apos;s friends and family meant to encourage, inspire, and remind the recipient of their best self.</p> 
+                    <p className="text-base text-gray-500">Bundle book: <em>noun, thoughtful gift,</em> a book of written letters and meaningful pictures provided by the recipient&apos;s friends and family meant to encourage, inspire, and remind the recipient of their best self.</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   {/* <div className="mt-6 text-center">
