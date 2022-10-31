@@ -143,7 +143,7 @@ const AILandingPage = () => {
                 />
               </svg>
             </span>
-            This is what your friends think of you.
+            What your friends and family really think.
           </h2>{" "}
           <p className="text-base text-gray-700 md:text-lg">
             Bundle is a book of love letters written by a recipient's friends
@@ -166,10 +166,10 @@ const AILandingPage = () => {
   <div className="px-4 py-16 mx-auto bg-white w-full md:px-24 lg:px-8 lg:py-20">
     <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-        Get a Bundle of Love.
+        Give a Bundle of Love.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
-        Send someone you love the ultimate gift--a book of letters from friends
+        Send someone you love the ultimate gift--a book of letters from their friends
         and family to let them know how much they mean to you.
       </p>
     </div>{" "}
@@ -194,10 +194,10 @@ const AILandingPage = () => {
         </div>{" "}
         <div>
           <h6 className="mb-3 text-xl font-bold leading-5 text-gray-900">
-            100% Free.
+            100% made with love.
           </h6>{" "}
           <p className="mb-3 text-sm text-gray-700">
-            Our books are free, and we'll ship anywhere in the world!
+            Our books are made with love, and we'll ship anywhere in the world!
           </p>{" "}
           <a
             href="/"
@@ -285,7 +285,7 @@ const AILandingPage = () => {
             </p>{" "}
             <p className="text-gray-700">
               We create a book of love letters written by your friends and
-              family, then we send you the Bundle.
+              family, then we send you the Bundle book.
             </p>
           </div>
         </div>{" "}
@@ -322,8 +322,8 @@ const AILandingPage = () => {
           <div className="pt-1 pb-8">
             <p className="text-gray-900 mb-2 text-lg font-bold">Register</p>{" "}
             <p className="text-gray-700">
-              Once registered, you can get started collecting letters from loved
-              ones who want to write for you.
+              Once initated by you, with your help, we start collecting letters from loved
+              ones who want to write for your loved one.
             </p>
           </div>
         </div>{" "}
@@ -362,8 +362,8 @@ const AILandingPage = () => {
               Gather letters
             </p>{" "}
             <p className="text-gray-700">
-              You'll collect letters from your friends and family which will be
-              compiled into a personalized bundle of love for one lucky
+             We'll collect letters from your friends and family which will be
+              compiled into a personalized bundle of love aka a Bundle book for this one lucky
               recipient.
             </p>
           </div>
@@ -394,8 +394,7 @@ const AILandingPage = () => {
               Give the gift
             </p>{" "}
             <p className="text-gray-700">
-              We deliver Bundles across Canada so recipients don't have to worry
-              about shipping costs or customs delays
+              We deliver Bundles quickly, so you won't be waiting long.
             </p>
           </div>
         </div>
@@ -494,7 +493,7 @@ const AILandingPage = () => {
     <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-          The best present you'll ever receive.
+          The best present you'll ever give.
         </h2>{" "}
         <p className="text-base text-gray-700 md:text-lg">
           A Bundle is a thoughtful gift that celebrates the relationships of
