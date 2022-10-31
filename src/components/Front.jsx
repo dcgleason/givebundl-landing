@@ -814,7 +814,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">Send someone you love the ultimate gift--a book of letters from their friends and family to let them know how much they mean to you and their community.</p> 
+                    <p className="text-base text-gray-500">Send someone you love the ultimate gift -- a book of love letters from their friends and family to let them know just how much they are loved.</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   <div className="mt-6 text-center">
