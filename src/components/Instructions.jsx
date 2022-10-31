@@ -82,7 +82,7 @@ const Instructions = () => {
                 <div className="w-px h-full bg-gray-300" />
               </div>{" "}
               <div className="pt-1 pb-8">
-                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate collection:</p>{" "}
+                <p className="text-gray-900 mb-2 text-lg font-bold">Collect some loving seniment:</p>{" "}
                 <p className="text-gray-700">
                   We reach out, with your message, to your Bundle book contributors. We start collecting letters and that ask that your contributors to offer advice to your recipient, any favorite memories they have with your recipient, and/or qualities they admire about your recipient via prompts (you can add your own prompts here, too!). We also collect pictures during this time.
                   
@@ -121,7 +121,7 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Compile letters:
+                  Compile the letters:
                 </p>{" "}
                 <p className="text-gray-700">
                  Once the letters and pictures are collected from friends and family, their kind words and special pictures will be
