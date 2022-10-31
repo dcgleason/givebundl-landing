@@ -82,7 +82,7 @@ const Instructions = () => {
                 <div className="w-px h-full bg-gray-300" />
               </div>{" "}
               <div className="pt-1 pb-8">
-                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate colletion:</p>{" "}
+                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate collection:</p>{" "}
                 <p className="text-gray-700">
                   We reach out, with your message to the Bundle contributors you listed and we start collecting letters with the suggested prompts that ask for advice to your recipient, favorite memories with your recipient, and qualities people admire about your recipient (you can add your own prompts, too!).
                   
