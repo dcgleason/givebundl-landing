@@ -18,7 +18,7 @@ const AILandingPage = () => {
       <ul className="flex items-center hidden space-x-8 lg:flex">
         <li>
           <Link
-            href="/"
+            href="/about"
             aria-label="Our product"
             title="Our product"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
@@ -28,17 +28,17 @@ const AILandingPage = () => {
         </li>{" "}
         <li>
           <Link
-            href="/"
+            href="/contributors"
             aria-label="Our product"
             title="Our product"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
-            Browse
+            Write
           </Link>
         </li>{" "}
         <li>
           <Link
-            href="/"
+            href="/order"
             aria-label="Product pricing"
             title="Product pricing"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
@@ -48,34 +48,17 @@ const AILandingPage = () => {
         </li>
       </ul>{" "}
       <Link
-        href="/"
+        href="/companyone"
         aria-label="Company"
         title="Company"
         className="inline-flex items-center lg:mx-auto"
       >
-        <svg
-          viewBox="0 0 24 24"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          strokeLinecap="round"
-          strokeMiterlimit={10}
-          stroke="currentColor"
-          fill="none"
-          className="w-8 text-gray-700"
-        >
-          <rect x={3} y={1} width={7} height={12} />{" "}
-          <rect x={3} y={17} width={7} height={6} />{" "}
-          <rect x={14} y={1} width={7} height={6} />{" "}
-          <rect x={14} y={11} width={7} height={12} />
-        </svg>{" "}
-        <span className="ml-2 text-xl font-bold tracking-wide text-gray-900 uppercase">
-          Company
-        </span>
+       Company
       </Link>{" "}
       <ul className="flex items-center hidden ml-auto space-x-8 lg:flex">
         <li>
           <Link
-            href="/"
+            href="/signup"
             aria-label="Sign in"
             title="Sign in"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
@@ -85,11 +68,11 @@ const AILandingPage = () => {
         </li>{" "}
         <li>
           <Link
-            href="/"
+            href="/test"
             aria-label="Sign up"
             title="Sign up"
             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-500 focus:shadow-outline focus:outline-none"
-          ></Link>
+          >Test</Link>
         </li>
       </ul>{" "}
       <div className="ml-auto lg:hidden">
@@ -155,7 +138,7 @@ const AILandingPage = () => {
         </div>{" "}
         <div>
           <Link
-            href="/"
+            href="/buynow"
             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-500 focus:shadow-outline focus:outline-none"
           >
             Buy now
@@ -203,7 +186,7 @@ const AILandingPage = () => {
             Our books are made with love, and we&apos;ll ship anywhere in the world!
           </p>{" "}
           <Link
-            href="/"
+            href="/learnmore"
             aria-label=""
             className="inline-flex items-center font-semibold text-red-500 transition-colors duration-200 hover:text-red-500"
           >
@@ -237,7 +220,7 @@ const AILandingPage = () => {
             The perfect gift for anniversaries, birthdays or just because!
           </p>{" "}
           <Link
-            href="/"
+            href="/learn"
             aria-label=""
             className="inline-flex items-center font-semibold text-red-500 transition-colors duration-200 hover:text-red-500"
           >
@@ -407,6 +390,8 @@ const AILandingPage = () => {
           src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt=""
           className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
+          width="50"
+          height="50"
         />
       </div>
     </div>
@@ -430,6 +415,8 @@ const AILandingPage = () => {
           src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
+          width="50"
+          height="50"
         />{" "}
         <div className="flex flex-col justify-center mt-2">
           <p className="text-lg font-bold text-gray-900">Oliver Aguilerra</p>{" "}
@@ -445,6 +432,8 @@ const AILandingPage = () => {
           src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
+          width="50"
+          height="50"
         />{" "}
         <div className="flex flex-col justify-center mt-2">
           <p className="text-lg font-bold text-gray-900">Marta Clermont</p>{" "}
@@ -461,6 +450,8 @@ const AILandingPage = () => {
           src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
+          width="50"
+          height="50"
         />{" "}
         <div className="flex flex-col justify-center mt-2">
           <p className="text-lg font-bold text-gray-900">Alice Melbourne</p>{" "}
@@ -476,6 +467,8 @@ const AILandingPage = () => {
           src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt="Person"
           className="object-cover w-24 h-24 rounded-full shadow"
+          width="50"
+          height="50"
         />{" "}
         <div className="flex flex-col justify-center mt-2">
           <p className="text-lg font-bold text-gray-900">Martin Garix Potter</p>{" "}
