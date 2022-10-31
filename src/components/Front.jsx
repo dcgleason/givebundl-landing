@@ -959,9 +959,17 @@ const options = {
             {/* Policies section */}
             <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
               <div className="flex flex-col items-center pb-10 text-center">
-                <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+        It&apos;s time to express your love in a new way.
+      </h2>{" "}
+      <p className="text-base text-gray-700 md:text-lg">
+        Give a Bundle book on the following occasions.
+      </p>
+    </div>
+                {/* <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 Great times to give a Bundle book:
-                </h2>
+                </h2> */}
                 <p className="mt-3 max-w-3xl text-lg text-gray-600">
                  
                 </p>
