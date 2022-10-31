@@ -8,6 +8,9 @@ const Instructions = () => {
     return (
         <div className="px-4 py-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:py-20">
         <div className="grid gap-6 row-gap-10 lg:grid-cols-2 max-w-6xl mx-auto">
+        <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              How it works
+                </h2>
           <div className="lg:py-6 lg:pr-16">
             <div className="flex">
               <div className="flex flex-col items-center mr-4">
@@ -41,11 +44,10 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  How it works.
+                  Order a Bundle book:
                 </p>{" "}
                 <p className="text-gray-700">
-                  We create a book of love letters written by your friends and
-                  family, then we send you the completed Bundle book to gift.
+                  Order a Bundle book and input the email addresses of the family and friends of the person you are giving a Bundle book to. You&apos;ll also write a brief message that will be sent out to all Bundle contributors.
                 </p>
               </div>
             </div>{" "}
@@ -80,9 +82,9 @@ const Instructions = () => {
                 <div className="w-px h-full bg-gray-300" />
               </div>{" "}
               <div className="pt-1 pb-8">
-                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate Collection</p>{" "}
+                <p className="text-gray-900 mb-2 text-lg font-bold">Initiate colletion:</p>{" "}
                 <p className="text-gray-700">
-                  Once we start the proces by you, with your help we start collecting letters from the family and friends of your loved one who will be recieving the Bundle book. 
+                  We reach out, with your message to the Bundle contributors you listed and we start collecting letters with the suggested prompts that ask for advice to your recipient, favorite memories with your recipient, and qualities people admire about your recipient (you can add your own prompts, too!).
                   
                 </p>
               </div>
@@ -119,10 +121,10 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Gather letters
+                  Compile letters:
                 </p>{" "}
                 <p className="text-gray-700">
-                 Once we collect letters from your friends and family, their words of advice, love, and support will be
+                 Once we collect letters from your friends and family, their kind words will be
                   compiled into a personalized bundle of love aka a physical Bundle book. 
                 </p>
               </div>
@@ -150,7 +152,7 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Give the gift
+                  Give the gift:
                 </p>{" "}
                 <p className="text-gray-700">
                   We deliver your Bundle book a few days ahead of schedule, so you have time to gift it to your recipient.
@@ -158,15 +160,6 @@ const Instructions = () => {
               </div>
             </div>
           </div>{" "}
-          <div className="relative">
-            <Image
-              src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-              className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
-              width="50"
-              height="50"
-            />
-          </div>
         </div>
       </div>
     );
