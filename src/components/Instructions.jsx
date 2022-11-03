@@ -9,7 +9,7 @@ const Instructions = () => {
         <div className="px-4 py-16 mx-auto w-full bg-white md:px-24 lg:px-8 lg:py-20">
         <div className="grid gap-6 row-gap-10 lg:grid-cols-2 max-w-6xl mx-auto">
         <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              How it works
+              How it will work
                 </h2>
           <div className="lg:py-6 lg:pr-16">
             <div className="flex">
