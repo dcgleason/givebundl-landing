@@ -158,7 +158,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "The isn't just a emotion, it's an action.",
+  name: "The is not just a emotion, it's an action.",
   href: '#',
   price: '$99',
   description:
