@@ -44,10 +44,10 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Order a Bundle book:
+                  Order a Bundle:
                 </p>{" "}
                 <p className="text-gray-700">
-                  Order a Bundle book. Upload the email addresses of the family and friends of the person you are giving a Bundle book to. You&apos;ll also write a brief message that will be sent out to all your Bundle contributors.
+                  Order a Bundle. Upload the email addresses of the family and friends of the person you are giving a Bundle to. You&apos;ll also write a brief message that will be sent out to all your Bundle contributors.
                 </p>
               </div>
             </div>{" "}
