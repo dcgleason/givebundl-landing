@@ -160,7 +160,7 @@ const userNavigation = [
 const product = {
   name: "Love is not just an emotion, it's an action.",
   href: '#',
-  price: '$99',
+  price: '$79',
   description:
    '',
   imageSrc: "test",
