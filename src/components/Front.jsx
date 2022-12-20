@@ -160,7 +160,7 @@ const userNavigation = [
 const product = {
   name: "The best present you'll ever give.",
   href: '#',
-  price: '$49',
+  price: '$99',
   description:
    '',
   imageSrc: "test",
