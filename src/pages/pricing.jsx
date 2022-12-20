@@ -15,7 +15,7 @@ export default function Example() {
         <div className="pb-16 xl:flex xl:items-center xl:justify-between">
           <div>
             <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
-              <span className="text-gray-900"> For each Bundle book you pay </span>
+              <span className="text-gray-900"> For each Bundle you pay </span>
               <span className="text-red-400">$49</span>
             </h1>
             <p className="mt-5 text-xl text-gray-500">

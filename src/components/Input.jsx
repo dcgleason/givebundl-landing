@@ -394,7 +394,7 @@ const handleClick = () => {
           // onSubmit={submitForm}
         >
           <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
-            Pre-Order your Bundle book
+            Pre-Order your Bundle
           </h1>
           <div className="text-m pt-2 pb-2 text-center font-small text-gray-800">
             We will collect all necessary information (shipping address, Bundle contributor email addressses, etc.) in a subsequent email to you.
@@ -667,7 +667,7 @@ const handleClick = () => {
               type="submit"
               onClick={submitForm}
             >
-              Submit Payment & Pre-Order Bundle book
+              Submit Payment & Pre-Order Bundle
             </button>  
           </div>
       }

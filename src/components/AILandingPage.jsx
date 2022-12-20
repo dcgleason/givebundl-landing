@@ -271,7 +271,7 @@ const AILandingPage = () => {
             </p>{" "}
             <p className="text-gray-700">
               We create a book of love letters written by your friends and
-              family, then we send you the Bundle book.
+              family, then we send you the Bundle.
             </p>
           </div>
         </div>{" "}
@@ -349,7 +349,7 @@ const AILandingPage = () => {
             </p>{" "}
             <p className="text-gray-700">
              We&apos;ll collect letters from your friends and family which will be
-              compiled into a personalized bundle of love aka a Bundle book for this one lucky
+              compiled into a personalized bundle of love aka a Bundle for this one lucky
               recipient.
             </p>
           </div>
