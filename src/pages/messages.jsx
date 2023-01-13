@@ -6,11 +6,13 @@ import Image from 'next/image';
 import Success from './success';
 import Failure from './error';
 import Head from "next/head"
+import { useRouter } from 'next/router';
 import dotenv from 'dotenv'
 dotenv.config()
 
 
 // when you input the gift code, the person's whose Bundle it is should appear in the question.
+
 
 const Messages = () => {
 
@@ -29,7 +31,22 @@ const Messages = () => {
   const [ failure, setFailure ] = useState(false);
   const [file, setFile] = useState(null);
   const [caption, setCaption] = useState("");
+
   
+  const router = useRouter();
+  const { userId } = router.query;
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(`http://localhost:3001/users/${userId}`);
+      setUserData(data);
+    }
+    fetchData();
+  }, []); // only run the effect on first render
+
+  
+
     const submit = async (event) => {
       event.preventDefault();
   
@@ -56,8 +73,7 @@ const Messages = () => {
       console.log(imageUrl); //this is the url of the image in the s3 bucket -- you can use this to display the image (or store it in the database)
     };
   
-
- 
+ if (!userData) return <p>Loading...</p>;
 
   return (
     <>
@@ -192,3 +208,10 @@ const Messages = () => {
 }
 
 export default Messages;
+
+Messages.getInitialProps = async ({query: {userId}}) => {
+  //fetch data from the server using userId
+  const data = await fetch(`https://your-api.com/users/${userId}`);
+  //return data as props
+  return { userData: data };
+}
