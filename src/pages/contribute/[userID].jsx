@@ -3,8 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect } from 'react'
 import Box from '@material-ui/core/Box';
 import Image from 'next/image';
-import Success from './success';
-import Failure from './error';
+import Success from '../success';
+import Failure from '../error';
 import Head from "next/head"
 import { useRouter } from 'next/router';
 import dotenv from 'dotenv'
@@ -32,19 +32,22 @@ const Messages = () => {
   const [file, setFile] = useState(null);
   const [caption, setCaption] = useState("");
 
-  
+
   const router = useRouter();
-  const { userId } = router.query;
+  const { userID } = router.query;
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch(`http://localhost:3001/users/${userId}`);
+      const res = await fetch(`http://localhost:3001/users/${userID}`);
+      const data = await res.json();
       setUserData(data);
+      console.log("user first name" + data.firstName);
     }
     fetchData();
   }, []); // only run the effect on first render
 
+  // 636468ef285378771155ce54
   
 
     const submit = async (event) => {
