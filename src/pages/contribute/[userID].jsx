@@ -35,16 +35,31 @@ const Messages = () => {
 
   const router = useRouter();
   const { userID } = router.query;
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState({});
+  const [giftData, setGiftData] = useState({});
+
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchUserData() {
       const res = await fetch(`http://localhost:3001/users/${userID}`);
       const data = await res.json();
       setUserData(data);
-      console.log("user first name" + data.firstName);
+      console.log("user first name" + data.firstName); // first name of the gift owner
+
     }
-    fetchData();
+
+    async function fetchGiftData() {
+      const res = await fetch(`http://localhost:3001/gifts/user/${userID}`);
+      const data = await res.json();
+      setGiftData(data);
+      console.log("recipient first name" + data.recipientName);
+
+    }
+
+    fetchGiftData();
+    fetchUserData();
+    console.log('gift data' + giftData.recipientName);
+    console.log('userData' + userData.firstName);
   }, []); // only run the effect on first render
 
   // 636468ef285378771155ce54
@@ -95,7 +110,7 @@ const Messages = () => {
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Please write your letter to your your friend or family member by filling out the form below. 
+              Please write your letter to {giftData.recipientName} by filling out the form below. 
             </p>
           </div>
 
@@ -117,29 +132,11 @@ const Messages = () => {
                 </div>
               </div>
             </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Recipient Name:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  placeholder='Elle Young'
-                  onChange={e => setName(e.target.value)}
-                  value={name}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                />
-                </div>
-              </div>
-            </div>
 
             
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              <em>Elle Young</em> just had a baby - her second. To show your support, please take this opportunity to tell her how much she means to you and how. How has she impacted you in positive ways? How and why are you grateful for her presence in your life? (please include a signature with your name at the end of your letter)
+              Please write your letter to {giftData.recipientName} by filling out the form below.
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -147,7 +144,6 @@ const Messages = () => {
                   id="about"
                   name="about"
                   spellCheck="true"
-                  placeholder="Dear Elle, ... Sincerely, [Your name]"
                   rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
                   value={questionOne}
