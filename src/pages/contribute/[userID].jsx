@@ -118,7 +118,7 @@ const Messages = () => {
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                What does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be displayed in the Bundle book along with your letter to {giftData.recipientFirstName}):
+                What does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be placed in the Bundle book next to your letter to {giftData.recipientFirstName}):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
