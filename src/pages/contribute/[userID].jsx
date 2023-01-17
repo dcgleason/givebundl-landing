@@ -118,7 +118,7 @@ const Messages = () => {
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                What does name {giftData.recipientName} call to you? (e.g. Mom, Dad, Grandma, Grandpa, etc.):
+                What does name {giftData.recipientName} call to you (e.g. Mom, Dad, Grandma, Grandpa, etc)?  This name will be displayed along with your letter the Bundle book:
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -156,7 +156,7 @@ const Messages = () => {
                   id="about"
                   name="about"
                   spellCheck="true"
-                  placeholder={`Dear ${giftData.recipientName},`}
+                  placeholder={`Dear ${giftData.recipientFirstName}, ...`}
                   maxLength= {wantUploadPicture ? 1750 : 3500}
                   rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
