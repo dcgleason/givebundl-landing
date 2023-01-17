@@ -111,14 +111,14 @@ const Messages = () => {
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Please write your letter to {giftData.recipientName} by filling out the form below. 
+              Please write your letter to {giftData.recipientName} by filling out the form below. This letter will be displayed in the Bundle book to {giftData.recipientFirstName}, along with your photo, if you chose to upload one.
             </p>
           </div>
 
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                What does does {giftData.recipientName} normally call to you? E.g. Mom, Dad, Grandma, Grandpa, etc. (to be displayed along with your letter to {giftData.recipientFirstName}):
+                What does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be displayed in the Bundle book along with your letter to {giftData.recipientFirstName}):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -136,7 +136,7 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Do you want to upload a picture? (recommended)
+                    Do you want to upload a picture of you and {giftData.recipientFirstName}? (recommended)
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
@@ -148,7 +148,7 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 items-start ">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              Please write your letter to {giftData.recipientName} here:
+              Please write your letter here (<em>we ask that you write your letter from a place of love, support, and encouragement</em>):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2 w-full">
                 <div className="flex rounded-md shadow-sm">
@@ -173,7 +173,7 @@ const Messages = () => {
 {wantUploadPicture ? 
     <>
         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-          <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Photo: </label>
+          <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Your picture: </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
             <div className="max-w-lg flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
               <div className="space-y-1 text-center">
