@@ -146,6 +146,21 @@ const Messages = () => {
                 </div>
             </div>
 
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"></div>
+
+            <div className="text-center text-sm font-medium text-gray-700 sm:mt-px sm:pt-2 mb-4">
+              <em>Here is a message from Manny:</em> <br />
+              <strong>NOTE:</strong> Make sure to include specific memories, inside jokes, and personal anecdotes that only you and {giftData.recipientName} share. <br />
+              <br />
+              <strong>Suggested PROMPTS:</strong>
+              <ul className="list-disc">
+                <ol>What are some of your favorite memories with {giftData.recipientName}?</ol>
+                <ol>How has {giftData.recipientName} impacted your life?</ol>
+                <ol>What advice would you give to {giftData.recipientName} for the future?</ol>
+              </ul>
+            </div>
+          <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5"></div>
+
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 items-start ">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
               Please write your letter here (<em>we ask that you write your letter from a place of love, support, and encouragement</em>):
