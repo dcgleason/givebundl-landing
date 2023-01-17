@@ -122,10 +122,10 @@ const Messages = () => {
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
-                <textarea
+                <input
                   id="about"
                   name="about"
-                  rows={2}
+                  rows={3}
                   onChange={e => setContributorName(e.target.value)}
                   value={contributorName}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
