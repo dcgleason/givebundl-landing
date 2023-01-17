@@ -149,7 +149,7 @@ const Messages = () => {
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"></div>
 
             <div className="text-center text-sm font-medium text-gray-700 sm:mt-px sm:pt-2 mb-4">
-              <em>Here is a message from Manny:</em> <br />
+              <em>Here is a message from Manny (to you):</em> <br />
               <strong>NOTE:</strong> Make sure to include specific memories, inside jokes, and personal anecdotes that only you and {giftData.recipientName} share. <br />
               <br />
               <strong>Suggested PROMPTS:</strong>
