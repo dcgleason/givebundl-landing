@@ -150,7 +150,7 @@ const Messages = () => {
 
             <div className="text-center text-sm font-medium text-gray-700 sm:mt-px sm:pt-2 mb-4">
               <em>Here is a message from Manny (to you):</em> <br />
-              <strong>NOTE:</strong> Make sure to include specific memories, inside jokes, and personal anecdotes that only you and {giftData.recipientName} share. <br />
+              <strong>NOTE:</strong> [note from {userData.firstName}] <br />
               <br />
               <strong>Suggested PROMPTS:</strong>
               <ul className="list-disc">
