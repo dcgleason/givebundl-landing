@@ -32,6 +32,7 @@ const Messages = () => {
   const [file, setFile] = useState(null);
   const [caption, setCaption] = useState("");
 
+  const [wantUploadPicture, setWantUploadPicture] = useState(true);
 
   const router = useRouter();
   const { userID } = router.query;
@@ -133,30 +134,44 @@ const Messages = () => {
               </div>
             </div>
 
-            
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                  <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                    Do you want to upload a picture? (recommended)
+                  </label>
+                    <div className="mt-1 sm:mt-0 sm:col-span-2">
+                        <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
+                            <option value='yes'>Yes</option>
+                            <option value='no'>No</option>
+                        </select>
+                </div>
+            </div>
+
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 items-start ">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              Please write your letter to {giftData.recipientName} by filling out the form below.
+              Please write your letter to {giftData.recipientName} here:
               </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <div className="max-w-lg flex rounded-md shadow-sm">
+              <div className="mt-1 sm:mt-0 sm:col-span-2 w-full">
+                <div className="flex rounded-md shadow-sm">
                 <textarea
                   id="about"
                   name="about"
                   spellCheck="true"
-                  maxLength={3500} // charLimt --> roughly 2 pages or 700 words
+                  placeholder={`Dear ${giftData.recipientName},`}
+                  maxLength= {wantUploadPicture ? 1750 : 3500}
                   rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
                   value={questionOne}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md sm:col-span-2 py-2 px-3"
                 />
+                  <div className=" ml-3 text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> {questionOne.length}/{wantUploadPicture ? 1750 : 3500} characters</div>
                 </div>
               </div>
             </div>
 
     
 
-
+{wantUploadPicture ? 
+    <>
         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
           <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Photo: </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
@@ -187,6 +202,7 @@ const Messages = () => {
               </div>
 )} */}
         </div>
+        </> : <div> </div>}
        </div>
      </div>
      </div>
@@ -196,7 +212,7 @@ const Messages = () => {
          
           <button
             type="submit"
-            className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="ml-3 mb-8 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Send
           </button>
