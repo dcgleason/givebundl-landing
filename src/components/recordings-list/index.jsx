@@ -6,7 +6,8 @@ import useRecordingsList from "../../hooks/use-recordings-list";
 export default function RecordingsList({ audio }) {
   const { recordings, deleteAudio } = useRecordingsList(audio);
 
-  console.log('recordings', recordings);
+
+  console.log('recordings' + recordings);
 
   return (
     <div className="flex flex-col">
@@ -14,6 +15,7 @@ export default function RecordingsList({ audio }) {
         <>
           <h1 className="text-2xl">Your recordings</h1>
           <div className="flex flex-col">
+          
             {recordings.map((record) => (
               <div className="my-4" key={record.key}>
                 <audio className="w-full" controls src={record.audio} />
@@ -21,7 +23,7 @@ export default function RecordingsList({ audio }) {
                   <button
                     className="bg-red-500 text-white rounded-md p-2"
                     title="Delete this audio"
-                    onClick={() => deleteAudio(record.key)}
+                    onClick={() => {deleteAudio(record.key)}}
                   >
                     <FontAwesomeIcon icon={faTrashAlt} />
                   </button>

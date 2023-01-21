@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrophone, faTimes, faSave } from "@fortawesome/free-solid-svg-icons";
 import { formatMinutes, formatSeconds } from "../../utils/format-time";
+import { useState } from "react";
 
-export default function RecorderControls({ recorderState, handlers }) {
+export default function RecorderControls({ recorderState, handlers}) {
   const { recordingMinutes, recordingSeconds, initRecording } = recorderState;
   const { startRecording, saveRecording, cancelRecording } = handlers;
+
+
+
 
   return (
     <div className="flex flex-col items-center">
@@ -42,13 +46,17 @@ export default function RecorderControls({ recorderState, handlers }) {
             <FontAwesomeIcon icon={faSave} size="2x" />
             </button>
             ) : (
+               
             <button
                     className="bg-blue-500 text-white rounded-md p-2"
                     title="Start recording"
                     onClick={startRecording}
+                
                   >
             <FontAwesomeIcon icon={faMicrophone} size="2x" />
             </button>
+               
+                  
             )}
             </div>
             </div>

@@ -1,14 +1,5 @@
 export async function startRecording(setRecorderState) {
-  if (recordingInProgress) {
 
-    alert("Recording already in progress");
-
-    return
-
-  }
-
-
-  setRecordingInProgress(true);
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   
