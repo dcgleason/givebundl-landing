@@ -18,7 +18,7 @@ export default function RecordingsList({ audio, audioRecorded, setAudioRecorded 
           
             {recordings.map((record) => (
             <div className="my-4 flex space-x-4" key={record.key}>
-            <audio className="w-full" controls src={record.audio} />
+            <audio className="w-full" controls src={record.audio} playsinline />
             <div className="ml-auto">
               <button
                 className="bg-red-500 text-white rounded-md p-2"
