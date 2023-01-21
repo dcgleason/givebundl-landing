@@ -86,8 +86,8 @@ const Messages = () => {
         res.json()
       );
   
-      console.log(url);
-  
+      console.log("url" + url);
+
       //post the image to the s3 bucket
       await fetch(url, {
         method: "PUT",
@@ -96,9 +96,30 @@ const Messages = () => {
         },
         body: file,
       });
-  
+
       const imageUrl = url.split("?")[0];
       console.log(imageUrl); //this is the url of the image in the s3 bucket -- you can use this to display the image (or store it in the database)
+
+      // create a new FormData object
+       const form = new FormData();
+        form.append("audio", audio); // append the audio file
+        form.append("imageUrl", imageUrl); // append the image url
+        form.append("message", questionOne); // append the message
+
+        // make a post request to the endpoint '/contributor/create'
+        const res = await fetch('http://localhost:3001/contributor/create', {
+          method: 'POST',
+          body: form
+        });
+        if(res.status === 200){
+          setSuccess(true);
+        }else{
+          setFailure(true);
+        }
+  
+      
+  
+     
     };
   
  if (!userData) return <p>Loading...</p>;
