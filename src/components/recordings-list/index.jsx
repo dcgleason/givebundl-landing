@@ -3,7 +3,7 @@ import { faTrashAlt, faExclamationCircle } from "@fortawesome/free-solid-svg-ico
 import useRecordingsList from "../../hooks/use-recordings-list";
 
 
-export default function RecordingsList({ audio }) {
+export default function RecordingsList({ audio, audioRecorded, setAudioRecorded }) {
   const { recordings, deleteAudio } = useRecordingsList(audio);
 
 
@@ -13,7 +13,7 @@ export default function RecordingsList({ audio }) {
     <div className="flex flex-col">
       {recordings.length > 0 ? (
         <>
-          <h1 className="text-2xl">Your recordings</h1>
+          <h1 className="text-2xl">Your recording</h1>
           <div className="flex flex-col">
           
             {recordings.map((record) => (
@@ -23,7 +23,10 @@ export default function RecordingsList({ audio }) {
                   <button
                     className="bg-red-500 text-white rounded-md p-2"
                     title="Delete this audio"
-                    onClick={() => {deleteAudio(record.key)}}
+                    onClick={() => {
+                      deleteAudio(record.key);
+                      setAudioRecorded(false);
+                    console.log('deletedRecording')}}
                   >
                     <FontAwesomeIcon icon={faTrashAlt} />
                   </button>

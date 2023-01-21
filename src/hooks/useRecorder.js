@@ -12,6 +12,8 @@ const initialState = {
 
 export default function useRecorder() {
   const [recorderState, setRecorderState] = useState(initialState);
+  const [audioRecorded, setAudioRecorded] = useState(false);
+
 
   useEffect(() => {
     const MAX_RECORDER_TIME = 5;
@@ -55,7 +57,11 @@ export default function useRecorder() {
           mediaRecorder: new MediaRecorder(prevState.mediaStream),
         };
       });
+
+
   }, [recorderState.mediaStream]);
+
+  console.log('recorderState changed', recorderState);
 
   useEffect(() => {
     const recorder = recorderState.mediaRecorder;
@@ -90,8 +96,22 @@ export default function useRecorder() {
 
   return {
     recorderState,
-    startRecording: () => startRecording(setRecorderState),
+    startRecording: () => {
+      // check if an audio file has already been recorded
+      if (audioRecorded) {
+        alert("You have already recorded an audio file. Please delete it before recording another one.");
+        return;
+      }
+      startRecording(setRecorderState);
+    },
     cancelRecording: () => setRecorderState(initialState),
-    saveRecording: () => saveRecording(recorderState.mediaRecorder),
+    saveRecording: () => {
+      saveRecording(recorderState.mediaRecorder);
+      setAudioRecorded(true);
+    },
+    audioRecorded,
+    setAudioRecorded
   };
 }
+
+

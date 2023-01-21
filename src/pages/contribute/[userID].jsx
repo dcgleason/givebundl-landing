@@ -42,7 +42,7 @@ const Messages = () => {
   const { userID } = router.query;
   const [userData, setUserData] = useState({});
   const [giftData, setGiftData] = useState({});
-  const { recorderState, ...handlers } = useRecorder();
+  const { recorderState, audioRecorded, setAudioRecorded, ...handlers } = useRecorder();
   const { audio } = recorderState;
   
 
@@ -203,7 +203,7 @@ const Messages = () => {
                 <h1 className="text-xl text-center"><em>Click on the blue microphone to record </em></h1>
                 <div className="">
                   <RecorderControls recorderState={recorderState} handlers={handlers}   />
-                  <RecordingsList audio={audio} />
+                  <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} />
                 </div>
               </section>
 
