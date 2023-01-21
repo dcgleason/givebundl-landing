@@ -44,7 +44,7 @@ const Messages = () => {
   const [giftData, setGiftData] = useState({});
   const { recorderState, ...handlers } = useRecorder();
   const { audio } = recorderState;
-  const [ count, setCount ] = useState(0);
+  
 
 
 
@@ -202,8 +202,8 @@ const Messages = () => {
             <section className="mx-auto">
                 <h1 className="text-xl text-center"><em>Click on the blue microphone to record </em></h1>
                 <div className="">
-                  <RecorderControls recorderState={recorderState} handlers={handlers} setCount={setCount} count={count}  />
-                  <RecordingsList audio={audio} count={count} setCount={setCount}/>
+                  <RecorderControls recorderState={recorderState} handlers={handlers}   />
+                  <RecordingsList audio={audio} />
                 </div>
               </section>
 
