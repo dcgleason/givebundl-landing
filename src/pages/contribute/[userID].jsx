@@ -20,24 +20,12 @@ import useRecorder from "@/hooks/useRecorder";
 const Messages = () => {
 
   const [ questionOne, setQuestionOne] = useState('');
-  const [ name, setName] = useState('');
-  const [ street, setStreet] = useState('');
-  const [ city, setCity] = useState('');
-  const [ state, setState] = useState('');
-  const [ zip, setZip] = useState('');
-  const [ apartment, setApartment] = useState('');
-  const [ country, setCountry] = useState('');
   const [ contributorName, setContributorName ] = useState('');
-  const [ giftCode, setGiftCode ] = useState('');
-  const [selectedImage, setSelectedImage] = useState(null);
   const [ success, setSuccess ] = useState(false);
   const [ failure, setFailure ] = useState(false);
   const [file, setFile] = useState(null);
   const [caption, setCaption] = useState("");
-
   const [wantUploadPicture, setWantUploadPicture] = useState(true);
-  
-
   const router = useRouter();
   const { userID } = router.query;
   const [userData, setUserData] = useState({});
@@ -51,6 +39,7 @@ const Messages = () => {
 
   useEffect(() => {
     async function fetchUserData() {
+      console.log("user id" + userID);
       const res = await fetch(`http://localhost:3001/users/${userID}`);
       const data = await res.json();
       setUserData(data);
@@ -70,7 +59,7 @@ const Messages = () => {
     fetchUserData();
     console.log('gift data' + giftData.recipientName);
     console.log('userData' + userData.firstName);
-  }, []); // only run the effect on first render
+  }, []); // only run the effect on first render --< how to 
 
   // 636468ef285378771155ce54
 
