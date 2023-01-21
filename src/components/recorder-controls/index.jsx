@@ -23,28 +23,30 @@ export default function RecorderControls({ recorderState, handlers}) {
             <span>{formatSeconds(recordingSeconds)}</span>
           </div>
         </div>
-        {initRecording && (
-          <div className="ml-auto">
-            <button
-              className="bg-red-500 text-white rounded-md p-2"
-              title="Cancel recording"
-              onClick={cancelRecording}
-            >
-              <FontAwesomeIcon icon={faTimes} />
-            </button>
-          </div>
-        )}
+        {/* {initRecording && (
+          
+        )} */}
       </div>
       <div className="my-4">
         {initRecording ? (
+          <div className="flex justify-center space-x-4">
           <button
-            className="bg-green-500 text-white rounded-md p-2"
+            className="bg-green-500 text-white rounded-md p-2 h-20"
             title="Save recording"
             disabled={recordingSeconds === 0}
             onClick={saveRecording}
             >
-            <FontAwesomeIcon icon={faSave} size="2x" />
+           Save <br></br> <FontAwesomeIcon icon={faSave} /> 
             </button>
+            <button
+              className="bg-red-500 text-white rounded-md p-2 h-20"
+              title="Cancel recording"
+              onClick={cancelRecording}
+            >
+            Cancel <br></br> <FontAwesomeIcon icon={faTimes} />
+            </button>
+            </div>
+            
             ) : (
                
             <button

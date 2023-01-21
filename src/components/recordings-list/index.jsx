@@ -17,28 +17,28 @@ export default function RecordingsList({ audio, audioRecorded, setAudioRecorded 
           <div className="flex flex-col">
           
             {recordings.map((record) => (
-              <div className="my-4" key={record.key}>
-                <audio className="w-full" controls src={record.audio} />
-                <div className="ml-auto">
-                  <button
-                    className="bg-red-500 text-white rounded-md p-2"
-                    title="Delete this audio"
-                    onClick={() => {
-                      deleteAudio(record.key);
-                      setAudioRecorded(false);
-                    console.log('deletedRecording')}}
-                  >
-                    <FontAwesomeIcon icon={faTrashAlt} />
-                  </button>
-                </div>
-              </div>
+            <div className="my-4 flex space-x-4" key={record.key}>
+            <audio className="w-full" controls src={record.audio} />
+            <div className="ml-auto">
+              <button
+                className="bg-red-500 text-white rounded-md p-2"
+                title="Delete this audio"
+                onClick={() => {
+                  deleteAudio(record.key);
+                  setAudioRecorded(false);
+                console.log('deletedRecording')}}
+              >
+                <FontAwesomeIcon icon={faTrashAlt} />
+              </button>
+            </div>
+          </div>
             ))}
           </div>
         </>
       ) : (
-        <div className="flex flex-col items-center">
+        <div className="flex items-center space-x-4">
+          <span className="text-l">(Click on the blue microphone to record your message)</span>
           <FontAwesomeIcon icon={faExclamationCircle} size="2x" color="#f2ea02" />
-          <span className="text-xl">(You have yet to record a message)</span>
         </div>
       )}
     </div>

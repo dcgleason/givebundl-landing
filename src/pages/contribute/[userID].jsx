@@ -214,15 +214,15 @@ const Messages = () => {
               </div>
             </div>
 
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5 items-center">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              We encourage you to record a voice message to {giftData.recipientFirstName} as well (optional). Feel free to read your letter or add any final thoughts:
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="recording" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+             To give {giftData.recipientFirstName} a more engaging experience, we encourage you to read your letter aloud and record it here (it will show up in the book):
               </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2 w-full">
-                <div className="flex rounded-md shadow-md">
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg sm:w-full flex rounded-md shadow-sm">
 
             <section className="mx-auto">
-                <h1 className="text-xl text-center"><em>Click on the blue microphone to record </em></h1>
+            <h1 className="text-xl text-center underline"><em>Voice Recorder</em></h1>
                 <div className="">
                   <RecorderControls recorderState={recorderState} handlers={handlers}   />
                   <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} />
