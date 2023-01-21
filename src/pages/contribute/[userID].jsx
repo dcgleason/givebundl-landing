@@ -105,6 +105,7 @@ const Messages = () => {
         form.append("audio", audio); // append the audio file
         form.append("imageUrl", imageUrl); // append the image url
         form.append("message", questionOne); // append the message
+        form.append("contributorName", contributorName); // append the contributor name
 
         // make a post request to the endpoint '/contributor/create'
         const res = await fetch('http://localhost:3001/contributor/create', {
