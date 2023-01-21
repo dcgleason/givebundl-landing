@@ -289,9 +289,3 @@ const Messages = () => {
 
 export default Messages;
 
-Messages.getInitialProps = async ({query: {userId}}) => {
-  //fetch data from the server using userId
-  const data = await fetch(`https://your-api.com/users/${userId}`);
-  //return data as props
-  return { userData: data };
-}
