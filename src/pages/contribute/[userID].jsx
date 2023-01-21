@@ -9,6 +9,9 @@ import Head from "next/head"
 import { useRouter } from 'next/router';
 import dotenv from 'dotenv'
 dotenv.config()
+import RecorderControls from '@/components/recorder-controls/index.jsx'
+import RecordingsList from "@/components/recordings-list/index.jsx";
+import useRecorder from "@/hooks/useRecorder";
 
 
 // when you input the gift code, the person's whose Bundle it is should appear in the question.
@@ -38,6 +41,9 @@ const Messages = () => {
   const { userID } = router.query;
   const [userData, setUserData] = useState({});
   const [giftData, setGiftData] = useState({});
+  const { recorderState, ...handlers } = useRecorder();
+  const { audio } = recorderState;
+
 
 
   useEffect(() => {
@@ -64,7 +70,7 @@ const Messages = () => {
   }, []); // only run the effect on first render
 
   // 636468ef285378771155ce54
-  
+
 
     const submit = async (event) => {
       event.preventDefault();
@@ -122,10 +128,10 @@ const Messages = () => {
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
-                <input
+                <textarea
                   id="about"
                   name="about"
-                  rows={3}
+                  rows={2}
                   onChange={e => setContributorName(e.target.value)}
                   value={contributorName}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
@@ -183,6 +189,24 @@ const Messages = () => {
               </div>
             </div>
 
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5 items-center">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              We encourage you to record a voice message to {giftData.recipientFirstName} as well (optional). Feel free to read your letter or add any final thoughts:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2 w-full">
+                <div className="flex rounded-md shadow-md">
+
+            <section className="mx-auto">
+                <h1 className="text-xl text-center"><em>Click on the blue microphone to record </em></h1>
+                <div className="">
+                  <RecorderControls recorderState={recorderState} handlers={handlers} />
+                  <RecordingsList audio={audio} />
+                </div>
+              </section>
+
+              </div>
+              </div>
+            </div>
     
 
 {wantUploadPicture ? 
