@@ -3,11 +3,8 @@ import { faTrashAlt, faExclamationCircle } from "@fortawesome/free-solid-svg-ico
 import useRecordingsList from "../../hooks/use-recordings-list";
 
 
-export default function RecordingsList({ audio, audioRecorded, setAudioRecorded }) {
+export default function RecordingsList({ audio, setAudioRecorded }) {
   const { recordings, deleteAudio } = useRecordingsList(audio);
-
-
-  console.log('recordings' + recordings);
 
   return (
     <div className="flex flex-col">
