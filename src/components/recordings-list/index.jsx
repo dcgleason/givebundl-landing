@@ -34,7 +34,7 @@ export default function RecordingsList({ audio, setAudioRecorded }) {
         </>
       ) : (
         <div className="flex items-center space-x-4">
-          <span className="text-l">(Click on the blue microphone to record your message)</span>
+          <span className="text-l">(Click on the red microphone to record your message)</span>
           <FontAwesomeIcon icon={faExclamationCircle} size="2x" color="#f2ea02" />
         </div>
       )}

@@ -15,7 +15,7 @@ export default function RecorderControls({ recorderState, handlers}) {
       <div className="flex">
         <div className="flex items-center">
           {initRecording && (
-            <div className="bg-blue-500 rounded-full w-4 h-4 mr-2"></div>
+            <div className="bg-red-500 rounded-full w-4 h-4 mr-2"></div>
           )}
           <div className="text-center">
             <span>{formatMinutes(recordingMinutes)}</span>
@@ -31,7 +31,7 @@ export default function RecorderControls({ recorderState, handlers}) {
         {initRecording ? (
           <div className="flex justify-center space-x-4">
           <button
-            className="bg-green-500 text-white rounded-md p-2 h-20"
+            className="bg-slate-300 text-white rounded-md p-2 h-20"
             title="Save recording"
             disabled={recordingSeconds === 0}
             onClick={saveRecording}
@@ -50,7 +50,7 @@ export default function RecorderControls({ recorderState, handlers}) {
             ) : (
                
             <button
-                    className="bg-blue-500 text-white rounded-md p-2"
+                    className="bg-red-400 text-white rounded-md p-2"
                     title="Start recording"
                     onClick={startRecording}
                 
