@@ -50,7 +50,7 @@ export default function RecorderControls({ recorderState, handlers}) {
             ) : (
                
             <button
-                    className="bg-red-400 text-white rounded-md p-2"
+                    className="bg-red-400 hover:bg-red-300 text-white rounded-md p-2"
                     title="Start recording"
                     onClick={startRecording}
                 
