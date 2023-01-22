@@ -127,7 +127,7 @@ const Messages = () => {
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Please write your letter to {giftData.recipientName} by filling out the form below. <br></br> <br></br> <em>This letter will be displayed in the Bundle book (a collection of letters from family and friends that aim to support, uplift, and show love for someone special ... all compiled into a physical book) {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName}, along with your photo, if you chose to upload one.</em>
+              Please write your letter to {giftData.recipientName} by filling out the form below. <br></br> <br></br> <em>This letter will be displayed in the Bundle book (a collection of letters from family and friends that aim to support, uplift, and show love for someone special ... all compiled into a physical book) {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName}, along with your photo, if you chose to upload one and your optional voice recording.</em>
             </p>
           </div>
 
