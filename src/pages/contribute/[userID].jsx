@@ -167,7 +167,7 @@ const submit = async (event) => {
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              <div className='underline'>Your name :</div> what last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be placed in {userData.firstName}&apos;s book above your letter to {giftData.recipientFirstName}):
+              <div className='underline'>Your name :</div> What last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> 
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -185,7 +185,7 @@ const submit = async (event) => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                  Do you want to upload  picture of you and {giftData.recipientFirstName}? Note: if you upload a picture you will only be able to write one page for your letter. If you do not upload a picture you will be able to write two pages.
+                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: if you upload a picture you will only be able to write one page for your letter. If you do not upload a picture you will be able to write two pages.</em>
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
@@ -256,7 +256,7 @@ const submit = async (event) => {
 {wantUploadPicture ? 
     <>
         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-          <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> <div className='underline'>Picture (optional) :</div> Your picture of you and {giftData.recipientFirstName}: </label>
+          <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> <div className='underline'>Picture (optional) :</div> A picture of you and {giftData.recipientFirstName}: </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
             <div className="max-w-lg flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
               <div className="space-y-1 text-center">
