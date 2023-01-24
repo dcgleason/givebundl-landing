@@ -160,14 +160,14 @@ const submit = async (event) => {
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-            <div className='underline'>Instructions :</div> <br></br>Please write a letter to {giftData.recipientName} by filling out the form below for the Bundle book {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName} (this is a collection of letters from family and friends that aim to support, uplift, and show love for someone special compiled into a physical book by <a href='https://usebundle.co'>Bundle</a>). <br></br> <br></br> <em>This letter will be displayed along with your photo, if you chose to upload one, and an (optional) voice recording. <br/> <br/> We ask that you fill only page of text if you&apos;d like to provide and provide a picture. Feel free to write up to text if you choose not to include a picture of you and {giftData.recipientFirstName}. The option for an audio clip is always there, as well. </em>
+            <div className='underline'>Instructions :</div> <br></br>Please write a short to medium length letter to {giftData.recipientName} by filling out the form below for the special book {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName} (this is a collection of letters from family and friends that aim to support, uplift, and show love for someone special compiled into a physical book by <a href='https://usebundle.co'>Bundle</a>). <br></br> <br></br> <em>This letter will be displayed along with your photo, if you chose to upload one, and an (optional) voice recording. <br/> <br/> We ask that you fill only page of text if you&apos;d like to provide and provide a picture. Feel free to write up to text if you choose not to include a picture of you and {giftData.recipientFirstName}. The option for an audio clip is always there, as well. <br></br><br></br> If you want to only write a one page letter, we really strongly encourage you to include a picture. </em>
             </p>
           </div>
 
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              <div className='underline'>Your name (optional) :</div> what last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be placed in {userData.firstName}&apos;s book above your letter to {giftData.recipientFirstName}):
+              <div className='underline'>Your name :</div> what last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be placed in {userData.firstName}&apos;s book above your letter to {giftData.recipientFirstName}):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
