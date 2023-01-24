@@ -14,8 +14,38 @@ import RecordingsList from "@/components/recordings-list/index.jsx";
 import useRecorder from "@/hooks/useRecorder";
 
 
-// when you input the gift code, the person's whose Bundle it is should appear in the question.
 
+
+// if picture! --> create PDF page from L-R template
+  // if no picture --> store in an object
+  // OR we just tell people if no picture, they will create a blank page / we require a picture
+
+  // example two page book object --> one L-R spread per array, for those without a picture (can go at the end)
+
+  // var book = {
+  //   "one": [{
+  //     "message": "hello",
+  //     "contributorName": "jessica",
+  //     "audioUrl": "https://bundle-bucket.s3.amazonaws.com/IMG_20210730_165000.jpg"
+
+  //   }, 
+  //   {
+  //     "message": "hello",
+  //     "contributorName": "charlie",
+  //     "audioUrl": "https://bundle-bucket.s3.amazonaws.com/IMG_20210730_165000.jpg"
+  // }],
+  //   "two": [{
+  //     "message": "hello there",
+  //     "contributorName": "jessica",
+  //     "audioUrl": "https://bundle-bucket.s3.amazonaws.com/IMG_20210730_165000.jpg"
+
+  //   }, 
+  //   {
+  //     "message": "hi buddy",
+  //     "contributorName": "james",
+  //     "audioUrl": "https://bundle-bucket.s3.amazonaws.com/IMG_20210730_165000.jpg"
+  // }]
+  // }
 
 const Messages = () => {
 
@@ -60,8 +90,11 @@ const Messages = () => {
   // 636468ef285378771155ce54
 
 
-    const submit = async (event) => {
+
+const submit = async (event) => {
       event.preventDefault();
+
+      // POST request to PDF template ROUTE - create contributor page 
   
       const formData = new FormData();
       formData.append("image", file);
@@ -127,14 +160,14 @@ const Messages = () => {
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Please write your letter to {giftData.recipientName} by filling out the form below. <br></br> <br></br> <em>This letter will be displayed in the Bundle book (a collection of letters from family and friends that aim to support, uplift, and show love for someone special ... all compiled into a physical book) {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName}, along with your photo, if you chose to upload one and your optional voice recording.</em>
+            <div className='underline'>Instructions :</div> <br></br>Please write a letter to {giftData.recipientName} by filling out the form below for the Bundle book {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName} (this is a collection of letters from family and friends that aim to support, uplift, and show love for someone special compiled into a physical book by <a href='https://usebundle.co'>Bundle</a>). <br></br> <br></br> <em>This letter will be displayed along with your photo, if you chose to upload one, and an (optional) voice recording. <br/> <br/> We ask that you fill only page of text if you&apos;d like to provide and provide a picture. Feel free to write up to text if you choose not to include a picture of you and {giftData.recipientFirstName}. The option for an audio clip is always there, as well. </em>
             </p>
           </div>
 
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                What last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be placed in the Bundle book next to your letter to {giftData.recipientFirstName}):
+              <div className='underline'>Your name (optional) :</div> what last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> (to be placed in {userData.firstName}&apos;s book above your letter to {giftData.recipientFirstName}):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -152,7 +185,7 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                    Do you want to upload a picture of you and {giftData.recipientFirstName}? (recommended)
+                  <div className='underline'>You choose :</div> do you want to upload  picture of you and {giftData.recipientFirstName}? Note: if you upload a picture you will only be able to write one page for your letter. If you do not upload a picture you will be able to write two pages.
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
@@ -179,7 +212,7 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 items-start ">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              Please write your letter here (<em>we ask that you write your letter from a place of love, support, and encouragement</em>):
+              <div className='underline'>Letter :</div>please write your letter here (<em>we ask that you write your letter from a place of love, support, and encouragement</em>):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2 w-full">
                 <div className="flex rounded-md shadow-sm">
@@ -189,6 +222,7 @@ const Messages = () => {
                   spellCheck="true"
                   placeholder={`Dear ${giftData.recipientFirstName}, ...`}
                   maxLength= {wantUploadPicture ? 1750 : 3500}
+                  minLength= {wantUploadPicture ? 0 : 1750}
                   rows={8}
                   onChange={e => setQuestionOne(e.target.value)}
                   value={questionOne}
@@ -201,7 +235,7 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="recording" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-             To give {giftData.recipientFirstName} an even more engaging experience, please add a voice note! (recommended)
+              <div className='underline'>Audio (optional) :</div> to give {giftData.recipientFirstName} an even more engaging experience, please add a voice note! (recommended)
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg sm:w-full flex rounded-md shadow-sm">
@@ -222,7 +256,7 @@ const Messages = () => {
 {wantUploadPicture ? 
     <>
         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-          <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Your picture of you and {giftData.recipientFirstName}: </label>
+          <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> <div className='underline'>Picture (optional) :</div> your picture of you and {giftData.recipientFirstName}: </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
             <div className="max-w-lg flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
               <div className="space-y-1 text-center">
