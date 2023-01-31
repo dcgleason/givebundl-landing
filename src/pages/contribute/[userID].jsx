@@ -62,6 +62,7 @@ const Messages = () => {
   const [giftData, setGiftData] = useState({});
   const { recorderState, audioRecorded, setAudioRecorded, ...handlers } = useRecorder();
   const { audio } = recorderState;
+  const [blob, setBlob] = useState('');
   
 
 
@@ -89,12 +90,32 @@ const Messages = () => {
 
   // 636468ef285378771155ce54
 
+  const getDataChild = (data) => { // make this the same as the onsubmit
 
+   setBlob(data[0].audio)
+   console.log('data from parent ' + data[0].audio)
+   console.log('this is the blob' + blob);
+
+
+  }
 
 const submit = async (event) => {
       event.preventDefault();
 
+
+
       // POST request to PDF template ROUTE - create contributor page 
+
+         //post the image to the s3 bucket
+         await fetch("url", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: file,
+        });
+
+   
   
       const formData = new FormData();
       formData.append("image", file);
@@ -155,7 +176,7 @@ const submit = async (event) => {
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
         onSubmit={submit}
         >
-      <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
+      <div className="h-36 space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
@@ -233,18 +254,28 @@ const submit = async (event) => {
               </div>
             </div>
 
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            <div className="h-full sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="recording" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
               <div className='underline'>Audio (optional) :</div> To give {giftData.recipientFirstName} an even more engaging experience, please add a voice note! (recommended)
               </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
+              
+              <div className=" h-full mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg sm:w-full flex rounded-md shadow-sm">
+
+
 
             <section className="mx-auto">
             <h1 className="text-xl text-center underline"><em>Voice Recorder</em></h1>
                 <div className="">
+
+                  
                   <RecorderControls recorderState={recorderState} handlers={handlers}   />
-                  <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} />
+                
+                  <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} getData={getDataChild} />
+                  {blob != "" ? <li className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
+                    Your recording: 
+                     {blob}
+                  </li> : <div></div>}
                 </div>
               </section>
 
