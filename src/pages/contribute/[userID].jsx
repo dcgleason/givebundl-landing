@@ -173,15 +173,15 @@ const submit = async (event) => {
       </Head>
     {success? <Success/> : <div></div>}
     {failure? <Failure/> : <div></div>}
-      <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
+      <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32"
         onSubmit={submit}
         >
-      <div className="h-36 space-y-8 divide-y divide-gray-200 sm:space-y-5">
+      <div className=" space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Write a Letter</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-            <div className='underline'>Instructions :</div> <br></br>Please write a short to medium length letter to {giftData.recipientName} by filling out the form below for the special book {userData.firstName } {userData.lastName} is making for {giftData.recipientFirstName} (this is a collection of letters from family and friends that aim to support, uplift, and show love for someone special compiled into a physical book by <a href='https://usebundle.co'>Bundle</a>). <br></br> <br></br> <em>This letter will be displayed along with your photo, if you chose to upload one, and an (optional) voice recording. <br/> <br/> We ask that you fill only page of text if you&apos;d like to provide and provide a picture. Feel free to write up to text if you choose not to include a picture of you and {giftData.recipientFirstName}. The option for an audio clip is always there, as well. <br></br><br></br> If you want to only write a one page letter, we really strongly encourage you to include a picture. </em>
+            <div className='underline'>Instructions :</div> <br></br>Please contribute to the Bundle book for {giftData.recipientName} being gifted by {userData.firstName} by filling out the form below.
             </p>
           </div>
 
@@ -206,7 +206,7 @@ const submit = async (event) => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: if you upload a picture you will only be able to write one page for your letter. If you do not upload a picture you will be able to write two pages.</em>
+                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because each submitter gets just one left-right spread in the book, you can choose to write a one page letter (1750 characters) and include a picture, or if you do not upload a picture you will be able to write two pages (3500 characters). </em>
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
@@ -233,7 +233,7 @@ const submit = async (event) => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 items-start ">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              <div className='underline'>Letter :</div>please write your letter here (<em>we ask that you write your letter from a place of love, support, and encouragement</em>):
+              <div className='underline'>Letter :</div> Please write your letter here (<em> we ask that you write from a place of love, support, and encouragement</em>):
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2 w-full">
                 <div className="flex rounded-md shadow-sm">
@@ -256,7 +256,7 @@ const submit = async (event) => {
 
             <div className="h-full sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="recording" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              <div className='underline'>Audio (optional) :</div> To give {giftData.recipientFirstName} an even more engaging experience, please add a voice note! (recommended)
+              <div className='underline'>Audio :</div> To give {giftData.recipientFirstName} an even more engaging experience, please add a short voice note - something like... &quot;Hey {giftData.recipientFirstName}, this is [YOUR NAME]. Happy birthday! Love you!&quot;  (recommended) 
               </label>
               
               <div className=" h-full mt-1 sm:mt-0 sm:col-span-2">
@@ -272,10 +272,10 @@ const submit = async (event) => {
                   <RecorderControls recorderState={recorderState} handlers={handlers}   />
                 
                   <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} getData={getDataChild} />
-                  {blob != "" ? <li className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
-                    Your recording: 
-                     {blob}
-                  </li> : <div></div>}
+                  {blob != "" ? <div className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
+                    Your recording (ready to submit):  
+                    <a className='text-blue-500 underline' href={blob}>Audio recording - {Date()}</a>
+                  </div> : <div></div>}
                 </div>
               </section>
 
