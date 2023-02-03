@@ -99,18 +99,11 @@ const Messages = () => {
 
   }
 
-
-
-
 const submit = async (event) => {
       event.preventDefault();
 
-
-
-      // POST request to PDF template ROUTE - create contributor page 
-
          //post the image to the s3 bucket
-         await fetch("url", {
+         await fetch("url", { // what is this url??
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -118,13 +111,11 @@ const submit = async (event) => {
           body: file,
         });
 
-   
-  
       const formData = new FormData();
       formData.append("image", file);
-      formData.append("caption", caption);
+      //formData.append("caption", caption);
   
-      const { url } = await fetch("http://localhost:3001/s3Url").then((res) =>
+      const { url } = await fetch("http://localhost:3001/s3Url").then((res) => // manny has this route / code on this local machine
         res.json()
       );
   
