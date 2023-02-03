@@ -88,7 +88,7 @@ const Messages = () => {
     fetchUserData();
   }, [userID]); // only run the effect on first render --< how to 
 
-  // 636468ef285378771155ce54
+  // 636468ef285378771155ce54 --> user id of the giftOwner
 
   const getDataChild = (data) => { // make this the same as the onsubmit
 
@@ -98,6 +98,9 @@ const Messages = () => {
 
 
   }
+
+
+
 
 const submit = async (event) => {
       event.preventDefault();
@@ -146,6 +149,112 @@ const submit = async (event) => {
         form.append("message", questionOne); // append the message
         form.append("contributorName", contributorName); // append the contributor name
 
+
+        // creating the PDF document with the image(or not) and audio (or not) 
+        if(wantUploadPicture && blob){
+          // template with image and audio (1 page of text with audio)
+        
+          (async function functionOne () {
+        
+              const response = await fetch("http://localhost:3001/contribution/create-document", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  data: {
+                    message: questionOne,
+                    contributorName: contributorName,
+                    audioUrl: blob,
+                    imageUrl: imageUrl,
+                  },
+                  template: '571024',
+                  userID: userID,
+                }),
+              });
+        
+            })();
+        
+        
+        }
+        
+        if(!wantUploadPicture && blob){
+          //template with audio only (2 pages of text with audio)
+        
+          (async function functionTwo () {
+        
+            const response = await fetch("http://localhost:3001/contribution/create-document", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                data: {
+                  message: questionOne,
+                  contributorName: contributorName,
+                  audioUrl: blob,
+                },
+                template: '571157',
+                userID: userID,
+              }),
+            });
+        
+          })();
+        
+        
+        }
+        
+        if(wantUploadPicture && !blob){
+        
+          //template with image only (1 page of text no audio)
+        
+          (async function functionThree () {
+        
+            const response = await fetch("http://localhost:3001/contribution/create-document", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                data: {
+                  message: questionOne,
+                  contributorName: contributorName,
+                  imageUrl: imageUrl,
+                },
+                template: '570862',
+                userID: userID,
+              }),
+            });
+        
+          })();
+        } 
+        
+        if(!wantUploadPicture && !blob){
+        
+          // template with no image or audio, just two pages of text  (2 pages of text no audio)
+        
+        
+          (async function functionFour () {
+        
+            const response = await fetch("http://localhost:3001/contribution/create-document", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                data: {
+                  message: questionOne,
+                  contributorName: contributorName
+                },
+                template: '571124',
+                userID: userID,
+              }),
+            });
+        
+          })();
+        }
+
+        
         // make a post request to the endpoint '/contributor/create'
         const res = await fetch('http://localhost:3001/contributor/create', {
           method: 'POST',
@@ -161,6 +270,8 @@ const submit = async (event) => {
   
      
     };
+
+
   
  if (!userData) return <p>Loading...</p>;
 
@@ -206,7 +317,7 @@ const submit = async (event) => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because each submitter gets just one left-right spread in the book, you can choose to write a one page letter (1750 characters) and include a picture, or if you do not upload a picture you will be able to write two pages (3500 characters). </em>
+                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because each submitter gets just one left-right spread in the book, you can choose to write a one page letter (1750 characters) and include a picture, or if you do not upload a picture you will be able to write two pages (3500 characters). If you would like to say more, we suggest you utilize the voice note feature.</em>
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
