@@ -100,27 +100,14 @@ const Messages = () => {
   }
 
 const submit = async (event) => {
-      event.preventDefault();
+      event.preventDefault();      
 
-         //post the image to the s3 bucket
-         await fetch("url", { // what is this url??
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: file,
-        });
-
-      const formData = new FormData();
-      formData.append("image", file);
-      //formData.append("caption", caption);
+  if(file!==null){
   
       const { url } = await fetch("http://localhost:3001/s3Url").then((res) => // manny has this route / code on this local machine
         res.json()
       );
-  
       console.log("url" + url);
-
       //post the image to the s3 bucket
       await fetch(url, {
         method: "PUT",
@@ -129,24 +116,47 @@ const submit = async (event) => {
         },
         body: file,
       });
-
       const imageUrl = url.split("?")[0];
       console.log(imageUrl); //this is the url of the image in the s3 bucket -- you can use this to display the image (or store it in the database)
+          // creating the PDF document with the image(or not) and audio (or not) 
+      if(blob){ // if there is audio && image
+            // template with image and audio (1 page of text with audio)
+          
+            (async function functionOne () {
+          
+                const response = await fetch("http://localhost:3001/contribution/create-document", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    data: {
+                      message: questionOne,
+                      contributorName: contributorName,
+                      audioUrl: blob,
+                      imageUrl: imageUrl,
+                    },
+                    template: '571024',
+                    userID: userID,
+                  }),
+                });
 
-      // create a new FormData object
-       const form = new FormData();
-        form.append("audio", audio); // append the audio file
-        form.append("imageUrl", imageUrl); // append the image url
-        form.append("message", questionOne); // append the message
-        form.append("contributorName", contributorName); // append the contributor name
+                if(response.status === 200){
+                  setSuccess(true);
+                }else{
+                  setFailure(true);
+                }
+              })();
+          
+              }
+          
 
-
-        // creating the PDF document with the image(or not) and audio (or not) 
-        if(wantUploadPicture && blob){
-          // template with image and audio (1 page of text with audio)
-        
-          (async function functionOne () {
-        
+          if(!blob){ // if there is no audio && image
+            
+            //template with image only (1 page of text no audio)
+          
+            (async function functionThree () {
+          
               const response = await fetch("http://localhost:3001/contribution/create-document", {
                 method: "POST",
                 headers: {
@@ -156,20 +166,33 @@ const submit = async (event) => {
                   data: {
                     message: questionOne,
                     contributorName: contributorName,
-                    audioUrl: blob,
                     imageUrl: imageUrl,
                   },
-                  template: '571024',
+                  template: '570862',
                   userID: userID,
                 }),
               });
-        
+          
+              if(response.status === 200){
+                setSuccess(true);
+              }else{
+                setFailure(true);
+              }
             })();
-        
-        
+
+           
+          }
         }
-        
-        if(!wantUploadPicture && blob){
+
+    if (file==null){
+
+      // create a new FormData object
+      //  const form = new FormData();
+      //   form.append("audio", audio); // append the audio file
+      //   form.append("imageUrl", imageUrl); // append the image url
+      //   form.append("message", questionOne); // append the message
+      //   form.append("contributorName", contributorName); // append the contributor name 
+        if(blob){ // if there is audio && no image
           //template with audio only (2 pages of text with audio)
         
           (async function functionTwo () {
@@ -190,37 +213,21 @@ const submit = async (event) => {
               }),
             });
         
+            if(response.status === 200){
+              setSuccess(true);
+            }else{
+              setFailure(true);
+            }
           })();
-        
+
         
         }
         
-        if(wantUploadPicture && !blob){
         
-          //template with image only (1 page of text no audio)
         
-          (async function functionThree () {
+
         
-            const response = await fetch("http://localhost:3001/contribution/create-document", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                data: {
-                  message: questionOne,
-                  contributorName: contributorName,
-                  imageUrl: imageUrl,
-                },
-                template: '570862',
-                userID: userID,
-              }),
-            });
-        
-          })();
-        } 
-        
-        if(!wantUploadPicture && !blob){
+        if(!blob){ //
         
           // template with no image or audio, just two pages of text  (2 pages of text no audio)
         
@@ -241,24 +248,17 @@ const submit = async (event) => {
                 userID: userID,
               }),
             });
-        
+
+            if(response.status === 200){
+              setSuccess(true);
+            }else{
+              setFailure(true);
+            }
           })();
-        }
 
         
-        // make a post request to the endpoint '/contributor/create'
-        const res = await fetch('http://localhost:3001/contributor/create', {
-          method: 'POST',
-          body: form
-        });
-        if(res.status === 200){
-          setSuccess(true);
-        }else{
-          setFailure(true);
         }
-  
-      
-  
+      }
      
     };
 
