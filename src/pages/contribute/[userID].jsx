@@ -63,6 +63,7 @@ const Messages = () => {
   const { recorderState, audioRecorded, setAudioRecorded, ...handlers } = useRecorder();
   const { audio } = recorderState;
   const [blob, setBlob] = useState('');
+  const [pageTwo, setPageTwo] = useState('');
   
 
 
@@ -122,7 +123,21 @@ const submit = async (event) => {
       if(blob){ // if there is audio && image
             // template with image and audio (1 page of text with audio)
           
-            (async function functionOne () {
+
+                const res = await fetch("http://localhost:3001/contribution/convert-audio-to-mp3", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    data: {
+                      blob: blob,
+                    },
+                  }),
+                });
+                const data = await res.json();
+                const audioAddress = data.audioAddress;
+
           
                 const response = await fetch("http://localhost:3001/contribution/create-document", {
                   method: "POST",
@@ -131,13 +146,13 @@ const submit = async (event) => {
                   },
                   body: JSON.stringify({
                     data: {
-                      message: questionOne,
-                      contributorName: contributorName,
-                      audioUrl: blob,
-                      imageUrl: imageUrl,
+                      letter: questionOne,
+                      name: contributorName,
+                      qrcode: audioAddress,
+                      image: imageUrl,
                     },
                     template: '571024',
-                    userID: userID,
+                    giftID: giftID._id,
                   }),
                 });
 
@@ -146,7 +161,7 @@ const submit = async (event) => {
                 }else{
                   setFailure(true);
                 }
-              })();
+
           
               }
           
@@ -155,8 +170,7 @@ const submit = async (event) => {
             
             //template with image only (1 page of text no audio)
           
-            (async function functionThree () {
-          
+           
               const response = await fetch("http://localhost:3001/contribution/create-document", {
                 method: "POST",
                 headers: {
@@ -164,12 +178,12 @@ const submit = async (event) => {
                 },
                 body: JSON.stringify({
                   data: {
-                    message: questionOne,
-                    contributorName: contributorName,
-                    imageUrl: imageUrl,
+                    letter: questionOne,
+                    name: contributorName,
+                    image: imageUrl,
                   },
                   template: '570862',
-                  userID: userID,
+                  giftID: giftID._id,
                 }),
               });
           
@@ -178,7 +192,7 @@ const submit = async (event) => {
               }else{
                 setFailure(true);
               }
-            })();
+
 
            
           }
@@ -194,8 +208,25 @@ const submit = async (event) => {
       //   form.append("contributorName", contributorName); // append the contributor name 
         if(blob){ // if there is audio && no image
           //template with audio only (2 pages of text with audio)
-        
-          (async function functionTwo () {
+
+          if (questionOne.length > 1750) {
+            setPageTwo(questionOne.slice(-1750));
+            setQuestionOne(questionOne.slice(0, 1750));
+            }
+
+          const res = await fetch("http://localhost:3001/contribution/convert-audio-to-mp3", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              data: {
+                blob: blob,
+              },
+            }),
+          });
+          const data = await res.json();
+          const audioAddress = data.audioAddress;
         
             const response = await fetch("http://localhost:3001/contribution/create-document", {
               method: "POST",
@@ -204,12 +235,13 @@ const submit = async (event) => {
               },
               body: JSON.stringify({
                 data: {
-                  message: questionOne,
-                  contributorName: contributorName,
-                  audioUrl: blob,
+                  letter: questionOne,
+                  letterTwo: pageTwo,
+                  name: contributorName,
+                  qrcode: audioAddress,
                 },
                 template: '571157',
-                userID: userID,
+                giftID: giftID._id,
               }),
             });
         
@@ -218,8 +250,6 @@ const submit = async (event) => {
             }else{
               setFailure(true);
             }
-          })();
-
         
         }
         
@@ -231,8 +261,11 @@ const submit = async (event) => {
         
           // template with no image or audio, just two pages of text  (2 pages of text no audio)
         
-        
-          (async function functionFour () {
+          if (questionOne.length > 1750) {
+            setPageTwo(questionOne.slice(-1750));
+            setQuestionOne(questionOne.slice(0, 1750));
+            }
+    
         
             const response = await fetch("http://localhost:3001/contribution/create-document", {
               method: "POST",
@@ -241,11 +274,12 @@ const submit = async (event) => {
               },
               body: JSON.stringify({
                 data: {
-                  message: questionOne,
-                  contributorName: contributorName
+                  letter: questionOne,
+                  letterTwo: pageTwo,
+                  name: contributorName,
                 },
                 template: '571124',
-                userID: userID,
+                giftID: giftID._id,
               }),
             });
 
@@ -254,7 +288,6 @@ const submit = async (event) => {
             }else{
               setFailure(true);
             }
-          })();
 
         
         }
@@ -308,7 +341,7 @@ const submit = async (event) => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because you get one left-right spread in the book, you can choose to write a one page letter (1750 characters) and include a picture, or if you do not upload a picture you will be able to write two pages (3500 characters). If you would like to say more, we suggest you utilize the voice note feature.</em>
+                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because you get one left-right spread in the book, you can choose to write a one-page letter (1750 characters) and include a picture (that will be on the other page) or if you do not upload a picture you will be able to write two pages (3500 characters). If you would like to say more, we suggest you utilize the voice note feature.</em>
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
