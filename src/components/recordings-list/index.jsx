@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt, faExclamationCircle, faCheck, faSave } from "@fortawesome/free-solid-svg-icons";
 import useRecordingsList from "../../hooks/use-recordings-list";
-
+import { useState } from "react";
 
 
 
 export default function RecordingsList({ audio, setAudioRecorded, getData }) {
   const { recordings, deleteAudio } = useRecordingsList(audio);
+  const [ saved, setSaved ] = useState(true)
 
   console.log('recordings are here ' + JSON.stringify(recordings) )
 
@@ -20,6 +21,7 @@ export default function RecordingsList({ audio, setAudioRecorded, getData }) {
             {recordings.map((record) => (
             <div className="my-4 flex space-x-4" key={record.key}>
             <audio className="w-full" controls src={record.audio} playsinline />
+           
             <div className="ml-auto flex">
               <button
                 className="bg-red-500 text-white rounded-md p-2 mr-2"
@@ -29,23 +31,29 @@ export default function RecordingsList({ audio, setAudioRecorded, getData }) {
                   setAudioRecorded(false);
                   getData([{audio: ""}])
                   console.log('deletedRecording');
+                  setSaved(true)
                 }}
               >
                 Delete
                 <FontAwesomeIcon icon={faTrashAlt} />
               </button>
+              {saved ? (
               <button
                 className="bg-green-500 text-white rounded-md p-2"
                 title="Add this audio"
                 onClick={() => {
                   getData(recordings);
                   console.log('adding audio');
+                  setSaved(false)
                 }}
               >
                 Save
                 <FontAwesomeIcon icon={faSave} />
               </button>
-            </div>
+            ) : (
+              <div></div> )
+}
+            </div> 
           </div>
             ))}
           </div>

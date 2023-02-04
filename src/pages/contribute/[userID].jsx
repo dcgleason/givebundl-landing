@@ -90,7 +90,7 @@ const Messages = () => {
 
   // 636468ef285378771155ce54 --> user id of the giftOwner
 
-  const getDataChild = (data) => { // make this the same as the onsubmit
+  const getDataChild = (data) => { // make this the same as the onsubmit 
 
    setBlob(data[0].audio)
    console.log('data from parent ' + data[0].audio)
@@ -290,7 +290,7 @@ const submit = async (event) => {
           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-              <div className='underline'>Your name :</div> What last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, Grandpa, etc.</em> 
+              <div className='underline'>Your name :</div> What last does {giftData.recipientName} normally call you? <em>e.g. Mom, Dad, Grandma, a nickname, etc.</em> 
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <div className="max-w-lg flex rounded-md shadow-sm">
@@ -308,7 +308,7 @@ const submit = async (event) => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because each submitter gets just one left-right spread in the book, you can choose to write a one page letter (1750 characters) and include a picture, or if you do not upload a picture you will be able to write two pages (3500 characters). If you would like to say more, we suggest you utilize the voice note feature.</em>
+                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because you get one left-right spread in the book, you can choose to write a one page letter (1750 characters) and include a picture, or if you do not upload a picture you will be able to write two pages (3500 characters). If you would like to say more, we suggest you utilize the voice note feature.</em>
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
@@ -375,8 +375,8 @@ const submit = async (event) => {
                 
                   <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} getData={getDataChild} />
                   {blob != "" ? <div className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
-                    Your recording (ready to submit):  
-                    <a className='text-blue-500 underline' href={blob}>Audio recording - {Date()}</a>
+                    Your recording:  
+                    <a className='text-blue-500 underline' href={blob}>Audio message - {Date()}</a>
                   </div> : <div></div>}
                 </div>
               </section>
