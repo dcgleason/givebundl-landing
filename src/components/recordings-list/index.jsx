@@ -11,6 +11,7 @@ export default function RecordingsList({ audio, setAudioRecorded, getData }) {
 
   console.log('recordings are here ' + JSON.stringify(recordings) )
 
+
   return (
     <div className="flex flex-col">
       {recordings.length > 0 ? (
@@ -26,7 +27,8 @@ export default function RecordingsList({ audio, setAudioRecorded, getData }) {
               <button
                 className="bg-red-500 text-white rounded-md p-2 mr-2"
                 title="Delete this audio"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   deleteAudio(record.key);
                   setAudioRecorded(false);
                   getData([{audio: ""}])
@@ -41,10 +43,12 @@ export default function RecordingsList({ audio, setAudioRecorded, getData }) {
               <button
                 className="bg-green-500 text-white rounded-md p-2"
                 title="Add this audio"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   getData(recordings);
-                  console.log('adding audio');
                   setSaved(false)
+                  console.log('adding audio');
+              
                 }}
               >
                 Save

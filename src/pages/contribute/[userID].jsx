@@ -62,9 +62,15 @@ const Messages = () => {
   const [giftData, setGiftData] = useState({});
   const { recorderState, audioRecorded, setAudioRecorded, ...handlers } = useRecorder();
   const { audio } = recorderState;
-  const [blob, setBlob] = useState('');
+  const [blob, setBlob] = useState(null);
   const [pageTwo, setPageTwo] = useState('');
-  
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (!blob) {
+      setError('Blob (audio) is not set');
+    }
+  }, [blob]);
 
 
 
@@ -93,16 +99,17 @@ const Messages = () => {
 
   const getDataChild = (data) => { // make this the same as the onsubmit 
 
-   setBlob(data[0].audio)
+  setBlob(data[0].audio)
    console.log('data from parent ' + data[0].audio)
-   console.log('this is the blob' + blob);
 
 
   }
-
 const submit = async (event) => {
-      event.preventDefault();      
-
+      event.preventDefault();  
+if (!blob) {
+        return;
+      }
+  
   if(file!==null){
   
       const { url } = await fetch("http://localhost:3001/s3Url").then((res) => // manny has this route / code on this local machine
@@ -120,8 +127,13 @@ const submit = async (event) => {
       const imageUrl = url.split("?")[0];
       console.log(imageUrl); //this is the url of the image in the s3 bucket -- you can use this to display the image (or store it in the database)
           // creating the PDF document with the image(or not) and audio (or not) 
+
+    
+
       if(blob){ // if there is audio && image
             // template with image and audio (1 page of text with audio)
+            const originalString = blob;
+            const newBlobString = originalString.substring(originalString.indexOf("http"));
           
 
                 const res = await fetch("http://localhost:3001/contribution/convert-audio-to-mp3", {
@@ -131,7 +143,7 @@ const submit = async (event) => {
                   },
                   body: JSON.stringify({
                     data: {
-                      blob: blob,
+                      blob: newBlobString,
                     },
                   }),
                 });
@@ -152,7 +164,8 @@ const submit = async (event) => {
                       image: imageUrl,
                     },
                     template: '571024',
-                    giftID: giftID._id,
+                    giftID: giftData._id,
+                    optionsCode: 4
                   }),
                 });
 
@@ -160,11 +173,12 @@ const submit = async (event) => {
                   setSuccess(true);
                 }else{
                   setFailure(true);
+                  console.log(response)
                 }
 
           
               }
-          
+
 
           if(!blob){ // if there is no audio && image
             
@@ -183,7 +197,8 @@ const submit = async (event) => {
                     image: imageUrl,
                   },
                   template: '570862',
-                  giftID: giftID._id,
+                  giftID: giftData._id,
+                  optionsCode: 3
                 }),
               });
           
@@ -191,11 +206,14 @@ const submit = async (event) => {
                 setSuccess(true);
               }else{
                 setFailure(true);
+                console.log(response)
               }
 
 
            
           }
+
+ 
         }
 
     if (file==null){
@@ -207,12 +225,18 @@ const submit = async (event) => {
       //   form.append("message", questionOne); // append the message
       //   form.append("contributorName", contributorName); // append the contributor name 
         if(blob){ // if there is audio && no image
+
+          console.log('two pages, blob is set: ' + blob)
           //template with audio only (2 pages of text with audio)
 
+          const originalString = blob;
+          const newBlobString = originalString.substring(originalString.indexOf("http"));
+
           if (questionOne.length > 1750) {
-            setPageTwo(questionOne.slice(-1750));
-            setQuestionOne(questionOne.slice(0, 1750));
-            }
+            const pageTwo = questionOne.slice(-1750);
+            const pageOne = questionOne.slice(0, 1750);
+            console.log(pageOne);
+          
 
           const res = await fetch("http://localhost:3001/contribution/convert-audio-to-mp3", {
             method: "POST",
@@ -221,11 +245,13 @@ const submit = async (event) => {
             },
             body: JSON.stringify({
               data: {
-                blob: blob,
+                blob: newBlobString,
               },
             }),
           });
+
           const data = await res.json();
+
           const audioAddress = data.audioAddress;
         
             const response = await fetch("http://localhost:3001/contribution/create-document", {
@@ -235,22 +261,25 @@ const submit = async (event) => {
               },
               body: JSON.stringify({
                 data: {
-                  letter: questionOne,
+                  letter: pageOne,
                   letterTwo: pageTwo,
                   name: contributorName,
                   qrcode: audioAddress,
                 },
                 template: '571157',
-                giftID: giftID._id,
+                giftID: giftData._id,
+                optionsCode: 2
               }),
+            
             });
         
             if(response.status === 200){
               setSuccess(true);
             }else{
               setFailure(true);
+              console.log(response)
             }
-        
+          }
         }
         
         
@@ -262,10 +291,9 @@ const submit = async (event) => {
           // template with no image or audio, just two pages of text  (2 pages of text no audio)
         
           if (questionOne.length > 1750) {
-            setPageTwo(questionOne.slice(-1750));
-            setQuestionOne(questionOne.slice(0, 1750));
-            }
-    
+            const pageTwo = questionOne.slice(-1750);
+            const pageOne = questionOne.slice(0, 1750);
+            console.log(pageOne);
         
             const response = await fetch("http://localhost:3001/contribution/create-document", {
               method: "POST",
@@ -279,7 +307,8 @@ const submit = async (event) => {
                   name: contributorName,
                 },
                 template: '571124',
-                giftID: giftID._id,
+                giftID: giftData._id,
+                optionsCode: 1
               }),
             });
 
@@ -287,10 +316,12 @@ const submit = async (event) => {
               setSuccess(true);
             }else{
               setFailure(true);
+              console.log(response)
             }
 
         
         }
+      }
       }
      
     };
@@ -309,7 +340,7 @@ const submit = async (event) => {
     {success? <Success/> : <div></div>}
     {failure? <Failure/> : <div></div>}
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32"
-        onSubmit={submit}
+      
         >
       <div className=" space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
@@ -407,7 +438,7 @@ const submit = async (event) => {
                   <RecorderControls recorderState={recorderState} handlers={handlers}   />
                 
                   <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} getData={getDataChild} />
-                  {blob != "" ? <div className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
+                  {blob != null ? <div className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
                     Your recording:  
                     <a className='text-blue-500 underline' href={blob}>Audio message - {Date()}</a>
                   </div> : <div></div>}
@@ -462,6 +493,7 @@ const submit = async (event) => {
           <button
             type="submit"
             className="ml-3 mb-8 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-400 hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-200"
+            onClick={submit}
           >
             Send
           </button>

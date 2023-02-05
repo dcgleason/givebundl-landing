@@ -8,6 +8,20 @@ export default function RecorderControls({ recorderState, handlers}) {
   const { startRecording, saveRecording, cancelRecording } = handlers;
 
 
+  const handleRecord = (e) => {
+    e.preventDefault();
+    startRecording();
+  }
+
+  const handleSave = (e) => {
+    e.preventDefault();
+    saveRecording();
+  }
+
+ const handleCancel = (e) => {
+    e.preventDefault();
+    cancelRecording();
+  }
 
 
   return (
@@ -34,14 +48,14 @@ export default function RecorderControls({ recorderState, handlers}) {
             className="bg-red-500 text-white rounded-md p-2 h-20"
             title="Save recording"
             disabled={recordingSeconds === 0}
-            onClick={saveRecording}
+            onClick={handleSave}
             >
            Stop <br></br> <FontAwesomeIcon icon={faCheck} /> 
             </button>
             <button
               className="bg-slate-300 text-white rounded-md p-2 h-20"
               title="Cancel recording"
-              onClick={cancelRecording}
+              onClick={handleCancel}
             >
             Cancel <br></br> <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -52,7 +66,7 @@ export default function RecorderControls({ recorderState, handlers}) {
             <button
                     className="bg-red-400 hover:bg-red-300 text-white rounded-md p-2"
                     title="Start recording"
-                    onClick={startRecording}
+                    onClick={handleRecord}
                 
                   >
             <FontAwesomeIcon icon={faMicrophone} size="2x" />
