@@ -334,7 +334,7 @@ if (!blob) {
     <>
 
     <Head>
-        <title>Messages - Bundl Books</title>
+        <title>Messages - Bundl</title>
         <meta name="description" content="Where a Bundle contributor submits his or her written messages." />
       </Head>
     {success? <Success/> : <div></div>}

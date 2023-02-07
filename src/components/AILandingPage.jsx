@@ -132,7 +132,7 @@ const AILandingPage = () => {
             What your friends and family really think.
           </h2>{" "}
           <p className="text-base text-gray-700 md:text-lg">
-            A Bundl Book is a book of love letters written by a recipient&apos;s friends
+            A Bundl book is a book of love letters written by a recipient&apos;s friends
             and family and gifted to that person.
           </p>
         </div>{" "}

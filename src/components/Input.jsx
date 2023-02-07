@@ -598,7 +598,7 @@ const handleClick = () => {
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              First and last name of your Bundl Book recipient:
+              First and last name of your Bundl book recipient:
             </label>
             <input
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -667,7 +667,7 @@ const handleClick = () => {
               type="submit"
               onClick={submitForm}
             >
-              Submit Payment & Pre-Order Bundl Book
+              Submit Payment & Pre-Order Bundl book
             </button>  
           </div>
       }

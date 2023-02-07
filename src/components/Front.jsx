@@ -215,7 +215,7 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>It's been a joy to work with the Bundl Books team. We used Bundl books to honor our school retirees and would love to partner with them in the future. The Bundl Book team took care of us by helping us place the order, ensuring our Bundl books were done on time, and shipping our Bundl books in the mail. A great experience all around!</p>
+        <p>It's been a joy to work with the Bundl team. We used Bundl books to honor our school retirees and would love to partner with them in the future. The Bundl team took care of us by helping us place the order, ensuring our Bundl books were done on time, and shipping our Bundl books in the mail. A great experience all around!</p>
       `,
       author: 'Eliza Irwin',
       avatarSrc:
@@ -308,7 +308,7 @@ const options = {
     <>
 
       <Head>
-        <title>Home - Bundl Books</title>
+        <title>Home - Bundl</title>
         <meta name="description" content="Bundl Book: a gift giving software that enables you to collect written messages for someone and gift them via a physical book." />
       </Head>
     <div>
