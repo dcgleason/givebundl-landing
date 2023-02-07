@@ -43,7 +43,7 @@ const AILandingPage = () => {
             title="Product pricing"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
-            Give a Bundle
+            Give a Bundl
           </Link>
         </li>
       </ul>{" "}
@@ -132,7 +132,7 @@ const AILandingPage = () => {
             What your friends and family really think.
           </h2>{" "}
           <p className="text-base text-gray-700 md:text-lg">
-            Bundle is a book of love letters written by a recipient&apos;s friends
+            Bundl is a book of love letters written by a recipient&apos;s friends
             and family and gifted to that person.
           </p>
         </div>{" "}
@@ -152,7 +152,7 @@ const AILandingPage = () => {
   <div className="px-4 py-16 mx-auto bg-white w-full md:px-24 lg:px-8 lg:py-20">
     <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-        Give a Bundle of Love.
+        Give a Bundl of Love.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
         Send someone you love the ultimate gift--a book of letters from their friends
@@ -271,7 +271,7 @@ const AILandingPage = () => {
             </p>{" "}
             <p className="text-gray-700">
               We create a book of love letters written by your friends and
-              family, then we send you the Bundle.
+              family, then we send you the Bundl.
             </p>
           </div>
         </div>{" "}
@@ -349,7 +349,7 @@ const AILandingPage = () => {
             </p>{" "}
             <p className="text-gray-700">
              We&apos;ll collect letters from your friends and family which will be
-              compiled into a personalized bundle of love aka a Bundle for this one lucky
+              compiled into a personalized bundl of love aka a Bundl for this one lucky
               recipient.
             </p>
           </div>
@@ -380,7 +380,7 @@ const AILandingPage = () => {
               Give the gift
             </p>{" "}
             <p className="text-gray-700">
-              We deliver Bundles quickly, so you won&apos;t be waiting long.
+              We deliver Bundls quickly, so you won&apos;t be waiting long.
             </p>
           </div>
         </div>
@@ -404,7 +404,7 @@ const AILandingPage = () => {
         It&apos;s time to express your love in a new way.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
-        Bundle is the perfect gift for couples who are celebrating an
+        Bundl is the perfect gift for couples who are celebrating an
         anniversary, or just want to remind their partner how much they mean to
         them.
       </p>
@@ -492,7 +492,7 @@ const AILandingPage = () => {
           The best present you&apos;ll ever give.
         </h2>{" "}
         <p className="text-base text-gray-700 md:text-lg">
-          A Bundle is a thoughtful gift that celebrates the relationships of
+          A Bundl is a thoughtful gift that celebrates the relationships of
           your friends and family with you. Each letter contains words to
           encourage, inspire and bring out the best in you.
         </p>
