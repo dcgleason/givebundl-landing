@@ -44,7 +44,7 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Order a Bundl:
+                  Order a Bundl book:
                 </p>{" "}
                 <p className="text-gray-700">
                   Order a Bundl book. Upload the email addresses of the family and friends of the person you are giving your Bundl bok to. You&apos;ll also write a brief message that will be sent out to all your Bundl book contributors.
