@@ -47,7 +47,7 @@ const Instructions = () => {
                   Order a Bundl book:
                 </p>{" "}
                 <p className="text-gray-700">
-                  Order a Bundl book. Upload the email addresses of the family and friends of the person you are giving your Bundl bok to. You&apos;ll also write a brief message that will be sent out to all your Bundl book contributors.
+                  Order a Bundl book. Upload the email addresses of the family and friends of the person you are giving your Bundl book to. You&apos;ll also write a brief message that will be sent out to all your Bundl book contributors.
                 </p>
               </div>
             </div>{" "}
@@ -125,7 +125,7 @@ const Instructions = () => {
                 </p>{" "}
                 <p className="text-gray-700">
                  Once the letters and pictures are collected from friends and family, their kind words and special pictures will be
-                  compiled into a personalized, physical book aka a Bundl for your recipient! 
+                  compiled into a personalized, physical book aka a Bundl book for your recipient! 
                 </p>
               </div>
             </div>{" "}
@@ -155,7 +155,7 @@ const Instructions = () => {
                   Give the gift:
                 </p>{" "}
                 <p className="text-gray-700">
-                  We make sure to deliver your Bundl a few days ahead of schedule, so you have time to gift it to your lucky recipient.
+                  We make sure to deliver your Bundl book a few days ahead of schedule, so you have time to gift it to your lucky recipient.
                 </p>
               </div>
             </div>
