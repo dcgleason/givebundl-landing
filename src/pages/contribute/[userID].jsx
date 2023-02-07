@@ -280,12 +280,8 @@ if (!blob) {
               console.log(response)
             }
           }
-        }
-        
-        
-        
-
-        
+        }      
+                
         if(!blob){ //
         
           // template with no image or audio, just two pages of text  (2 pages of text no audio)
