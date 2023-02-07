@@ -148,8 +148,8 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-  //  { name: "Write", href: 'http://givebundl.com/messages'},
-  //  { name: "Add Contributors", href: 'http://givebundl.com/contributors'} // need a way for the browser to known what gift the person is writing for / adding contributors to (and they can only add contributors once) - git code;
+  //  { name: "Write", href: 'http://bundlbooks.com/messages'},
+  //  { name: "Add Contributors", href: 'http://bundlbooks.com/contributors'} // need a way for the browser to known what gift the person is writing for / adding contributors to (and they can only add contributors once) - git code;
 
   ],
 }
@@ -215,7 +215,7 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>It's been a joy to work with the Bundl team. We used Bundl to honor our school retirees and would love to partner with them in the future. The Bundl team took care of us by helping us place the order, ensuring our Bundls were done on time, and shipping our Bundls in the mail. A great experience all around!</p>
+        <p>It's been a joy to work with the Bundl Books team. We used Bundl books to honor our school retirees and would love to partner with them in the future. The Bundl Book team took care of us by helping us place the order, ensuring our Bundl books were done on time, and shipping our Bundl books in the mail. A great experience all around!</p>
       `,
       author: 'Eliza Irwin',
       avatarSrc:
@@ -308,8 +308,8 @@ const options = {
     <>
 
       <Head>
-        <title>Home - Bundl</title>
-        <meta name="description" content="Bundl: a gift giving software that enables you to collect written messages for someone and gift them via a physical book." />
+        <title>Home - Bundl Books</title>
+        <meta name="description" content="Bundl Book: a gift giving software that enables you to collect written messages for someone and gift them via a physical book." />
       </Head>
     <div>
 
@@ -486,10 +486,10 @@ const options = {
                 {/* Logo */}
                 <div className="ml-4 flex lg:ml-0 relative">
                   <a href="#">
-                    <span className="sr-only">Bundl</span>
+                    <span className="sr-only">Bundl Books</span>
                     <Image
                       className="h-6 w-auto"
-                      src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
+                      src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Bundl_Books_Logo.png'
                       alt=""
                       height='6'
                       width='6' />
@@ -767,7 +767,7 @@ const options = {
     </nav> */}
                 <div className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25">
                   <Image
-                    src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
+                    src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Bundl_Books_Logo.png'
                     alt={product.imageAlt}
                     //className=" object-center object-cover mb-10 ml-14 mx-25"
                     width='500'
@@ -809,7 +809,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">Bundl: <em>noun, thoughtful gift,</em> a book of written letters and meaningful pictures provided by the recipient&apos;s friends and family meant to encourage, inspire, and remind the recipient of their best self.</p> 
+                    <p className="text-base text-gray-500">Bundl book: <em>noun, thoughtful gift,</em> a book of written letters and meaningful pictures provided by the recipient&apos;s friends and family meant to encourage, inspire, and remind the recipient of their best self.</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   {/* <div className="mt-6 text-center">
@@ -964,7 +964,7 @@ const options = {
         Show your loved one just how much they&apos;re loved.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
-        Give a Bundl on the following occasions.
+        Give a Bundl Book on the following occasions.
       </p>
     </div>
                 {/* <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -1165,7 +1165,7 @@ const options = {
                 {/* Image section */}
                 <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1 h-8 w-8">
                   <Image
-                    src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
+                    src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Bundl_Books_Logo.png'
                     alt=""
                     className="h-8 w-auto"
                     height='8'
@@ -1231,7 +1231,7 @@ const options = {
             </div>
 
             <div className="border-t border-gray-100 py-10 text-center">
-              <p className="text-sm text-gray-500">&copy; 2022 Bundle, Inc. All rights reserved.</p>
+              <p className="text-sm text-gray-500">&copy; 2023 Bundl Books, Inc. All rights reserved.</p>
             </div>
           </div>
         </footer>
