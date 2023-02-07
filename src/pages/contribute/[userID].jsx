@@ -151,7 +151,7 @@ if (!blob) {
                 const audioAddress = data.audioAddress;
 
           
-                const response = await fetch("http://localhost:3001/contribution/create-document", {
+                const response = await fetch("http://localhost:3001/contribution/create-document-three", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -185,7 +185,7 @@ if (!blob) {
             //template with image only (1 page of text no audio)
           
            
-              const response = await fetch("http://localhost:3001/contribution/create-document", {
+              const response = await fetch("http://localhost:3001/contribution/create-document-four", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -254,7 +254,7 @@ if (!blob) {
 
           const audioAddress = data.audioAddress;
         
-            const response = await fetch("http://localhost:3001/contribution/create-document", {
+            const response = await fetch("http://localhost:3001/contribution/create-document-one", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -295,7 +295,7 @@ if (!blob) {
             const pageOne = questionOne.slice(0, 1750);
             console.log(pageOne);
         
-            const response = await fetch("http://localhost:3001/contribution/create-document", {
+            const response = await fetch("http://localhost:3001/contribution/create-document-two", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
