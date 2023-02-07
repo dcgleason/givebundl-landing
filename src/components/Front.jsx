@@ -964,7 +964,7 @@ const options = {
         Show your loved one just how much they&apos;re loved.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
-        Give a Bundl Book on the following occasions.
+        Give a Bundl book on the following occasions.
       </p>
     </div>
                 {/* <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">

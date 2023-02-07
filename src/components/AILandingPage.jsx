@@ -43,7 +43,7 @@ const AILandingPage = () => {
             title="Product pricing"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
           >
-            Give a Bundl Book
+            Give a Bundl book
           </Link>
         </li>
       </ul>{" "}
