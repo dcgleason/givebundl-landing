@@ -489,7 +489,7 @@ const options = {
                     <span className="sr-only">Bundl Books</span>
                     <Image
                       className="h-6 w-auto"
-                      src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Bundl_Books_Logo.png'
+                      src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
                       alt=""
                       height='6'
                       width='6' />
@@ -767,7 +767,7 @@ const options = {
     </nav> */}
                 <div className="w-9/12 h-9/12 object-center object-cover mb-10 ml-14 mx-25">
                   <Image
-                    src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Bundl_Books_Logo.png'
+                    src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
                     alt={product.imageAlt}
                     //className=" object-center object-cover mb-10 ml-14 mx-25"
                     width='500'
@@ -1165,7 +1165,7 @@ const options = {
                 {/* Image section */}
                 <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1 h-8 w-8">
                   <Image
-                    src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Bundl_Books_Logo.png'
+                    src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
                     alt=""
                     className="h-8 w-auto"
                     height='8'
