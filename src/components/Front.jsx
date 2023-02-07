@@ -148,8 +148,8 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-  //  { name: "Write", href: 'http://usebundle.co/messages'},
-  //  { name: "Add Contributors", href: 'http://usebundle.co/contributors'} // need a way for the browser to known what gift the person is writing for / adding contributors to (and they can only add contributors once) - git code;
+  //  { name: "Write", href: 'http://givebundl.com/messages'},
+  //  { name: "Add Contributors", href: 'http://givebundl.com/contributors'} // need a way for the browser to known what gift the person is writing for / adding contributors to (and they can only add contributors once) - git code;
 
   ],
 }
@@ -164,7 +164,7 @@ const product = {
   description:
    '',
   imageSrc: "test",
-  imageAlt: 'Bundle logo',
+  imageAlt: 'Bundl logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
     { id: 2, name: 'Bags', href: '#' },
@@ -215,7 +215,7 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>It's been a joy to work with the Bundle team. We used Bundle to honor our school retirees and would love to partner with them in the future. The Bundle team took care of us by helping us place the order, ensuring our Bundles were done on time, and shipping our Bundles in the mail. A great experience all around!</p>
+        <p>It's been a joy to work with the Bundl team. We used Bundl to honor our school retirees and would love to partner with them in the future. The Bundl team took care of us by helping us place the order, ensuring our Bundls were done on time, and shipping our Bundls in the mail. A great experience all around!</p>
       `,
       author: 'Eliza Irwin',
       avatarSrc:
@@ -308,8 +308,8 @@ const options = {
     <>
 
       <Head>
-        <title>Home - Bundle</title>
-        <meta name="description" content="Bundle: a gift giving software that enables you to collect written messages for someone and gift them via a physical book." />
+        <title>Home - Bundl</title>
+        <meta name="description" content="Bundl: a gift giving software that enables you to collect written messages for someone and gift them via a physical book." />
       </Head>
     <div>
 
@@ -486,7 +486,7 @@ const options = {
                 {/* Logo */}
                 <div className="ml-4 flex lg:ml-0 relative">
                   <a href="#">
-                    <span className="sr-only">Bundle</span>
+                    <span className="sr-only">Bundl</span>
                     <Image
                       className="h-6 w-auto"
                       src='https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Modern_Dachshund_Instagram_Post_%283%29.png'
@@ -809,7 +809,7 @@ const options = {
                   </div>
 
                   <div className="mt-4 space-y-6">
-                    <p className="text-base text-gray-500">Bundle: <em>noun, thoughtful gift,</em> a book of written letters and meaningful pictures provided by the recipient&apos;s friends and family meant to encourage, inspire, and remind the recipient of their best self.</p> 
+                    <p className="text-base text-gray-500">Bundl: <em>noun, thoughtful gift,</em> a book of written letters and meaningful pictures provided by the recipient&apos;s friends and family meant to encourage, inspire, and remind the recipient of their best self.</p> 
                     {/* <b>Bundle book</b>,  <em>noun</em>: a physical book of written heartfelt messages of contragulations and support collected for an employee from <em>his or her</em> co-workers, given for a special occation */}
                   </div>
                   {/* <div className="mt-6 text-center">
@@ -964,7 +964,7 @@ const options = {
         Show your loved one just how much they&apos;re loved.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
-        Give a Bundle on the following occasions.
+        Give a Bundl on the following occasions.
       </p>
     </div>
                 {/* <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">

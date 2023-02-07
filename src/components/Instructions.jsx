@@ -84,7 +84,7 @@ const Instructions = () => {
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">Collect the letters:</p>{" "}
                 <p className="text-gray-700">
-                  We reach out, with your message, to your Bundle contributors. We collecting loving and supportive letters from prompts you choose and memorable pictures of your recipient as well.
+                  We reach out, with your message, to your Bundl contributors. We collecting loving and supportive letters from prompts you choose and memorable pictures of your recipient as well.
                   
                 </p>
               </div>
@@ -125,7 +125,7 @@ const Instructions = () => {
                 </p>{" "}
                 <p className="text-gray-700">
                  Once the letters and pictures are collected from friends and family, their kind words and special pictures will be
-                  compiled into a personalized, physical book aka a Bundle for your recipient! 
+                  compiled into a personalized, physical book aka a Bundl for your recipient! 
                 </p>
               </div>
             </div>{" "}
@@ -155,7 +155,7 @@ const Instructions = () => {
                   Give the gift:
                 </p>{" "}
                 <p className="text-gray-700">
-                  We make sure to deliver your Bundle a few days ahead of schedule, so you have time to gift it to your lucky recipient.
+                  We make sure to deliver your Bundl a few days ahead of schedule, so you have time to gift it to your lucky recipient.
                 </p>
               </div>
             </div>
