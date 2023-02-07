@@ -84,7 +84,7 @@ const Instructions = () => {
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">Collect the letters:</p>{" "}
                 <p className="text-gray-700">
-                  We reach out, with your message, to your Bundl contributors. We collecting loving and supportive letters from prompts you choose and memorable pictures of your recipient as well.
+                  We reach out, with your message, to your Bundl book bontributors. We collecting loving and supportive letters from prompts you choose and memorable pictures of your recipient as well.
                   
                 </p>
               </div>
