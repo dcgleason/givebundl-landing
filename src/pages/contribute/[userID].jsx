@@ -369,7 +369,7 @@ if (!blob) {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                   <label htmlFor="cover-photo" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <br></br> <br></br><em> Note: Because you get one left-right spread in the book, you can choose to write a one-page letter (1750 characters) and include a picture (that will be on the other page) or if you do not upload a picture you will be able to write two pages (3500 characters). If you would like to say more, we suggest you utilize the voice note feature.</em>
+                  Do you want to upload  picture of you and {giftData.recipientFirstName}? <em>(optional)</em>
                   </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <select className='rounded-md shadow-sm  border-gray-300' id="upload" name="upload" onChange={e => setWantUploadPicture(e.target.value === 'yes')}>
@@ -417,7 +417,7 @@ if (!blob) {
               </div>
             </div>
 
-            <div className="h-full sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            {/* <div className="h-full sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="recording" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
               <div className='underline'>Audio :</div> To give {giftData.recipientFirstName} an even more engaging experience, please add a short voice note - something like... &quot;Hey {giftData.recipientFirstName}, this is [YOUR NAME]. Happy birthday! Love you!&quot;  (recommended) 
               </label>
@@ -427,24 +427,24 @@ if (!blob) {
 
 
 
-            <section className="mx-auto">
-            <h1 className="text-xl text-center underline"><em>Voice Recorder</em></h1>
-                <div className="">
+                      <section className="mx-auto">
+                      <h1 className="text-xl text-center underline"><em>Voice Recorder</em></h1>
+                          <div className="">
 
-                  
-                  <RecorderControls recorderState={recorderState} handlers={handlers}   />
-                
-                  <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} getData={getDataChild} />
-                  {blob != null ? <div className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
-                    Your recording:  
-                    <a className='text-blue-500 underline' href={blob}>Audio message - {Date()}</a>
-                  </div> : <div></div>}
-                </div>
-              </section>
+                            
+                            <RecorderControls recorderState={recorderState} handlers={handlers}   />
+                          
+                            <RecordingsList audio={audio} audioRecorded={audioRecorded} setAudioRecorded={setAudioRecorded} getData={getDataChild} />
+                            {blob != null ? <div className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
+                              Your recording:  
+                              <a className='text-blue-500 underline' href={blob}>Audio message - {Date()}</a>
+                            </div> : <div></div>}
+                          </div>
+                        </section>
 
               </div>
               </div>
-            </div>
+            </div> */}
     
 
 {wantUploadPicture ? 
