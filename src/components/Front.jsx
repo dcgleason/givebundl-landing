@@ -158,7 +158,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Love is not just an emotion, it's an action.", // // give love, get love.
+  name: "Get sentimental with Bundl -- preserving memories and strengthening bonds", // // give love, get love. //  "Love is not just an emotion, it's an action."
   price: '$65',
   description:
    '',
