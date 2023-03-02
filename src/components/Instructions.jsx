@@ -124,8 +124,8 @@ const Instructions = () => {
                   Compile the messages:
                 </p>{" "}
                 <p className="text-gray-700">
-                 Once the letters and pictures are collected from your team, their kind words and special pictures will be
-                  compiled into a personalized, physical book aka a Bundl book and delivered to your recipient&apos;s home or office address.  
+                 Once the messages and pictures are collected from your team, their kind words and special pictures will be
+                  compiled into a personalized, physical book aka a Bundl book and delivered to your recipient&apos;s home or office address (a digital web-based version is also made available)
                 </p>
               </div>
             </div>{" "}
