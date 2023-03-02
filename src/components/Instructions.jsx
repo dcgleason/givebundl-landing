@@ -121,7 +121,7 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Compile the letters:
+                  Compile the messages:
                 </p>{" "}
                 <p className="text-gray-700">
                  Once the letters and pictures are collected from your team, their kind words and special pictures will be
