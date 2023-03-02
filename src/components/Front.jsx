@@ -964,7 +964,7 @@ const options = {
         Show your teammate or direct-report that they belong.
       </h2>{" "}
       <p className="text-base text-gray-700 md:text-lg">
-        Give a Bundl book with our app on the following milestones:
+        Give a Bundl book with our app on the following occasions:
       </p>
     </div>
                 {/* <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
