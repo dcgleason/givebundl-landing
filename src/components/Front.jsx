@@ -158,7 +158,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Retain Your Top Talent", // // give love, get love. //   "Love is not just an emotion, it's an action."
+  name: "Retain Your Top Talent.", // // give love, get love. //   "Love is not just an emotion, it's an action."
   price: '$65',
   description:
    '',
