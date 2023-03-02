@@ -44,10 +44,10 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Initiate creation of a Bundl book:
+                  Initiate the creation of a Bundl book:
                 </p>{" "}
                 <p className="text-gray-700">
-                  From within the app, select the team members you&apos;d like to contribute to your Bundl book. You&apos;ll also write a brief message that will be sent out to all your Bundl book contributors that explain the purpose of this Bundl book surprise.
+                  From within our app, select the team members you&apos;d like to contribute to your Bundl book. You&apos;ll also write a brief message that will be sent out to all your Bundl book contributors that explain the purpose of this Bundl book surprise.
                 </p>
               </div>
             </div>{" "}
