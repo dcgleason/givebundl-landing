@@ -82,7 +82,7 @@ const Instructions = () => {
                 <div className="w-px h-full bg-gray-300" />
               </div>{" "}
               <div className="pt-1 pb-8">
-                <p className="text-gray-900 mb-2 text-lg font-bold">Collect the messages:</p>{" "}
+                <p className="text-gray-900 mb-2 text-lg font-bold">Collect the love:</p>{" "}
                 <p className="text-gray-700">
                   Automatic messages are sent to your contributoring team members that collect words of support, congratulations, and care from prompts you select along with your introductory message to the group. Contributors also have the option to upload a relevent picture.
                   
@@ -121,7 +121,7 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Compile the messages:
+                  Compile the love:
                 </p>{" "}
                 <p className="text-gray-700">
                  Once the messages and pictures are collected from your team, their kind words and special pictures will be
