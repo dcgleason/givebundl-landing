@@ -158,7 +158,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Retain Your Top Talent with Bundl - The Employee Recognition Solution That Boosts Engagement", // // give love, get love. //   "Love is not just an emotion, it's an action."
+  name: "Retain Your Top Talent", // // give love, get love. //   "Love is not just an emotion, it's an action."
   price: '$65',
   description:
    '',
@@ -1021,7 +1021,7 @@ const options = {
                   <h3 className="mt-6 text-base font-medium text-gray-900">Retirement</h3>
                   <p className="mt-3 text-base text-gray-500">Offer well-wishes to a co-worker on his or her final day.</p>
                 </div>
-                
+
                 <div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
