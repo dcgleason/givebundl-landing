@@ -214,7 +214,7 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>It's been a joy to work with the Bundl team. We used Bundl books to honor our school retirees and would love to partner with them in the future. The Bundl team took care of us by helping us place the order, ensuring our Bundl books were done on time, and shipping our Bundl books in the mail. A great experience all around!</p>
+        <p>Bundl books have been amazing for my team. We have used Bundl books most recently to honor our school retirees and would love to partner with them in the future. Great customer support, too!</p>
       `,
       author: 'Eliza Irwin',
       avatarSrc:
