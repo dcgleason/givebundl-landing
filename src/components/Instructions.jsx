@@ -84,7 +84,7 @@ const Instructions = () => {
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">Collect the love:</p>{" "}
                 <p className="text-gray-700">
-                  Automatic messages are sent to your contributoring team members in a secret, private channel that collects words of support, congratulations, and care via available prompts that you as the Bundl gifter select. Contributors also have the option to upload a relevent picture.
+                  Your Bundl contributors are invited into a temporary, private, and secret channel that collects their words of support, congratulations, and care via available prompts that you as the Bundl gifter select. Contributors also have the option to upload a relevent picture.
                   
                 </p>
               </div>
