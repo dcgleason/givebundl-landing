@@ -47,7 +47,7 @@ const Instructions = () => {
                   Initiate the creation of a Bundl book:
                 </p>{" "}
                 <p className="text-gray-700">
-                  From within our app, select the team members you&apos;d like to contribute to your teammate&apos;s Bundl book. You&apos;ll also write a brief message that will be sent out to all of the group members contributing to your teammate&apos;s Bundl that explain the purpose of this surprise.
+                  From within the app, select the team members you&apos;d like to contribute to your teammate&apos;s Bundl book. You&apos;ll also write a brief message that will be sent out to all of the group members contributing to your teammate&apos;s Bundl that explain the purpose of this surprise.
                 </p>
               </div>
             </div>{" "}
@@ -84,7 +84,7 @@ const Instructions = () => {
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">Collect the love:</p>{" "}
                 <p className="text-gray-700">
-                  Automatic messages are sent to your contributoring team members that collect words of support, congratulations, and care from prompts you select along with your introductory message to the group. Contributors also have the option to upload a relevent picture.
+                  Automatic messages are sent to your contributoring team members in a secret, private channel that collects words of support, congratulations, and care via available prompts that you as the Bundl gifter select. Contributors also have the option to upload a relevent picture.
                   
                 </p>
               </div>
@@ -124,8 +124,8 @@ const Instructions = () => {
                   Compile the love:
                 </p>{" "}
                 <p className="text-gray-700">
-                 Once the messages and pictures are collected from your team, their kind words and special pictures will be
-                  compiled into a personalized, physical book aka a Bundl book and delivered to your recipient&apos;s home or office address (a digital web-based version is also made available)
+                 Once the messages and pictures are collected from your team, their kind words and special pictures are compiled
+                   into a personalized, physical book aka a Bundl book and delivered to your recipient&apos;s home or office address (a digital web-based, personalized version is also made available)
                 </p>
               </div>
             </div>{" "}
@@ -155,7 +155,7 @@ const Instructions = () => {
                   Feel the love:
                 </p>{" "}
                 <p className="text-gray-700">
-                  Your teammate recipient will be surprised and delighted to receive a personalized, physical book of words of support, congratulations, and care from their team.
+                  Your teammate recipient will be surprised and delighted to receive a personalized, physical book of words of support, congratulations, and care to them from their team.
                 </p>
               </div>
             </div>
