@@ -158,7 +158,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Group-to-individual Recognition from within Slack or Teams.", // // give love, get love. //   "Love is not just an emotion, it's an action."
+  name: "Group-to-individual recognition from within your Slack workspace.", // // give love, get love. //   "Love is not just an emotion, it's an action."
   price: '$65',
   description:
    '',
