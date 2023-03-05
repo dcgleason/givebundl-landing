@@ -158,7 +158,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: "Boost employee retention by instilling a felt sense of belonging in individuals.", // // give love, get love. //   "Love is not just an emotion, it's an action."
+  name: "Boost employee engagment by instilling a felt sense of belonging.", // // give love, get love. //   "Love is not just an emotion, it's an action."
   price: '$65',
   description:
    '',
