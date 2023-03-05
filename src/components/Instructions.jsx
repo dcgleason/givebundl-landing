@@ -44,7 +44,7 @@ const Instructions = () => {
               </div>{" "}
               <div className="pt-1 pb-8">
                 <p className="text-gray-900 mb-2 text-lg font-bold">
-                  Initiate the creation of a Bundl book:
+                  Initiate a Bundl:
                 </p>{" "}
                 <p className="text-gray-700">
                   From within the app, select the team members you&apos;d like to contribute to your teammate&apos;s Bundl book. You&apos;ll also write a brief message that will be sent out to all of the group members contributing to your teammate&apos;s Bundl that explains the purpose of this surprise.
